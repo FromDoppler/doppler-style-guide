@@ -1,6 +1,5 @@
 const commonConfig = require("./webpack-common.config");
 const path = require("path");
-const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = function (env) {
   const config = commonConfig(env);
@@ -23,17 +22,6 @@ module.exports = function (env) {
   config.watchOptions = {
     ignored: [path.resolve(__dirname, "src"), "./node_modules"],
   };
-
-  config.plugins.push(
-    new CopyPlugin({
-      patterns: [
-        {
-          from: path.resolve(__dirname, "src/documentation/js"),
-          to: path.resolve(__dirname, "dist"),
-        },
-      ],
-    })
-  );
 
   return config;
 };

@@ -32,7 +32,6 @@
     "@babel/preset-react": "^7.16.7",
     "babel": "^6.23.0",
     "babel-loader": "^8.2.5",
-    "copy-webpack-plugin": "^10.2.4",
     "css-loader": "^6.7.1",
     "dotenv": "^16.0.0",
     "dotenv-flow-webpack": "^1.1.0",
