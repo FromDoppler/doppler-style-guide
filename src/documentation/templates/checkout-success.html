@@ -38,22 +38,94 @@
     <article class="dp-container m-b-24">
       <nav class="dp-kpi-success">
         <ul class="dp-rowflex">
-          <li><img src="img/on-hold.svg" /></li>
           <li>
-            <span>Contactos:</span>
-            <h3>1500</h3>
+            <span class="dp-icon-kpis"><img src="img/three-points.svg" /></span>
           </li>
           <li>
-            <span>Envíos Disponibles:</span>
-            <h3>Ilimitados</h3>
+            <span>Tipo de Plan</span>
+            <h3>Por Contactos</h3>
           </li>
           <li>
-            <span>Tipo de renovación:</span>
-            <h3>mensual</h3>
+            <span>Contactos disponibles</span>
+            <h3>5000</h3>
+          </li>
+          <li>
+            <span>Tipo de renovación</span>
+            <h3>Mensual</h3>
           </li>
         </ul>
       </nav>
+      <div class="dp-wrap-message dp-wrap-warning">
+        <span class="dp-message-icon"></span>
+        <div class="dp-content-message dp-content-full">
+          <p>
+            Necesitas completar el proceso de pago para disponer de tu nuevo
+            Plan.
+          </p>
+        </div>
+      </div>
     </article>
+    <section class="dp-container dp-wrap-checkout">
+      <h4>Sigue ESTOS pasos para completar el proceso de pago:</h4>
+      <div class="dp-rowflex">
+        <div class="col-sm-7 m-b-12">
+          <div class="dp-checkout-content">
+            <div class="dp-plan-detail">
+              <ul class="dp-list-detail">
+                <li>
+                  <span class="dp-wrapp-icon dpicon iconapp-mail-inbox"></span>
+                  <span
+                    >Revisa tu correo, y dentro de las proximas 24 horas hábiles
+                    recibirás la factura con todos los datos para realizar el
+                    pago.</span
+                  >
+                </li>
+                <li>
+                  <span class="dp-wrapp-icon dpicon iconapp-bill"></span>
+                  <span>Realiza el pago.</span>
+                </li>
+                <li>
+                  <span
+                    class="dp-wrapp-icon dpicon iconapp-payment-failure"
+                  ></span>
+                  <span
+                    >Envía el comprobante de pago a billing@fromdoppler.com para
+                    que podamos activar tu nuevo Plan.</span
+                  >
+                </li>
+                <li>
+                  <span
+                    class="dp-wrapp-icon dpicon iconapp-send-message"
+                  ></span>
+                  <span
+                    >Una vez que confirmemos la recepción del pago te avisaremos
+                    por mail. ¡Ya podrás disfrutar de tu nuevo Plan!</span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-4 m-b-12">
+          <div class="dp-checkout-content">
+            <p></p>
+          </div>
+        </div>
+        <hr class="dp-separator" />
+      </div>
+      <div class="col-sm-12 m-t-24">
+        <p class="m-b-24">
+          <i>Mientras tanto, te invitamos a explorar tu cuenta :)</i>
+        </p>
+        <div class="dp-checkout-content">
+          <button type="button" class="dp-button button-medium primary-green">
+            Explorar
+          </button>
+        </div>
+      </div>
+    </section>
+
     <article class="dp-container m-b-24">
       <nav class="dp-kpi-success">
         <ul class="dp-rowflex">
@@ -182,5 +254,8 @@
         </div>
       </div>
     </section>
+    <!-- build:js:dist js/app.js -->
+    <script src="./js/main.js"></script>
+    <!-- /build -->
   </body>
 </html>

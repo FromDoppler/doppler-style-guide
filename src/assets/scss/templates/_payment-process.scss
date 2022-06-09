@@ -631,6 +631,12 @@
     padding: variables.$dp-spaces--lv4 variables.$dp-spaces--lv2;
     border-bottom: 1px solid colors.$dp-color-separator;
 
+    .dp-icon-kpis {
+      width: 60px;
+      position: relative;
+      top: 6px;
+    }
+
     li {
       margin-right: variables.$dp-spaces--lv6;
       display: flex;
@@ -654,6 +660,12 @@
     .dp-plan-detail {
       border: none;
       margin: variables.$dp-spaces--lv0;
+    }
+
+    .dp-wrapp-icon {
+      position: relative;
+      top: 3px;
+      margin-right: 12px;
     }
   }
 
