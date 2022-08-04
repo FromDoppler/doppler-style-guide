@@ -47,7 +47,7 @@
     "dotenv": "^16.0.1",
     "dotenv-flow-webpack": "^1.1.0",
     "eclint": "^2.8.1",
-    "html-loader": "^3.1.0",
+    "html-loader": "^4.1.0",
     "html-webpack-plugin": "^5.5.0",
     "jquery": "^3.6.0",
     "lit-html": "^2.2.7",
