@@ -23,15 +23,7 @@ export class Dropdown extends LitElement {
         <button @click="${this.openCloseMenuHandler}">
           Click para mostrar el menu
         </button>
-        ${this.open
-          ? html` <ul>
-              <li>Hola soy un li</li>
-              <li>Hola soy un li</li>
-              <li>Hola soy un li</li>
-              <li>Hola soy un li</li>
-              <li>Hola soy un li</li>
-            </ul>`
-          : ""}
+        ${this.open ? html`<slot></slot>` : ""}
       </div>
     `;
   }
