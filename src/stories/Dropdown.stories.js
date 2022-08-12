@@ -1,12 +1,21 @@
 import { html } from "lit";
 
 export const Default = () => {
-  return html`<dp-dropdown>
-    <div>Option 1</div>
-    <div>Option 2</div>
-    <div>Option 3</div>
-    <div>Option 4</div>
-  </dp-dropdown>`;
+  return html`
+    <dp-dropdown>
+      <dp-dropbdown-button>
+        <button>Click me!!</button>
+      </dp-dropbdown-button>
+      <dp-dropdown-content>
+        <a>Nombre</a>
+        <a>Apellido</a>
+        <a>Cumpleaños</a>
+        <a>Email</a>
+        <a>Nombre</a>
+        <a>Apellido</a>
+      </dp-dropdown-content>
+    </dp-dropdown>
+  `;
 };
 
 // More on default export:

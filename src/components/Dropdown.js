@@ -1,30 +1,53 @@
-import { css, html, LitElement } from "lit";
+export class Dropdown extends HTMLElement {
+  _open = false;
+  _button;
+  _expandableBox;
 
-export class Dropdown extends LitElement {
-  static properties = {
-    open: { state: true },
+  openCloseMenuHandler = () => {
+    this._open = !this._open;
+    this.updateRender();
   };
 
-  static get styles() {
-    return css`
-      .wrapper {
-        width: fit-content;
-      }
-    `;
+  constructor() {
+    super();
+    this._button = this.querySelector("dp-dropdown>dp-dropbdown-button");
+    this._expandableBox = this.querySelector("dp-dropdown>dp-dropdown-content");
+
+    //TODO: use class for hide or show expandableBox
+    this._expandableBox.setAttribute(
+      "style",
+      `display: ${this._open ? "block" : "none"}`
+    );
+
+    this.append(this._button, this._expandableBox);
   }
 
-  openCloseMenuHandler = () => (this.open = !this.open);
+  updateRender() {
+    //TODO: use class for hide or show expandableBox
+    this._expandableBox.setAttribute(
+      "style",
+      `display: ${this._open ? "block" : "none"}`
+    );
+  }
 
-  leaveMenuHandler = () => (this.open = false);
+  collapse() {
+    this._open = false;
+    this.updateRender();
+  }
 
-  render() {
-    return html`
-      <div class="wrapper" @mouseleave="${this.leaveMenuHandler}">
-        <button @click="${this.openCloseMenuHandler}">
-          Click para mostrar el menu
-        </button>
-        ${this.open ? html`<slot></slot>` : ""}
-      </div>
-    `;
+  _collapseOther() {
+    const all = document.querySelectorAll("dp-dropdown");
+    all.forEach((dropdown) => {
+      if (dropdown !== this) {
+        dropdown.collapse();
+      }
+    });
+  }
+
+  connectedCallback() {
+    this._button.addEventListener("click", () => {
+      this.openCloseMenuHandler();
+      this._collapseOther();
+    });
   }
 }
