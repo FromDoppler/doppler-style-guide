@@ -4,15 +4,17 @@ export const Default = () => {
   return html`
     <dp-dropdown>
       <dp-dropbdown-button>
-        <button>Click me!!</button>
+        <button><i class="ms-icon icon-brackets"></i></button>
       </dp-dropbdown-button>
       <dp-dropdown-content>
-        <a>Nombre</a>
-        <a>Apellido</a>
-        <a>Cumpleaños</a>
-        <a>Email</a>
-        <a>Nombre</a>
-        <a>Apellido</a>
+        <dp-dropdown-scroll style="display: flex; flex-direction: column">
+          <a>Nombre</a>
+          <a>Apellido</a>
+          <a>Cumpleaños</a>
+          <a>Email</a>
+          <a>Nombre</a>
+          <a>Apellido</a>
+        </dp-dropdown-scroll>
       </dp-dropdown-content>
     </dp-dropdown>
   `;

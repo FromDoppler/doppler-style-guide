@@ -1,0 +1,49 @@
+@use "core/variables";
+@use "core/settings";
+@use "helpers/colors";
+@use "helpers/mixins";
+@use "modules/preload";
+
+// mixin equal to .dp-button, all button can extend this
+@mixin library-button {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  appearance: none;
+  font-family: settings.$dp-font-family-proximanova;
+  border-radius: variables.$dp-border-radius;
+  font-weight: settings.$dp-font-weight-bold;
+  letter-spacing: 0.6px;
+  @include mixins.transition-all;
+
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.4;
+  }
+}
+
+// .dp-button-exit can extend this mixin
+@mixin grey-button {
+  @include library-button;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2px;
+  color: colors.$dp-color-grey;
+  height: 34px;
+  position: relative;
+  right: 3px;
+  top: 0;
+  &:hover,
+  &:active {
+    background: colors.$dp-color-white;
+  }
+
+  &:focus,
+  &.active {
+    box-shadow: inset 0 0 0 2px colors.$dp-color-orange-focus,
+      inset 0 0 0 3px colors.$dp-color-white;
+    background: colors.$dp-color-white;
+  }
+}

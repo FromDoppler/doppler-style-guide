@@ -1,0 +1,79 @@
+@use "button";
+@use "core/variables";
+@use "helpers/colors";
+
+@mixin scrollbar {
+  margin: variables.$dp-spaces--lv0;
+  padding: variables.$dp-spaces--lv0;
+  overflow: auto;
+  width: 200px;
+  height: 150px;
+
+  /* Tamaño del scroll */
+  &::-webkit-scrollbar {
+    width: 4px;
+    scrollbar-width: 4px;
+  }
+
+  /* barra thumb de scroll */
+  &::-webkit-scrollbar-thumb {
+    background: colors.$dp-color-silver;
+    border-radius: 4px;
+    right: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb:active {
+    background-color: colors.$dp-color-lightgrey;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: colors.$dp-color-silver;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+  }
+
+  /* track de scroll */
+  &::-webkit-scrollbar-track {
+    background: colors.$dp-color-snow;
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-track:hover,
+  &::-webkit-scrollbar-track:active {
+    background: colors.$dp-color-snow;
+  }
+}
+
+dp-dropdown {
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+
+  dp-dropbdown-button > * {
+    @include button.grey-button;
+    border: 1px solid colors.$dp-border-grey;
+    font-size: variables.$dp-sizing--lvl4;
+    background-color: colors.$dp-color-snow;
+    font-weight: 800;
+    width: 42px;
+  }
+
+  dp-dropdown-content {
+    position: absolute;
+    display: none;
+    top: 40px;
+    text-align: left;
+    line-height: variables.$dp-spaces--lv4;
+    overflow: hidden;
+    right: 0;
+    outline: 0;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: colors.$dp-color-white;
+    box-shadow: inset 0 0 0 3px colors.$dp-color-snow,
+      inset 0 0 0 5px colors.$dp-color-orange-focus;
+    z-index: 3;
+    dp-dropdown-scroll {
+      @include scrollbar;
+    }
+  }
+}
