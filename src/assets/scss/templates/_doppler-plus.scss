@@ -334,6 +334,25 @@
       flex-wrap: wrap;
     }
 
+    ul.datalist {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 calc($range-handle-size / 2);
+      margin-top: -8px;
+      font-size: variables.$dp-sizing--lvl1;
+      > li {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        width: 1px;
+        background: colors.$dp-color-silver;
+        height: 6px;
+        line-height: 40px;
+        margin: 0 0 20px 0;
+      }
+    }
+
     .range-slider {
       -webkit-appearance: none;
       width: 100%;
