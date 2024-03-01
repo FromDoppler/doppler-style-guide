@@ -49,12 +49,12 @@
     "webpack-manifest-plugin": "5.0.0"
   },
   "devDependencies": {
-    "@storybook/addon-actions": "6.5.16",
-    "@storybook/addon-essentials": "6.5.16",
-    "@storybook/addon-links": "6.5.16",
-    "@storybook/builder-webpack5": "6.5.16",
+    "@storybook/addon-actions": "7.6.17",
+    "@storybook/addon-essentials": "7.6.17",
+    "@storybook/addon-links": "7.6.17",
+    "@storybook/builder-webpack5": "7.6.17",
     "@storybook/manager-webpack5": "6.5.16",
-    "@storybook/web-components": "6.5.16",
+    "@storybook/web-components": "7.6.17",
     "concurrently": "8.2.2",
     "dotenv": "16.4.5",
     "dotenv-flow-webpack": "2.0.0",
