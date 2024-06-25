@@ -80,6 +80,18 @@ export const initModalsBehavior = function () {
     const $delayFade = 500;
     //Initialize all modals hidden
     $(".modal").hide();
+    $("#btn-all-accounts").click(function () {
+      $("#modal-all-accounts").fadeIn($delayFade);
+    });
+    $("#btn-new-collaborator").click(function () {
+      $("#modal-new-collaborator").fadeIn($delayFade);
+    });
+    $("#btn-permissions").click(function () {
+      $("#modal-permissions").fadeIn($delayFade);
+    });
+    $("#btn-successful-collaborator").click(function () {
+      $("#modal-successful-collaborator").fadeIn($delayFade);
+    });
     $("#btn-exclude-list").click(function () {
       $("#modal-exclude-list").fadeIn($delayFade);
     });
