@@ -6,6 +6,10 @@
     position: relative;
     margin: var.$dp-spaces--lv0;
 
+    .dp-with-buttons {
+      display: flex;
+    }
+
     .dp-bd-box {
       position: relative;
     }
@@ -50,10 +54,7 @@
     }
 
     .dp-button-group {
-      position: absolute;
-      right: 0;
       height: 40px;
-      top: 22px;
       display: flex;
       justify-content: flex-end;
       align-items: center;
