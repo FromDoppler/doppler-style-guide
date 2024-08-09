@@ -43,7 +43,7 @@
     "loader": "2.1.1",
     "mini-css-extract-plugin": "2.9.0",
     "sass": "1.77.8",
-    "sass-loader": "15.0.0",
+    "sass-loader": "16.0.0",
     "string-replace-loader": "3.1.0",
     "webpack": "5.93.0",
     "webpack-manifest-plugin": "5.0.0"
