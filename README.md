@@ -50,10 +50,21 @@ https://cdn.fromdoppler.com/doppler-style-guide/documentation/pr-551/storybook/?
 
 ```
 https://cdn.fromdoppler.com/doppler-style-guide/documentation/main/index.html
+
 ```
 
 # URL Storybook
 
 ```
 https://cdn.fromdoppler.com/doppler-style-guide/documentation/pr-530/storybook/?path=/story/example-introduction--page
+
+```
+
+# Consideraciones
+
+```
+
+Dentro de los estilos se encuentra una hoja llamada "_classes.scss" en este archivo se encuentran muchos fix que son para doppler viejo.
+En el resto de la aplicación NO deberían utilizar "!important" esto les va a dificultar la reutilización de los componentes
+
 ```
