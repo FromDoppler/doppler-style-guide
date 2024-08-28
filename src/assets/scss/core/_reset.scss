@@ -47,6 +47,10 @@ body {
   color: colors.$dp-color-grey;
   font-family: settings.$dp-font-family;
   min-height: 100%;
+
+  &.dp-onsite-bg {
+    background-color: colors.$dp-color-onsite-gray;
+  }
 }
 
 /* =======================================================================*/
