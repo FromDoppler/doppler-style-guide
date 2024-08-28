@@ -100,6 +100,10 @@
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-between;
+
+    &.border {
+      border: 1px solid #e7e5dc;
+    }
   }
 
   .form-filters .filter {
