@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <%=
+    require('html-loader!/src/documentation/templates/partials/_head.html').default
+    %>
+  </head>
+  <body data-active-menu="21" class="dp-library dp-onsite-bg">
+    <div class="dp-container">
+      <div class="dp-rowflex">
+        <div class="col-sm-12 m-t-24">
+          <header class="m-b-30">
+            <a
+              href="index.html"
+              class="dp-button button-medium secondary-green button--round"
+            >
+              Back
+            </a>
+          </header>
+        </div>
+      </div>
+    </div>
+
+    <div class="dp-container">
+      <header class="dp-onsite-header">
+        <h2>Dashboard de estadísticas</h2>
+        <p>
+          Aquí podrá ver el rendimiento de los anuncios en tus páginas web ...
+        </p>
+      </header>
+
+      <form class="form-filters p-b-30 border dp-white m-t-12">
+        <div class="col-sm-12 col-md-4 col-lg-4 m-b-12">
+          <fieldset class="filter">
+            <label for="domain">Seleccione el sitio Web:</label
+            ><span class="dropdown-arrow"></span
+            ><select id="domain">
+              <option value="www.fromdoppler.com">www.fromdoppler.com</option>
+              <option value="www.fromdoppler.com">www.fromdoppler.com</option>
+            </select>
+          </fieldset>
+        </div>
+        <div class="col-sm-12 col-md-4 col-lg-4 m-b-12">
+          <fieldset class="filter">
+            <label for="widget">Tipo de Widget:</label
+            ><span class="dropdown-arrow"></span
+            ><select id="widget">
+              <option value="all">Todas las páginas</option>
+              <option value="all">Todas las páginas</option>
+            </select>
+          </fieldset>
+        </div>
+        <div class="col-sm-12 col-md-4 col-lg-4 m-b-12">
+          <fieldset class="filter">
+            <label for="range_time">Seleccione el periodo:</label
+            ><span class="dropdown-arrow"></span
+            ><select id="range_time">
+              <option value="last_month">Último mes</option>
+              <option value="last_month">Último mes</option>
+            </select>
+          </fieldset>
+        </div>
+      </form>
+
+      <div class="dp-wrapper-as-kpi dp-onsite-kpi">
+        <ul class="kpi-ul">
+          <li>
+            <div class="dp-kpi-card dp-kpi-card-widgets dp-white">
+              <span
+                class="dp-assisted-sales-icon dpicon dpicon-onsite-kpi iconapp-persons"
+              ></span>
+              <div class="dp-assisted-sales-text">
+                <h3>680</h3>
+                <span>Visitas al Sitio</span>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="dp-kpi-card dp-kpi-card-widgets dp-white">
+              <span
+                class="dp-assisted-sales-icon dpicon dpicon-2 iconapp-web-development"
+              ></span>
+              <div class="dp-assisted-sales-text">
+                <h3>4</h3>
+                <span>Widgets Activos</span>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="dp-kpi-card dp-kpi-card-widgets dp-white">
+              <span
+                class="dp-assisted-sales-icon dpicon dpicon-2 iconapp-web-eye"
+              ></span>
+              <div class="dp-assisted-sales-text">
+                <h3>524</h3>
+                <span>Visitas</span>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="dp-kpi-card dp-kpi-card-widgets dp-white">
+              <span
+                class="dp-assisted-sales-icon dpicon dpicon-2 iconapp-finger-tap"
+              ></span>
+              <div class="dp-assisted-sales-text">
+                <h3>215</h3>
+                <span>Acciones</span>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="dp-kpi-card dp-kpi-card-widgets dp-white">
+              <span
+                class="dp-assisted-sales-icon dpicon dpicon-2 iconapp-click"
+              ></span>
+              <div class="dp-assisted-sales-text">
+                <h3>0.3%</h3>
+                <span>CRT</span>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
