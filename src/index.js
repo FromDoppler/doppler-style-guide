@@ -15,6 +15,7 @@ import {
   initDropdownButtonBehavior,
   initExitEditorButtonBehavior,
   initFonts,
+  lineChart,
 } from "./js";
 
 // autoInitialize flag is deprecated
@@ -35,6 +36,7 @@ if (window["style-guide-configuration"]?.autoInitialize) {
   window["style-guide-configuration"].initCarouselBehavior = true;
   window["style-guide-configuration"].initDropdownButtonBehavior = true;
   window["style-guide-configuration"].initExitEditorButtonBehavior = true;
+  window["style-guide-configuration"].lineChart = true;
 }
 
 if (window["style-guide-configuration"]?.initDopplerMenuBehavior) {
@@ -84,4 +86,8 @@ if (window["style-guide-configuration"]?.initExitEditorButtonBehavior) {
 
 if (window["style-guide-configuration"]?.initFonts) {
   initFonts();
+}
+
+if (window["style-guide-configuration"]?.initFonts) {
+  lineChart();
 }
