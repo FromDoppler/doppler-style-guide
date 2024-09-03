@@ -29,6 +29,9 @@ export const lineChart = function () {
       ],
       type: line(),
     },
+    line: {
+      width: 3, // Set the width of the line here
+    },
     padding: {
       bottom: 100,
     },
