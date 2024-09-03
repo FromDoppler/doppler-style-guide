@@ -109,6 +109,9 @@ $dp-violet-tabs: #c9a9d5;
 
 $dp-color-iconcm: #ef9c70;
 
+/// Color background for Onsite
+$dp-color-onsite-gray: #fafafafa;
+
 ///
 /// Class Colors Style Guides
 ///
@@ -260,5 +263,9 @@ $dp-color-iconcm: #ef9c70;
   /* bg */
   .dp-bg-verysoft-gray {
     background-color: $dp-color-verysoft-gray;
+  }
+
+  .dp-bg-onsite-gray {
+    background-color: $dp-color-onsite-gray;
   }
 }

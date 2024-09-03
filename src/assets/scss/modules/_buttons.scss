@@ -46,11 +46,11 @@
     }
 
     &.button--loading {
-      @include preload.dp-preloader(colors.$dp-color-white, 1.5em);
       padding-left: 3em;
       position: relative;
       display: flex;
       align-items: center;
+      @include preload.dp-preloader(colors.$dp-color-white, 1.5em);
 
       &:after {
         left: 1em;
@@ -58,13 +58,12 @@
     }
 
     &.button--centered-loading {
-      @include preload.dp-preloader(colors.$dp-color-white, 1.5em);
-
       position: relative;
       display: flex;
       align-items: center;
       justify-content: center;
       height: 30px;
+      @include preload.dp-preloader(colors.$dp-color-white, 1.5em);
 
       &:after {
         left: 0;
@@ -190,11 +189,11 @@
         }
 
         &.button--loading {
-          @include preload.dp-preloader(colors.$dp-color-silver, 1.5em);
           padding-left: 3em;
           position: relative;
           display: flex;
           align-items: center;
+          @include preload.dp-preloader(colors.$dp-color-silver, 1.5em);
 
           &:after {
             left: 1em;
@@ -598,6 +597,7 @@
     position: absolute;
     pointer-events: none;
     -webkit-appearance: none;
+    appearance: none;
     z-index: 3;
     height: 28px;
     top: -12px;
@@ -611,6 +611,7 @@
 
   div[slider] > input[type="range"]::-ms-track {
     -webkit-appearance: none;
+    appearance: none;
     background: transparent;
     color: transparent;
   }
