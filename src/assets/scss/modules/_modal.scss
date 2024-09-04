@@ -133,6 +133,10 @@
     max-width: 800px;
   }
 
+  .modal-content--extra-large {
+    max-width: 1000px;
+  }
+
   [class*="modal-content--"].modal-content--full {
     background: #f7f7f7;
     padding: 50px 50px 20px;
@@ -464,6 +468,13 @@
       padding-left: 24px;
       margin-right: 12px;
       width: 130px;
+    }
+  }
+
+  #modal-video-container {
+    .modal-content--extra-large {
+      background: transparent;
+      width: 900px;
     }
   }
 }
