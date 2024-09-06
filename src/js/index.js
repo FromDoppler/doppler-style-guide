@@ -101,6 +101,9 @@ export const initModalsBehavior = function () {
     $("#btn-error-list").click(function () {
       $("#modal-error-list").fadeIn($delayFade);
     });
+    $("#btn-modal-extra-large").click(function () {
+      $("#modal-extra-large").fadeIn($delayFade);
+    });
     $("#btn-modal-large").click(function () {
       $("#modal-large").fadeIn($delayFade);
     });

@@ -26,6 +26,15 @@
             <ul class="list-modal">
               <li>
                 <button
+                  id="btn-modal-extra-large"
+                  type="button"
+                  class="dp-button button-medium primary-green"
+                >
+                  Extra Large modal
+                </button>
+              </li>
+              <li>
+                <button
                   id="btn-modal-large"
                   type="button"
                   class="dp-button button-medium primary-green"
@@ -58,6 +67,30 @@
       <%=
       require('html-loader!/src/documentation/templates/partials/_footer.html').default
       %>
+      <div class="modal" id="modal-extra-large">
+        <div class="modal-content--extra-large">
+          <span class="close"></span>
+          <h2 class="modal-title">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit
+          </h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+            eleifend est vitae sem mollis, in pretium enim bibendum. In
+            eleifend, augue vitae pellentesque pulvinar, neque nisi suscipit
+            lorem, sed facilisis sem leo vel diam. Fusce vitae quam libero.
+            Vestibulum ut faucibus quam. Ut ante quam, aliquet nec dictum
+            euismod, tristique ut lorem. Aenean in tellus ligula. Pellentesque
+            malesuada, purus at egestas rutrum, metus erat varius tellus, a
+            vulputate est massa vel velit.
+          </p>
+          <p>
+            Ut ante quam, aliquet nec dictum euismod, tristique ut lorem. Aenean
+            in tellus ligula. Pellentesque malesuada, purus at egestas rutrum,
+            metus erat varius tellus, a vulputate est massa vel velit.
+          </p>
+        </div>
+      </div>
+      <!-- Extra-Large -->
       <div class="modal" id="modal-large">
         <div class="modal-content--large">
           <span class="close"></span>
