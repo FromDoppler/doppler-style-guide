@@ -1,60 +1,68 @@
-.test {
-  .bb-line {
-    stroke-width: 2px;
-  }
+@use "helpers/colors";
 
-  .bb-axis-x text,
-  .bb-axis-y text {
-    font-weight: 700;
-    font-size: 13px;
-    line-height: 18px;
-    font-family: "proxima-nova", helvetica, arial, sans-serif;
-    fill: #666666;
-  }
+.dp-chart-container {
+  padding: 1.5rem;
+  background-color: colors.$dp-color-white;
+  border: 1px solid colors.$dp-color-onsite-gray-border;
 
-  .bb-axis-x path,
-  .bb-axis-y path {
-    stroke: #999999;
-  }
+  .dp-chart {
+    .bb-line {
+      stroke-width: 2px;
+    }
 
-  .bb-legend-item text {
-    font-size: 16px;
-    line-height: 18px;
-    color: #666666;
-    font-family: "proxima-nova", helvetica, arial, sans-serif;
-  }
+    .bb-axis-x text,
+    .bb-axis-y text {
+      font-weight: 700;
+      font-size: 13px;
+      line-height: 18px;
+      font-family: "proxima-nova", helvetica, arial, sans-serif;
+      fill: colors.$dp-color-grey;
+    }
 
-  .bb-tooltip-custom {
-    background-color: white;
-    border: 1px solid #cccccc;
-    border-radius: 3px;
-    padding: 16px;
-  }
+    .bb-axis-x path,
+    .bb-axis-y path {
+      stroke: colors.$dp-color-lightgrey;
+    }
 
-  .bb-tooltip-title {
-    font-size: 16px;
-    font-weight: bold;
-    line-height: 18px;
-    margin-bottom: 8px;
-    color: #666666;
-  }
+    .bb-legend-item text {
+      font-size: 16px;
+      line-height: 18px;
+      color: colors.$dp-color-grey;
+      font-family: "proxima-nova", helvetica, arial, sans-serif;
+    }
 
-  .bb-tooltip-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 8px;
-  }
+    .bb-tooltip-custom {
+      background-color: colors.$dp-color-white;
+      border: 1px solid colors.$dp-color-silver;
+      border-radius: 3px;
+      padding: 16px;
+    }
 
-  .bb-tooltip-marker {
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    margin-right: 8px;
-  }
+    .bb-tooltip-title {
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 18px;
+      margin-bottom: 8px;
+      color: colors.$dp-color-grey;
+    }
 
-  .bb-xgrid-focus line {
-    stroke: #999999;
-    stroke-width: 2px;
-    stroke-dasharray: 3, 3;
+    .bb-tooltip-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .bb-tooltip-marker {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      margin-right: 8px;
+    }
+
+    .bb-xgrid-focus line {
+      stroke: colors.$dp-color-lightgrey;
+      stroke-width: 2px;
+      stroke-dasharray: 3, 3;
+    }
   }
 }
