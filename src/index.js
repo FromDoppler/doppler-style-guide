@@ -15,8 +15,8 @@ import {
   initDropdownButtonBehavior,
   initExitEditorButtonBehavior,
   initFonts,
-  lineChart,
 } from "./js";
+import { lineChart } from "./js/charts";
 
 // autoInitialize flag is deprecated
 if (window["style-guide-configuration"]?.autoInitialize) {
@@ -36,7 +36,6 @@ if (window["style-guide-configuration"]?.autoInitialize) {
   window["style-guide-configuration"].initCarouselBehavior = true;
   window["style-guide-configuration"].initDropdownButtonBehavior = true;
   window["style-guide-configuration"].initExitEditorButtonBehavior = true;
-  window["style-guide-configuration"].lineChart = true;
 }
 
 if (window["style-guide-configuration"]?.initDopplerMenuBehavior) {
@@ -83,11 +82,6 @@ if (window["style-guide-configuration"]?.initDropdownButtonBehavior) {
 if (window["style-guide-configuration"]?.initExitEditorButtonBehavior) {
   initExitEditorButtonBehavior();
 }
-
 if (window["style-guide-configuration"]?.initFonts) {
   initFonts();
-}
-
-if (window["style-guide-configuration"]?.initFonts) {
-  lineChart();
 }
