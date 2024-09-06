@@ -453,23 +453,23 @@
         }
       }
 
-      .status {
+      .dp-widget-status {
         display: inline-block;
         width: 10px;
         height: 10px;
         border-radius: 50%;
         margin-right: 5px;
 
-        &.active {
+        &.dp-widget-active {
           background-color: colors.$dp-color-green;
         }
 
-        &.inactive {
+        &.dp-widget-inactive {
           background-color: colors.$dp-color-red;
         }
       }
 
-      .icon-md {
+      .dp-table-icon-md {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -483,7 +483,7 @@
       }
     }
 
-    .no-header-border-top {
+    .dp-no-header-border-top {
       th {
         border-top: none;
       }
@@ -498,7 +498,7 @@
       width: 100%;
     }
 
-    .text-lg {
+    .dp-table-text-lg {
       th {
         font-size: 13px;
       }
@@ -528,7 +528,7 @@
     }
   }
 
-  .border {
+  .dp-table-border {
     border: 1px solid #f2f1e9;
     border-radius: 3px;
     padding: 1.5rem;
