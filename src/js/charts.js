@@ -53,13 +53,9 @@ function generateLineChart() {
 
           d.forEach((item) => {
             tooltipHTML += `<div class="bb-tooltip-item">
-                                <span 
-                                  class="bb-tooltip-marker" 
-                                  style="background-color:${color(item)};"
-                                >
-                                </span>
-                                ${item.name}: ${defaultValueFormat(item.value)}
-                              </div>`;
+                            <span class="bb-tooltip-marker" style="background-color:${color(item)}"></span>
+                            ${item.name}: ${defaultValueFormat(item.value)}
+                            </div>`;
           });
 
           tooltipHTML += `</div>`;
