@@ -47,7 +47,7 @@ function generateLineChart() {
       tooltip: {
         contents: function (d, defaultTitleFormat, defaultValueFormat, color) {
           let tooltipHTML = `<div class="bb-tooltip-custom">
-                               <div class="bb-tooltip-title">
+                              <div class="bb-tooltip-title">
                                 Fecha: ${defaultTitleFormat(d[0].x)}
                               </div>`;
 
