@@ -16,6 +16,7 @@ import {
   initExitEditorButtonBehavior,
   initFonts,
 } from "./js";
+import { lineChart } from "./js/charts";
 
 // autoInitialize flag is deprecated
 if (window["style-guide-configuration"]?.autoInitialize) {
@@ -81,7 +82,6 @@ if (window["style-guide-configuration"]?.initDropdownButtonBehavior) {
 if (window["style-guide-configuration"]?.initExitEditorButtonBehavior) {
   initExitEditorButtonBehavior();
 }
-
 if (window["style-guide-configuration"]?.initFonts) {
   initFonts();
 }
