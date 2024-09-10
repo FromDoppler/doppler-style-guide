@@ -1,9 +1,7 @@
-import bb, { line } from "billboard.js";
+import bb, { line, bar } from "billboard.js";
 import "billboard.js/dist/billboard.css";
 
 function generateLineChart() {
-  console.log("this function");
-  console.log(document.getElementById("lineChart"));
   if (document.getElementById("lineChart")) {
     const lineChart = bb.generate({
       bindto: "#lineChart",
@@ -80,4 +78,24 @@ function generateLineChart() {
   return null;
 }
 
+function generateBarChart() {
+  if (document.getElementById("barChart")) {
+    const barChart = bb.generate({
+      bindto: "#barChart",
+      data: {
+        columns: [["data1", 27, 16, 7, 30]],
+        type: bar(),
+      },
+      padding: {
+        bottom: 80,
+      },
+      axis: {
+        rotated: true,
+      },
+    });
+    return lineChart;
+  }
+  return null;
+}
 export const lineChart = generateLineChart();
+export const barChart = generateBarChart();
