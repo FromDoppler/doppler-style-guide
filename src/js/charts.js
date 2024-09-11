@@ -2,8 +2,6 @@ import bb, { line } from "billboard.js";
 import "billboard.js/dist/billboard.css";
 
 function generateLineChart() {
-  console.log("this function");
-  console.log(document.getElementById("lineChart"));
   if (document.getElementById("lineChart")) {
     const lineChart = bb.generate({
       bindto: "#lineChart",
