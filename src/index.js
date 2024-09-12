@@ -16,7 +16,7 @@ import {
   initExitEditorButtonBehavior,
   initFonts,
 } from "./js";
-import { lineChart } from "./js/charts";
+import { lineChart, barChart } from "./js/charts";
 
 // autoInitialize flag is deprecated
 if (window["style-guide-configuration"]?.autoInitialize) {

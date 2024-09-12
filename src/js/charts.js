@@ -1,4 +1,4 @@
-import bb, { line } from "billboard.js";
+import bb, { line, bar } from "billboard.js";
 import "billboard.js/dist/billboard.css";
 
 function generateLineChart() {
@@ -78,4 +78,78 @@ function generateLineChart() {
   return null;
 }
 
+function generateBarChart() {
+  if (document.getElementById("barChart")) {
+    const chart = bb.generate({
+      bindto: "#barChart",
+      data: {
+        x: "x",
+        columns: [
+          [
+            "x",
+            "WhatsApp",
+            "Subscripcion Newsletter",
+            "Black Friday",
+            "Promocion 20% OFF",
+          ],
+          ["Pop-up WhatsApp", 28, 0, 0, 0],
+          ["Pop-up Suscripción", 0, 16, 0, 0],
+          ["Pop-up Promocional", 0, 0, 8, 30],
+        ],
+        type: bar(),
+        groups: [
+          ["Pop-up WhatsApp", "Pop-up Suscripción", "Pop-up Promocional"],
+        ],
+      },
+      bar: {
+        width: {
+          ratio: 0.5,
+        },
+      },
+      axis: {
+        rotated: true,
+        x: {
+          type: "category",
+        },
+      },
+      legend: {
+        position: "bottom",
+        padding: 20,
+        item: {
+          tile: {
+            width: 16,
+            height: 16,
+          },
+        },
+      },
+      tooltip: {
+        grouped: false,
+        contents: function (d, defaultTitleFormat, defaultValueFormat, color) {
+          let tooltipHTML = `<div class="bb-tooltip-custom">
+                              <div class="bb-tooltip-title">
+                                Nombre: ${defaultTitleFormat(d[0].x)}
+                              </div>`;
+
+          d.forEach((item) => {
+            tooltipHTML += `<div class="bb-tooltip-item">
+                            <span class="bb-tooltip-marker" style="background-color:${color(item)}"></span>
+                            ${item.name}: ${defaultValueFormat(item.value)}
+                            </div>`;
+          });
+
+          tooltipHTML += `</div>`;
+          return tooltipHTML;
+        },
+      },
+      padding: {
+        bottom: 60,
+        top: 10,
+      },
+    });
+
+    return lineChart;
+  }
+  return null;
+}
 export const lineChart = generateLineChart();
+export const barChart = generateBarChart();
