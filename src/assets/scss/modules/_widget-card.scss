@@ -42,67 +42,10 @@
 
   &-text {
     padding-right: 30px;
-
-    h3 {
-      font-size: 18px;
-      font-weight: 700;
-      margin: 0;
-      color: colors.$dp-color-darkgrey;
-    }
-
-    p {
-      font-size: 16px;
-      color: colors.$dp-color-grey;
-      line-height: 20px;
-      font-weight: 400;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      line-clamp: 2;
-      -webkit-box-orient: vertical;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
   }
 
   &-action {
     align-self: flex-end;
-
-    a {
-      color: colors.$dp-color-green;
-      font-weight: 700;
-      font-size: 16px;
-      line-height: 24px;
-      cursor: pointer;
-      text-decoration: none;
-    }
-  }
-
-  &-new-feature {
-    &::before {
-      content: "";
-      position: absolute;
-      right: -8px;
-      height: 121px;
-      width: 121px;
-      top: -5px;
-      z-index: 2;
-      background: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTI5IiBoZWlnaHQ9IjEyOSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+PGRlZnM+PGZpbHRlciB4PSItMTEuMyUiIHk9Ii04LjMlIiB3aWR0aD0iMTIxLjMlIiBoZWlnaHQ9IjEyMS4zJSIgaWQ9ImEiLz48cGF0aCBpZD0iYiIgZD0iTTYuNTkzIDBMMTIxIDExNC40MjZ2LTQ1LjQ4TDUyLjA3MyAweiIvPjwvZGVmcz48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik03LjU5NiA1TDEgOWgxMy4xN2w2LjU5NS00SDcuNTk1ek0xMTggMTEyLjU5NnYxMy4xNjlsNC02LjU5NlYxMDZsLTQgNi41OTZ6IiBmaWxsPSIjOTM2RDlGIi8+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMSA1KSI+PHVzZSBmaWxsPSIjMDAwIiBmaWx0ZXI9InVybCgjYSkiIHhsaW5rOmhyZWY9IiNiIi8+PHVzZSBmaWxsPSIjQjU4RkMxIiB4bGluazpocmVmPSIjYiIvPjwvZz48L2c+PC9zdmc+)
-        no-repeat center center;
-    }
-
-    &::after {
-      color: #fff;
-      text-transform: uppercase;
-      font-size: 9px;
-      content: attr(data-text);
-      display: inline-block;
-      position: absolute;
-      transform: rotate(45deg);
-      z-index: 2;
-      font-weight: 400;
-      top: 39px;
-      right: 11px;
-    }
   }
 
   &-hover-message {
@@ -117,27 +60,5 @@
     transition: opacity 0.5s ease-in-out;
     z-index: 3;
     border-radius: 5px;
-
-    h3 {
-      font-size: 16px;
-      font-weight: 700;
-      color: colors.$dp-color-white;
-    }
-
-    p {
-      font-size: 13px;
-      font-weight: 400;
-      line-height: normal;
-    }
-
-    a {
-      cursor: pointer;
-      color: colors.$dp-color-white;
-      text-transform: uppercase;
-      &:hover {
-        text-decoration: underline;
-        color: inherit;
-      }
-    }
   }
 }
