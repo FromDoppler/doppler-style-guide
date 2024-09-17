@@ -10,9 +10,9 @@ export default {
       defaultValue: "dp-green",
       options: ["dp-green", "dp-yellow", "dp-red"],
     },
-    banner: {
+    ribbon: {
       control: { type: "boolean" },
-      description: "Show or hide the new feature banner",
+      description: "Show or hide the new feature ribbon",
       defaultValue: false,
     },
     message: {
@@ -26,27 +26,27 @@ export default {
   },
 };
 
-const Template = ({ bgColor, banner, message }) =>
-  WidgetCard({ bgColor, banner, message });
+const Template = ({ bgColor, ribbon, message }) =>
+  WidgetCard({ bgColor, ribbon, message });
 
 export const Default = Template.bind({});
 Default.args = {
   bgColor: "dp-red",
-  banner: false,
+  ribbon: false,
   message: null,
 };
 
-export const WithBanner = Template.bind({});
-WithBanner.args = {
+export const WithRibbon = Template.bind({});
+WithRibbon.args = {
   bgColor: "dp-red",
-  banner: true,
+  ribbon: true,
   message: null,
 };
 
 export const WithMessage = Template.bind({});
 WithMessage.args = {
   bgColor: "dp-red",
-  banner: false,
+  ribbon: false,
   message: {
     title: "Hover Title",
     description: "This is a hover message description.",
