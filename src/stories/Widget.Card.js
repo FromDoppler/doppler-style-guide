@@ -3,7 +3,7 @@ import { html } from "lit-html";
 /**
  * Primary UI component for user interaction
  */
-export const WidgetCard = ({ bgColor, banner, message }) => {
+export const WidgetCard = ({ bgColor, ribbon, message }) => {
   return html`
     <div class="m-b-24">
       <h2>Widget-Card</h2>
@@ -24,10 +24,13 @@ export const WidgetCard = ({ bgColor, banner, message }) => {
               <a href="#">Seleccionar</a>
             </div>
           </div>
-          <div
-            class="${banner ? "dp-widget-card-new-feature" : ""}"
-            data-text="New Feature"
-          />
+          ${ribbon
+            ? html`<div
+                class="dp-ribbon dp-ribbon-top-right-alt dp-ribbon-violet"
+              >
+                <span>New Feature</span>
+              </div>`
+            : ""}
           ${message
             ? html`
                 <div class="${`dp-widget-card-hover-message ${bgColor}`}">
