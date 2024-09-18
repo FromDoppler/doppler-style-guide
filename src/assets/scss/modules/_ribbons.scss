@@ -59,27 +59,46 @@
 
   /// Ribbon Top right
 
-  .dp-ribbon-top-right {
+  .dp-ribbon-top-right,
+  .dp-ribbon-top-right-alt {
     top: -10px;
     right: -10px;
+
+    &::before,
+    &::after {
+      border-top-color: transparent;
+      border-right-color: transparent;
+    }
+
+    span {
+      left: -25px;
+      top: 30px;
+      transform: rotate(45deg);
+    }
   }
-  .dp-ribbon-top-right::before,
-  .dp-ribbon-top-right::after {
-    border-top-color: transparent;
-    border-right-color: transparent;
+
+  .dp-ribbon-top-right {
+    &::before {
+      top: -2px;
+      left: 34px;
+    }
+
+    &::after {
+      bottom: 34px;
+      right: -2px;
+    }
   }
-  .dp-ribbon-top-right::before {
-    top: -2px;
-    left: 34px;
-  }
-  .dp-ribbon-top-right::after {
-    bottom: 34px;
-    right: -2px;
-  }
-  .dp-ribbon-top-right span {
-    left: -25px;
-    top: 30px;
-    transform: rotate(45deg);
+
+  .dp-ribbon-top-right-alt {
+    &::before {
+      top: 0px;
+      left: 33px;
+    }
+
+    &::after {
+      bottom: 33px;
+      right: 0px;
+    }
   }
 
   /// Ribbon Top left
