@@ -5,11 +5,8 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(388px, 1fr));
   gap: 1rem;
-
-  @media (max-width: 600px) {
-    .grid-container {
-      grid-template-columns: 1fr;
-    }
+  @media screen and (max-width: 400px) {
+    grid-template-columns: 1fr;
   }
 }
 
