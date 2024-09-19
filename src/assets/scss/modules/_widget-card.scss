@@ -1,10 +1,16 @@
 @use "helpers/colors";
 
-.dp-widget-card-container {
+.dp-widget-card-grid-container {
   padding: 4px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(388px, 1fr));
   gap: 1rem;
+
+  @media (max-width: 600px) {
+    .grid-container {
+      grid-template-columns: 1fr;
+    }
+  }
 }
 
 .dp-widget-card {
