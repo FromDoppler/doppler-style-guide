@@ -1,5 +1,12 @@
 @use "helpers/colors";
 
+.dp-widget-card-container {
+  padding: 4px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(388px, 1fr));
+  gap: 1rem;
+}
+
 .dp-widget-card {
   align-items: flex-start;
   border: 1px solid colors.$dp-color-onsite-gray-border;
@@ -9,7 +16,7 @@
   background-color: colors.$dp-color-white;
   transition: box-shadow 0.15s ease-in-out;
   position: relative;
-  width: calc((100% - 20px) / 3);
+  width: 100%;
   height: 140px;
 
   &:hover {
