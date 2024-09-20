@@ -63,3 +63,22 @@
     border-radius: 5px;
   }
 }
+
+.dp-widget-info-card {
+  align-items: flex-start;
+  border: 1px solid colors.$dp-color-onsite-gray-border;
+  border-radius: 5px;
+  display: flex;
+  padding: 24px;
+  background-color: colors.$dp-color-white;
+  transition: box-shadow 0.15s ease-in-out;
+  position: relative;
+  width: 100%;
+  height: 140px;
+  box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.15);
+
+  &-header {
+    display: flex;
+    align-items: center;
+  }
+}
