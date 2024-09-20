@@ -7,7 +7,7 @@ export const WidgetCard = ({ bgColor, ribbon, message }) => {
   return html`
     <div class="m-b-24">
       <h2>Widget-Card</h2>
-      <div class="dp-widget-card-grid-container" style="max-width: 500px">
+      <div class="col-lg-4">
         <div class="dp-widget-card">
           <div class="${`dp-widget-card-icon ${bgColor}`}">
             <span class="dpicon iconapp-online-clothing"></span>
