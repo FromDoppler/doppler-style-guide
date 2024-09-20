@@ -1,15 +1,5 @@
 @use "helpers/colors";
 
-.dp-widget-card-grid-container {
-  padding: 4px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 388px);
-  gap: 1rem;
-  @media screen and (max-width: 400px) {
-    grid-template-columns: 1fr;
-  }
-}
-
 .dp-widget-card {
   align-items: flex-start;
   border: 1px solid colors.$dp-color-onsite-gray-border;
