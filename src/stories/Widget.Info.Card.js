@@ -42,7 +42,7 @@ export const WidgetInfoCard = ({ bgColor }) => {
                       <button type="button">Editar</button>
                     </li>
                     <li role="menuitem">
-                      <button type="button">Dumplicar</button>
+                      <button type="button">Duplicar</button>
                     </li>
                     <li role="menuitem">
                       <button type="button">Eliminar</button>
