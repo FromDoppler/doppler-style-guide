@@ -7,7 +7,7 @@ export const WidgetInfoCard = ({ bgColor }) => {
   return html`
     <div class="m-b-24">
       <h2>Widget-Info-Card</h2>
-      <div class="col-lg-5">
+      <div class="col-md-8 col-lg-5">
         <div class="dp-widget-info-card">
           <div class="dp-widget-info-card-header">
             <div class="${`dp-widget-card-icon ${bgColor}`}">
@@ -25,14 +25,31 @@ export const WidgetInfoCard = ({ bgColor }) => {
               </label>
             </div>
 
-            <div class="dp-widget-info-card-header-menu">
-              <button>
-                <div class="dp-dots-menu-icon">
-                  <span class="dp-dot"></span>
-                  <span class="dp-dot"></span>
-                  <span class="dp-dot"></span>
+            <div
+              class="dp-table-multilogin dp-flex-wrap dp-button-dropdown-wrap dp-wrap-medium dp-fit-content"
+            >
+              <div class="dp-button-box">
+                <button
+                  class="dp-button button-medium dp-button-dropdown dp-three-points-vertical "
+                  aria-controls="dp-exit-editor"
+                ></button>
+                <div
+                  class="dp-content-menu dp-max-content dp-menu-to-left"
+                  style="display: none;"
+                >
+                  <ul class="dp-list-dropdown" id="dropdown">
+                    <li role="menuitem">
+                      <button type="button">Editar</button>
+                    </li>
+                    <li role="menuitem">
+                      <button type="button">Dumplicar</button>
+                    </li>
+                    <li role="menuitem">
+                      <button type="button">Eliminar</button>
+                    </li>
+                  </ul>
                 </div>
-              </button>
+              </div>
             </div>
           </div>
 
