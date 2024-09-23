@@ -160,6 +160,16 @@
         inset 0 0 0 3px colors.$dp-color-snow,
         inset 0 0 0 5px colors.$dp-color-orange-focus;
       z-index: 3;
+
+      &.dp-max-content {
+        width: max-content;
+        min-width: 200px;
+      }
+
+      &.dp-menu-to-left {
+        right: 0;
+        left: auto;
+      }
     }
 
     .dp-list-dropdown {
