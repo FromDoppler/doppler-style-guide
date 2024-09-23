@@ -1,16 +1,20 @@
 @use "helpers/colors";
 
-.dp-widget-card {
-  align-items: flex-start;
+.dp-widget-card,
+.dp-widget-info-card {
   border: 1px solid colors.$dp-color-onsite-gray-border;
   border-radius: 5px;
   display: flex;
   padding: 24px;
   background-color: colors.$dp-color-white;
-  transition: box-shadow 0.15s ease-in-out;
   position: relative;
   width: 100%;
+}
+
+.dp-widget-card {
   height: 140px;
+  align-items: flex-start;
+  transition: box-shadow 0.15s ease-in-out;
 
   &:hover {
     box-shadow: 0 0 0 4px rgba(105, 105, 105, 0.15);
@@ -65,20 +69,77 @@
 }
 
 .dp-widget-info-card {
-  align-items: flex-start;
-  border: 1px solid colors.$dp-color-onsite-gray-border;
-  border-radius: 5px;
-  display: flex;
-  padding: 24px;
-  background-color: colors.$dp-color-white;
-  transition: box-shadow 0.15s ease-in-out;
-  position: relative;
-  width: 100%;
-  height: 140px;
+  height: 194px;
+  flex-direction: column;
   box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.15);
 
   &-header {
     display: flex;
     align-items: center;
+    width: 100%;
+    padding-bottom: 20px;
+    border-bottom: 1px solid colors.$dp-color-onsite-gray-border;
+
+    &-title {
+      flex: 1;
+    }
+
+    &-menu {
+      font-size: xx-large;
+      display: flex;
+
+      .dp-dots-menu-icon {
+        margin-left: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 4px;
+        height: 28px;
+      }
+
+      .dp-dot {
+        width: 6px;
+        height: 6px;
+        background-color: #555;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  &-data {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px 0;
+
+    .dp-stat-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+
+      &:not(:last-child) {
+        border-right: 1px solid colors.$dp-color-onsite-gray-border;
+      }
+
+      .dp-stat-text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .dp-stat-text-label {
+          margin-top: 5px;
+          margin-bottom: 5px;
+        }
+
+        .dp-stat-text-value {
+          font-size: 22px;
+          color: colors.$dp-color-grey;
+          font-weight: bold;
+          line-height: 24px;
+        }
+      }
+    }
   }
 }
