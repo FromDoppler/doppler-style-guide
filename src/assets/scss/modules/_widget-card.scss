@@ -83,27 +83,6 @@
     &-title {
       flex: 1;
     }
-
-    &-menu {
-      font-size: xx-large;
-      display: flex;
-
-      .dp-dots-menu-icon {
-        margin-left: 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 4px;
-        height: 28px;
-      }
-
-      .dp-dot {
-        width: 6px;
-        height: 6px;
-        background-color: #555;
-        border-radius: 50%;
-      }
-    }
   }
 
   &-data {
