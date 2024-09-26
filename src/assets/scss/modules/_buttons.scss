@@ -55,6 +55,16 @@
       &:after {
         left: 1em;
       }
+
+      &.button-icon {
+        padding-left: 3em;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5em;
+        line-height: normal;
+      }
     }
 
     &.button--centered-loading {
