@@ -26,7 +26,7 @@ export const WidgetInfoCard = ({ bgColor }) => {
             </div>
 
             <div
-              class="dp-menu-container dp-flex-wrap dp-button-dropdown-wrap dp-wrap-medium "
+              class="dp-dots-menu-container dp-flex-wrap dp-button-dropdown-wrap dp-wrap-medium "
             >
               <div class="dp-button-box">
                 <button

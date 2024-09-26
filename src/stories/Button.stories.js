@@ -53,3 +53,6 @@ Secondary.args = { ...commonArgs, mode: "secondary" };
 
 export const Link = Template.bind({});
 Link.args = { ...commonArgs, mode: "link" };
+
+export const Icon = Template.bind({});
+Icon.args = { ...commonArgs, iconClass: "iconapp-user-interface" };
