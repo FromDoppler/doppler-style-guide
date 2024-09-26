@@ -13,6 +13,7 @@ export const Button = ({
   rounded,
   onClick,
   mode,
+  iconClass,
 }) => {
   if (preloading) {
     label = "";
@@ -28,10 +29,12 @@ export const Button = ({
         loading ? "button--loading" : "",
         rounded ? "button--round" : "",
         preloading ? "button--centered-loading" : "",
+        iconClass ? "button-icon" : "",
       ].join(" ")}"
       @click="${onClick}"
       .disabled="${disabled}"
     >
+      ${iconClass ? html`<span class="${`dpicon ${iconClass}`}"></span>` : ""}
       ${label}
     </button>
   `;
