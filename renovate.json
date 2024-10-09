@@ -1,21 +1,19 @@
 {
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
     "config:base",
     ":semanticCommits",
     ":combinePatchMinorReleases",
     ":enableVulnerabilityAlerts",
-    ":automergeLinters",
-    ":automergeTesters",
-    ":automergeTypes",
     ":prConcurrentLimitNone",
-    ":prConcurrentLimit20",
-    "group:dotNetCore"
+    ":prConcurrentLimit20"
   ],
   "platformAutomerge": true,
   "packageRules": [
     {
       "packageRules": [
         {
+          "description": "Automerge non-major updates",
           "matchUpdateTypes": ["minor", "patch"],
           "matchDepTypes": ["devDependencies"],
           "automerge": true
