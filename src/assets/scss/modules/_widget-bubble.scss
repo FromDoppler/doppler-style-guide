@@ -1,0 +1,209 @@
+@use "core/variables";
+@use "helpers/colors";
+@use "core/typography";
+
+.dp-bubble-flex-container {
+  display: flex;
+  flex-direction: row;
+  gap: variables.$dp-spaces--lv2;
+
+  .dp-bubble-location {
+    display: flex;
+    gap: variables.$dp-spaces--lv2;
+
+    .dp-location-option {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      width: auto;
+
+      .dp-bubble-input--radio[type="radio"] {
+        display: none;
+      }
+
+      .dp-location-inner {
+        width: 50px;
+        height: 50px;
+        border: 2px solid colors.$dp-color-silver;
+        border-radius: variables.$dp-border-radius;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        &.left,
+        &.right {
+          &::before {
+            content: "";
+            width: 20px;
+            height: 10px;
+            background-color: colors.$dp-color-grey;
+            position: absolute;
+            bottom: variables.$dp-spaces--lv1;
+          }
+        }
+        &.left {
+          &::before {
+            left: variables.$dp-spaces--lv1;
+          }
+        }
+        &.right {
+          &::before {
+            right: variables.$dp-spaces--lv1;
+          }
+        }
+      }
+
+      input[type="radio"]:checked + .dp-location-inner {
+        border-color: colors.$dp-color-blue-widget;
+
+        &::before {
+          background-color: colors.$dp-color-blue-widget;
+        }
+      }
+    }
+  }
+
+  .dp-bubble-options-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: variables.$dp-spaces--lv2;
+
+    .dp-bubble-color-option {
+      display: flex;
+      align-items: center;
+      gap: variables.$dp-spaces--lv2;
+
+      .dp-color-sample-container {
+        width: 50px;
+        height: 50px;
+        border: 2px solid colors.$dp-color-silver;
+        border-radius: variables.$dp-border-radius;
+        margin-bottom: 4px;
+        padding: 3px;
+        .dp-color-sample {
+          border-radius: variables.$dp-border-radius;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  .dp-bubble-color-text {
+    font-size: 13px;
+    color: colors.$dp-color-grey;
+  }
+
+  .dp-bubble-image-container {
+    display: flex;
+    padding: 35px 60px;
+    background: #f2f2f2;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+
+    .dp-arrow-left {
+      position: absolute;
+      left: 24px;
+      padding: 8px;
+    }
+
+    .dp-arrow-right {
+      position: absolute;
+      right: 24px;
+      padding: 8px;
+    }
+
+    .dp-desktop-mockup-image {
+      background-repeat: no-repeat;
+      width: 509px;
+      height: 360px;
+      display: block;
+      background-image: url(assets/img/desktop-mockup.svg);
+      position: relative;
+
+      .widget-button {
+        position: absolute;
+        bottom: 5%;
+        text-transform: none;
+
+        &.left {
+          left: 4%;
+        }
+
+        &.right {
+          right: 4%;
+        }
+      }
+    }
+
+    .dp-mobile-mockup-image {
+      background-repeat: no-repeat;
+      width: 194px;
+      height: 365px;
+      display: block;
+      background-image: url(assets/img/mobile-mockup.svg);
+      position: relative;
+
+      .widget-button {
+        position: absolute;
+        bottom: 5%;
+        border-radius: 50%;
+        padding: 14px;
+        text-transform: none;
+
+        &.left {
+          left: 4%;
+        }
+
+        &.right {
+          right: 4%;
+        }
+      }
+    }
+
+    .display-none {
+      display: none;
+    }
+
+    .uppercase-none {
+      text-transform: none;
+    }
+  }
+
+  .dp-device-selector {
+    display: flex;
+    gap: 20px;
+    margin-top: 24px;
+    justify-content: center;
+
+    .dp-device-option {
+      display: flex;
+      align-items: center;
+      width: auto;
+      cursor: pointer;
+      gap: 5px;
+
+      input[type="radio"] {
+        display: none;
+      }
+
+      .dp-device-icon {
+        font-size: 14px;
+      }
+
+      .dp-device-label {
+        font-weight: normal;
+        font-size: 14px;
+        width: 70px;
+        display: inline-block;
+      }
+
+      input[type="radio"]:checked + .dp-device-icon + .dp-device-label {
+        font-weight: bold;
+      }
+    }
+  }
+}
