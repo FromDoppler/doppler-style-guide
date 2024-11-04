@@ -9,12 +9,19 @@ export default {
       description: "Position of the bubble",
       defaultValue: "left",
     },
+    device: {
+      options: ["desktop", "mobile"],
+      control: { type: "radio" },
+      description: "Type of device",
+      defaultValue: "desktop",
+    },
   },
 };
 
-const Template = ({ side }) => WidgetBubble({ side });
+const Template = ({ side, device }) => WidgetBubble({ side, device });
 
 export const Default = Template.bind({});
 Default.args = {
   side: "left",
+  device: "desktop",
 };

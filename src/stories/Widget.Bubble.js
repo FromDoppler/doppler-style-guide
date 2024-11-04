@@ -1,6 +1,6 @@
 import { html } from "lit-html";
 
-export const WidgetBubble = ({ side }) => {
+export const WidgetBubble = ({ side, device }) => {
   return html`
     <form class="dp-container awa-form">
       <h2>Configuración de widget</h2>
@@ -88,7 +88,10 @@ export const WidgetBubble = ({ side }) => {
               type="button"
               class="ms-icon icon-arrow-prev dp-arrow-left"
             ></button>
-            <span class="dp-desktop-mockup-image">
+            <span
+              class="dp-desktop-mockup-image"
+              style=${`display: ${device === "desktop" ? "block" : "none"}`}
+            >
               <button
                 type="button"
                 class="dp-button button-small button--round widget-button ${side}"
@@ -98,7 +101,10 @@ export const WidgetBubble = ({ side }) => {
                 Últimos vistos
               </button>
             </span>
-            <span class="dp-mobile-mockup-image display-none">
+            <span
+              class="dp-mobile-mockup-image"
+              style=${`display: ${device === "mobile" ? "block" : "none"}`}
+            >
               <button
                 type="button"
                 class="dp-button button-small button--round widget-button ${side}"
@@ -114,12 +120,22 @@ export const WidgetBubble = ({ side }) => {
           </div>
           <div class="dp-device-selector">
             <label class="dp-device-option">
-              <input type="radio" name="device" value="desktop" checked />
+              <input
+                type="radio"
+                name="device"
+                value="desktop"
+                ?checked=${device === "desktop"}
+              />
               <span class="dpicon iconapp-monitor dp-device-icon"></span>
               <span class="dp-device-label">Desktop</span>
             </label>
             <label class="dp-device-option">
-              <input type="radio" name="device" value="mobile" />
+              <input
+                type="radio"
+                name="device"
+                value="mobile"
+                ?checked=${device === "mobile"}
+              />
               <span
                 class="dpicon iconapp-smartphone dp-device-icon"
                 title=""
