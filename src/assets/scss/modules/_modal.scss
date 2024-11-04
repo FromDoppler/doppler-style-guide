@@ -357,6 +357,20 @@
     }
   }
 
+  /* Modal AddOn */
+
+  #modal-addons {
+    .modal-content--medium {
+      padding: 20px 45px;
+      max-width: 600px;
+      background-color: #fff;
+
+      .dp-carousel {
+        padding-bottom: 0;
+      }
+    }
+  }
+
   /* Multilogin modal permissions */
 
   #modal-permissions {
