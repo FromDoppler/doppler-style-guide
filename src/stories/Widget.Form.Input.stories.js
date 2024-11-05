@@ -54,8 +54,7 @@ export default {
       description:
         "The children of the input container, could be another input",
       control: { type: "text" },
-      defaultValue:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ipsum tellus, pharetra nec viverra a, efficitur ac ipsum. Ut vitae libero in dui congue faucibus. Maecenas rutrum euismod tempor. Phasellus aliquet mi non justo ultricies, sed egestas metus consectetur. Curabitur sed sem rutrum, euismod tellus et, accumsan mauris. Phasellus non suscipit turpis, a mattis nisl. Mauris euismod, ante eget fermentum volutpat, tortor lectus ullamcorper nisi, at elementum massa libero a lacus. Proin porttitor porttitor ipsum.",
+      defaultValue: "Lorem ipsum dolor sit amet...",
     },
     showChildren: {
       description: "Indicates if the children content should be displayed",
@@ -116,7 +115,6 @@ Default.args = {
   textAfter: "times per user",
   inputValue: 5,
   options: ["chrome", "firefox", "internet explorer", "safari", "opera"],
-  children:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ipsum tellus, pharetra nec viverra a, efficitur ac ipsum. Ut vitae libero in dui congue faucibus. Maecenas rutrum euismod tempor. Phasellus aliquet mi non justo ultricies, sed egestas metus consectetur. Curabitur sed sem rutrum, euismod tellus et, accumsan mauris. Phasellus non suscipit turpis, a mattis nisl. Mauris euismod, ante eget fermentum volutpat, tortor lectus ullamcorper nisi, at elementum massa libero a lacus. Proin porttitor porttitor ipsum.",
+  children: "Lorem ipsum dolor sit amet...",
   showChildren: false,
 };
