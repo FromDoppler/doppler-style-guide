@@ -66,6 +66,16 @@
     z-index: 3;
     border-radius: 5px;
   }
+
+  &-hover-message h3,
+  &-hover-message a,
+  &-hover-message p {
+    color: colors.$dp-color-white;
+  }
+
+  &-hover-message a:hover {
+    color: colors.$dp-color-blue;
+  }
 }
 
 .dp-widget-info-card {
