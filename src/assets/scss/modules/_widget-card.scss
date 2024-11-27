@@ -68,13 +68,18 @@
   }
 
   &-hover-message h3,
-  &-hover-message a,
   &-hover-message p {
     color: colors.$dp-color-white;
   }
 
+  &-hover-message a {
+    text-transform: uppercase;
+    color: colors.$dp-color-white;
+    text-decoration-line: underline;
+  }
+
   &-hover-message a:hover {
-    color: colors.$dp-color-blue;
+    color: colors.$dp-color-white;
   }
 }
 
