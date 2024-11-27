@@ -73,6 +73,7 @@
   }
 
   &-hover-message a {
+    text-transform: uppercase;
     color: colors.$dp-color-white;
     text-decoration-line: underline;
   }
