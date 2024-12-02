@@ -74,6 +74,15 @@
     }
   }
 
+  .dp-tooltip-top-bubble {
+    max-width: 180px;
+    font-size: variables.$dp-sizing--lvl2;
+    line-height: variables.$dp-spaces--lv3;
+    text-align: center;
+    display: inline-block;
+    font-weight: normal;
+  }
+
   .dp-tooltip-top {
     opacity: 0;
     //TODO: duplicated code
