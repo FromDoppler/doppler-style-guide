@@ -57,7 +57,7 @@
     "@storybook/manager-webpack5": "6.5.16",
     "@storybook/web-components": "6.5.16",
     "concurrently": "9.1.0",
-    "dotenv": "16.4.5",
+    "dotenv": "16.4.6",
     "dotenv-flow-webpack": "2.0.0",
     "eclint": "2.8.1",
     "lit-html": "3.2.1",
