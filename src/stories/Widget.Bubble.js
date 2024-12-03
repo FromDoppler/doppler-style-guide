@@ -57,7 +57,7 @@ export const WidgetBubble = ({ side, device }) => {
               </label>
             </li>
 
-            <li class="field-item col-lg-8 col-md-12">
+            <li class="field-item col-md-12 m-t-6">
               <label>Color de burbuja:</label>
               <div class="dp-bubble-options-container">
                 <div class="dp-bubble-color-option">
