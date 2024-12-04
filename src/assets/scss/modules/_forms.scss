@@ -160,6 +160,10 @@
       width: 100%;
       margin-bottom: var.$dp-spaces--lv2;
 
+      &.dp-no-margin-bottom {
+        margin-bottom: 0;
+      }
+
       &__checkbox {
         cursor: pointer;
         margin-bottom: var.$dp-spaces--lv2;
@@ -1138,6 +1142,7 @@
 
   .dp-input--radio.dp-checkout-radio-selected {
     .dp-accordion-content {
+      display: flex;
       border-left: 1px solid colors.$dp-color-silver;
       margin-left: 52px;
       width: 100%;

@@ -69,11 +69,22 @@
     margin-left: -(variables.$dp-spaces--lv2);
   }
 
+  .dp-colflex {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+  }
+
   [class*="col-"] {
     position: relative;
     width: 100%;
     padding-right: variables.$dp-spaces--lv2;
     padding-left: variables.$dp-spaces--lv2;
+  }
+
+  .p-all-0 {
+    padding: 0;
   }
 
   .dp-box-shadow {
