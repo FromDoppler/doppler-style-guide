@@ -95,8 +95,19 @@
     padding-bottom: 20px;
     border-bottom: 1px solid colors.$dp-color-onsite-gray-border;
 
-    &-title {
+    &-title-container {
       flex: 1;
+    }
+
+    &-subtitle-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-right: 18px;
+    }
+
+    &-subtitle {
+      font-size: 14px;
     }
   }
 

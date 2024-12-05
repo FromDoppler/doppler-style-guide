@@ -7,15 +7,25 @@ export const WidgetInfoCard = ({ bgColor }) => {
   return html`
     <div class="m-b-24">
       <h2>Widget-Info-Card</h2>
-      <div class="col-md-8 col-lg-5">
+      <div class="col-md-8 col-lg-6">
         <div class="dp-widget-info-card">
           <div class="dp-widget-info-card-header">
             <div class="${`dp-widget-card-icon ${bgColor}`}">
               <span class="dpicon iconapp-online-clothing"></span>
             </div>
 
-            <div class="dp-widget-info-card-header-title">
-              <h3>Historial de productos</h3>
+            <div class="dp-widget-info-card-header-title-container">
+              <h3 class="dp-widget-info-card-header-title">
+                Historial de productos
+              </h3>
+              <div class="dp-widget-info-card-header-subtitle-container">
+                <span class="dp-widget-info-card-header-subtitle">
+                  Historial de Productos
+                </span>
+                <span class="dp-widget-info-card-header-subtitle">
+                  Fecha creación: 04/03/2024
+                </span>
+              </div>
             </div>
 
             <div class="dp-switch">
