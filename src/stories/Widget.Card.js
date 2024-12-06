@@ -21,7 +21,8 @@ export const WidgetCard = ({ bgColor, ribbon, message }) => {
               </p>
             </div>
             <div class="dp-widget-card-action">
-              <a href="#">Seleccionar</a>
+              <a href="#">Seleccionar</a
+              ><span class="iconapp-arrow-right"></span>
             </div>
           </div>
           ${ribbon

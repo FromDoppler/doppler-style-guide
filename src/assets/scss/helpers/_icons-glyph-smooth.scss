@@ -52,6 +52,24 @@
   border-bottom: none;
 }
 
+.iconapp-arrow-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::before {
+    content: "";
+    position: relative;
+    display: block;
+    background-image: url(assets/img/right-long-solid.svg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 16px 16px;
+    width: 16px;
+    height: 16px;
+  }
+}
+
 [class^="dpicon"],
 [class*="dpicon"] {
   /* use !important to prevent issues with browser extensions that change fonts */
