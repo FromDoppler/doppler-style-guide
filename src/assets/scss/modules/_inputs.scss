@@ -303,6 +303,9 @@
     line-height: 24px;
     margin-top: var.$dp-spaces--lv1;
     box-shadow: 0 0 0 2px colors.$dp-color-white;
+    &.silver {
+      border: 1px solid colors.$dp-color-silver;
+    }
   }
 
   .labelcontrol input[type="text"] {
@@ -373,7 +376,6 @@
   }
 
   /* AWA search */
-
   .dp-wrap-search.dp-bg-search input {
     padding-left: 36px;
     border: 1px solid #838370;
@@ -409,6 +411,10 @@
       border-radius: 100%;
       box-shadow: rgba(255, 255, 255, 0) 0px 0px 0px 30px;
       transition: box-shadow 0.4s ease 0s;
+      
+      &.grey {
+        color: colors.$dp-color-grey;
+      }
 
       &:hover {
         box-shadow: rgba(149, 157, 165, 0.5) 0 0 0 0;
