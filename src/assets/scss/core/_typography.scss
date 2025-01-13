@@ -23,6 +23,11 @@ $dp-label-fontsize-base: 0.9rem; /*14px*/
 $dp-lineheight-medium: 1.5rem; /*24px*/
 
 @font-face {
+  font-family: "HandOfSeanPro";
+  src: url("assets/fonts/HandOfSeanPro-webfont.ttf") format("truetype");
+}
+
+@font-face {
   font-family: "hand-of-sean";
   src: url("assets/fonts/HandOfSeanPro-webfont.eot");
   src:
