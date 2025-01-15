@@ -1,0 +1,15 @@
+/* temporaly rule 
+  TODO: Create new footer element cross app site 
+*/
+.dp-root-footer {
+  .arrow {
+    &::before {
+      content: "";
+      position: absolute;
+      background: url("assets/img/arrow-right-graphic.svg") no-repeat 0 0;
+      height: 40px;
+      width: 40px;
+      transform: rotate(-20deg) scaleY(-1);
+    }
+  }
+}
