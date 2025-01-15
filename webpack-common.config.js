@@ -93,6 +93,14 @@ module.exports = function (env) {
             replace: process.env.PUBLIC_URL,
           },
         },
+        {
+          test: /\.(woff(2)?|eot|ttf|otf)$/,
+          type: "asset", // <-- Assets module - asset
+          generator: {
+            //If emitting file, the file path is
+            filename: "static/fonts/[hash][ext][query]",
+          },
+        },
       ],
     },
   };
