@@ -513,6 +513,10 @@
         }
 
         &.dp-widget-inactive {
+          background-color: colors.$dp-color-silver;
+        }
+
+        &.dp-widget-deleted {
           background-color: colors.$dp-color-red;
         }
       }
