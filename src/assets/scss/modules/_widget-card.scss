@@ -152,3 +152,42 @@
     }
   }
 }
+
+.dp-widget-plan-progress {
+  width: 100%;
+
+  .dp-progress-bar {
+    width: 100%;
+    height: 7px;
+    background-color: colors.$dp-color-cement;
+    border-radius: 10px;
+    overflow: hidden;
+
+    .progress {
+      height: 100%;
+      width: 25%;
+      background-color: colors.$dp-color-green;
+      transition:
+        width 0.5s ease-in-out,
+        background-color 0.5s ease-in-out;
+    }
+
+    .progress.exceeded {
+      width: 100%;
+      background-color: colors.$dp-color-orange-carousel;
+    }
+  }
+
+  .plan-info {
+    display: flex;
+    justify-content: space-between;
+
+    .text-green {
+      color: colors.$dp-color-darkgreen;
+    }
+
+    .text-orange {
+      color: colors.$dp-color-orange-carousel;
+    }
+  }
+}
