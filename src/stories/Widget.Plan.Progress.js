@@ -7,7 +7,7 @@ export const WidgetPlanProgress = ({ percentage }) => {
   return html`
     <div class="dp-widget-plan-progress">
       <p>Plan: <strong>20.000 Impresiones</strong></p>
-      <div class="dp-progress-bar">
+      <div class="dp-progress-bar m-t-12 m-b-12">
         <div
           id="progress"
           class="progress ${percentage == 100 ? "exceeded" : ""}"
