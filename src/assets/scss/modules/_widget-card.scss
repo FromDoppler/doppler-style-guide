@@ -176,6 +176,11 @@
       width: 100%;
       background-color: colors.$dp-color-orange-carousel;
     }
+
+    .progress.ended {
+      width: 100%;
+      background-color: colors.$dp-color-red;
+    }
   }
 
   .plan-info {
@@ -188,6 +193,10 @@
 
     .text-orange {
       color: colors.$dp-color-orange-carousel;
+    }
+
+    .text-red {
+      color: colors.$dp-color-red;
     }
   }
 }
