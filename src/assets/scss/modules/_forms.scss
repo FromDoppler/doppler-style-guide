@@ -102,6 +102,11 @@
     -webkit-appearance: none;
     appearance: none;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+
+    &.dp-card-select {
+      width: 30%;
+      appearance: auto;
+    }
   }
 
   select:disabled {
@@ -886,6 +891,22 @@
       input {
         position: absolute;
         left: -9999px;
+
+        &[type="date"] {
+          left: 0;
+        }
+
+        &.dp-card-date-input {
+          width: 120px;
+          height: 40px;
+          margin: 0 5px;
+          padding: 2px 5px;
+          border: 1px solid colors.$dp-color-silver;
+          border-radius: 3px;
+          text-align: center;
+          position: relative;
+          left: 0;
+        }
 
         &.dp-card-number-input {
           width: 60px;
