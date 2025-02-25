@@ -125,13 +125,14 @@
   /* No list */
 
   .dp-content-promotion {
-    padding: variables.$dp-spaces--lv5;
+    padding: variables.$dp-spaces--lv4;
 
     .dp-list-promo {
       padding: variables.$dp-spaces--lv2 variables.$dp-spaces--lv0;
 
       li {
         padding-left: variables.$dp-spaces--lv3;
+        padding-bottom: variables.$dp-spaces--lv3;
         background: url("assets/img/check-green.svg") no-repeat 0 8px;
       }
     }
@@ -152,7 +153,7 @@
   }
 
   .dp-icon-promotion {
-    padding-left: variables.$dp-spaces--lv6;
+    padding-left: variables.$dp-spaces--lv4;
     width: 80px;
   }
 
