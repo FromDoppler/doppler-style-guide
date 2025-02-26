@@ -370,7 +370,7 @@
 
   #modal-addons {
     .modal-content--medium {
-      padding: 20px 45px;
+      padding: 30px 45px;
       max-width: 620px;
       background-color: #fff;
 
@@ -379,8 +379,11 @@
       }
 
       .pic-carousel {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         text-align: center;
-        min-height: 450px;
+        min-height: 460px;
       }
 
       .dp-button {
