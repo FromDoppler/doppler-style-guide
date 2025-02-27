@@ -377,13 +377,17 @@
       .dp-carousel {
         padding-bottom: 0;
       }
-
+      
       .pic-carousel {
         display: flex;
         align-items: center;
         justify-content: center;
         text-align: center;
         min-height: 460px;
+      }
+      
+      .text-carousel {
+        min-height: 130px;
       }
 
       .dp-button {
