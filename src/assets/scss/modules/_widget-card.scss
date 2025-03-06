@@ -35,6 +35,15 @@
       color: colors.$dp-color-white;
       border-radius: 3px;
     }
+
+    .iconapp-wheel-of-fortune {
+      background-image: url("assets/img/wheel-of-fortune.svg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      display: block;
+      width: 29px;
+      height: 28px;
+    }
   }
 
   &-content {
