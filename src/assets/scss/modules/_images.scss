@@ -232,4 +232,14 @@
       @extend %lock;
     }
   }
+
+  ///
+  /// icon OnSite
+  ///
+  ///
+  .iconapp-wheel-of-fortune {
+    background-image: url("assets/img/wheel-of-fortune.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
 }
