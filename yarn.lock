@@ -4834,9 +4834,9 @@ bignumber.js@^2.4.0:
   integrity sha1-g4qZLan51zfg9LLbC+YrsJ3Qxeg=
 
 billboard.js@^3.13.0:
-  version "3.14.3"
-  resolved "https://registry.yarnpkg.com/billboard.js/-/billboard.js-3.14.3.tgz#53a9cdbd7d3fffbce61a32fbfb65e4326be6bdc0"
-  integrity sha512-DhldgsPcAv6Y9iw7VTnY6NaRKUlZ2UvW9e60tCi2C3cxq9HzQWrnx4f0xDCk51O/SDshhE+/2PcaIdhZ9DD7+A==
+  version "3.15.0"
+  resolved "https://registry.yarnpkg.com/billboard.js/-/billboard.js-3.15.0.tgz#c13db9daf047370f9cff1b6ce827f4bb84d9dc88"
+  integrity sha512-ENw8hj3gBeeKvNsiYltkYGp8w4vge0Z7wguHhBoBQs0XdFMPHEvKHijilzdbZoXaiP/JcoD/oCb8xtwTaEVQHw==
   dependencies:
     "@types/d3-selection" "^3.0.11"
     "@types/d3-transition" "^3.0.9"
