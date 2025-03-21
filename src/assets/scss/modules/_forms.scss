@@ -236,6 +236,11 @@
         font-style: italic;
       }
     }
+
+    .field-item-onsite-rules {
+      @extend .field-item;
+      width: 105%;
+    }
   }
 
   input[type="checkbox"] {
