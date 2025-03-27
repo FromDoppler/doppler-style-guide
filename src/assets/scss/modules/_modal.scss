@@ -523,4 +523,8 @@
     gap: 12px;
     justify-content: flex-end;
   }
+
+  .tf-v1-popup {
+    z-index: 5000000000;
+  }
 }
