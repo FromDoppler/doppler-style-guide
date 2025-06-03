@@ -1551,6 +1551,17 @@
             color: colors.$dp-color-darkgrey;
           }
         }
+
+        .dp-subscription-items ul {
+          list-style: disc;
+          font-size: 1rem;
+          line-height: 1.5rem;
+          padding-left: 20px;
+
+          li {
+            padding-bottom: 5px;
+          }
+        }
       }
 
       .dp-plan-box:nth-child(even) {
