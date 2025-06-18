@@ -687,7 +687,8 @@
       height: 140%;
       left: 0;
       display: block;
-      background: linear-gradient(
+      background:
+        linear-gradient(
           -45deg,
           transparent 33.33%,
           colors.$dp-color-ghostwhite 33.33%,
@@ -713,7 +714,8 @@
       left: 0;
       width: 100%;
       display: block;
-      background: linear-gradient(
+      background:
+        linear-gradient(
           -45deg,
           transparent 33.33%,
           colors.$dp-color-silver 33.33%,

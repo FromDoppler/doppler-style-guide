@@ -22,7 +22,8 @@ $dp-font-weight-regular: $dp-font-weight !default;
 $dp-font-size: 15px !default;
 ///
 $dp-font-family: "proxima-nova", helvetica, arial, sans-serif;
-$dp-font-family-proximanova: "proxima-nova", Helvetica, Arial, sans-serif !default;
+$dp-font-family-proximanova:
+  "proxima-nova", Helvetica, Arial, sans-serif !default;
 $dp-font-family-handofsean: "hand-of-sean";
 ///
 $dp-font: $dp-font-weight $dp-font-size $dp-font-family !default;
