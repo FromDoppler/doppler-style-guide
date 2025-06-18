@@ -144,6 +144,41 @@
           right: 4%;
         }
       }
+
+      .widget-button.custom-desktop-bubble {
+        display: flex;
+        align-items: center;
+        padding: 6px 12px 6px 6px;
+
+        .icon-circle {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .icon-wrapper {
+          background-color: white;
+          border-radius: 50%;
+          width: 32px;
+          height: 32px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+
+          svg {
+            width: 22px;
+            height: 22px;
+            display: block;
+            margin: 0;
+            padding: 0;
+          }
+        }
+
+        .bubble-text {
+          margin-left: 3px;
+        }
+      }
     }
 
     .dp-mobile-mockup-image {
@@ -167,6 +202,25 @@
 
         &.right {
           right: 4%;
+        }
+      }
+
+      .widget-button.custom-mobile-bubble {
+        padding: 4px;
+
+        .icon-wrapper--mobile {
+          width: 32px;
+          height: 32px;
+          background-color: white;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          svg {
+            width: 22px;
+            height: 22px;
+          }
         }
       }
     }
