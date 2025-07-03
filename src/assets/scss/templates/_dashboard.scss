@@ -453,6 +453,10 @@
         justify-content: center;
         height: 70px;
       }
+
+      li:last-child {
+        border-bottom: 0px;
+      }
     }
 
     .dp-functionalities {
@@ -548,6 +552,10 @@
         font-weight: normal;
         padding-left: 6px;
       }
+
+      .dp-description-legend {
+        white-space: break-spaces;
+      }
     }
 
     .dp-footer-addons {
@@ -559,6 +567,11 @@
       a {
         color: #666;
         font-size: 12px;
+      }
+
+      .dp-more-information {
+        text-decoration: underline;
+        text-transform: uppercase;
       }
     }
   }
