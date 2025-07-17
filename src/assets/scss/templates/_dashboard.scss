@@ -447,11 +447,15 @@
       color: #212121;
 
       li {
-        border-bottom: 1px solid #ccc;
+        border-bottom: 1px solid #e8e8e8;
         display: flex;
         flex-direction: column;
         justify-content: center;
         height: 70px;
+
+        .plan-item {
+          color: #666;
+        }
       }
 
       li:last-child {
