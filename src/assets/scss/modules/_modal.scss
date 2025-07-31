@@ -247,6 +247,7 @@
   #modal-cancel-subscription .modal-content--medium {
     padding: 30px 30px;
     background-color: #fff;
+    min-width: 700px;
 
     h2 {
       margin-bottom: 6px;
@@ -281,6 +282,11 @@
     .dp-input--radio label span.dp-radio-twolines {
       align-items: normal;
       line-height: 18px;
+    }
+
+    .dp-cancellation-reason-options {
+      display: inline-block;
+      width: 100%;
     }
   }
 
