@@ -638,6 +638,10 @@
         font-size: var.$dp-sizing--lvl1;
       }
 
+      li:hover {
+        font-weight: bold;
+      }
+
       a {
         font-size: var.$dp-sizing--lvl2;
         color: colors.$dp-color-grey;
