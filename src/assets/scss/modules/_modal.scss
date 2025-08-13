@@ -317,6 +317,32 @@
     }
   }
 
+  /* Modal success account cancellation */
+  #modal-success-account-cancellation .modal-content--medium {
+    padding: 30px 30px;
+    background-color: #fff;
+    min-width: 700px;
+    top: 30%;
+
+    h2 {
+      margin-bottom: 6px;
+      padding: 0;
+    }
+
+    h4 {
+      text-transform: none;
+      margin-bottom: 6px;
+    }
+
+    .dp-group-buttons {
+      display: flex;
+      width: 100%;
+      justify-content: flex-end;
+      border-top: 1px solid #ccc;
+      padding-top: 12px;
+    }
+  }
+
   /* Modal discount code confirmation */
 
   #modal-discount-code-confirmation {
