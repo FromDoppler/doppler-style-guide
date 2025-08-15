@@ -1,0 +1,57 @@
+/* Base for SVG icons without breaking legacy */
+.icon-svg {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  line-height: 1;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+
+    /* The SVG goes as a mask so it takes currentColor */
+    -webkit-mask: var(--icon-url) no-repeat center / contain;
+    mask: var(--icon-url) no-repeat center / contain;
+
+    /* The actual fill comes from the parent's background */
+    background-color: currentColor;
+  }
+
+  /* Modifiers */
+  &--xs {
+    font-size: 16px;
+  }
+  &--sm {
+    font-size: 24px;
+  }
+  &--md {
+    font-size: 36px;
+  }
+  &--lg {
+    font-size: 48px;
+  }
+  &--xl {
+    font-size: 64px;
+  }
+  &--xxl {
+    font-size: 96px;
+  }
+}
+
+/* Fallback for browsers without mask-image support "Old Firefox (pre-2017)" */
+@supports not ((-webkit-mask: url("")) or (mask: url(""))) {
+  .icon-svg::before {
+    background: var(--icon-url) no-repeat center / contain;
+    -webkit-mask: none;
+    mask: none;
+  }
+}
+
+/* Icons */
+
+.icon-sparkle-ia {
+  @extend .icon-svg;
+  --icon-url: url("assets/icons/svg-icons/sparkle-ia.svg");
+}

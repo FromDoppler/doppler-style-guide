@@ -1,0 +1,202 @@
+// The styles in this file
+// are used only in the SVG icons documentation
+
+.dp-icons-svg-grid {
+  --card-bg: #fff;
+  --card-fg: #000000;
+  --card-fg-hover: #9758ab;
+  --card-border: #e6ebf2;
+  --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --radius: 12px;
+
+  list-style: none;
+  margin: 0 0 42px 0;
+  padding: 18px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
+  border-bottom: 1px solid #ccc;
+
+  li {
+    margin: 0;
+    padding: 0;
+  }
+
+  .icon-card {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 22px 18px;
+    background: var(--card-bg);
+    color: var(--card-fg);
+    border: 1px solid var(--card-border);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    transition:
+      transform 0.15s ease,
+      box-shadow 0.15s ease,
+      color 0.15s ease,
+      border-color 0.15s ease;
+    cursor: pointer;
+
+    appearance: none;
+    background-clip: padding-box;
+
+    &:hover,
+    &:focus-visible {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+      color: var(--card-fg-hover);
+      border-color: rgba(13, 42, 73, 0.18);
+      outline: none;
+    }
+
+    > span:first-child {
+      font-size: 36px;
+      line-height: 1;
+    }
+
+    > .icon-svg,
+    > i[class^="icon-"],
+    > i[class*=" icon-"] {
+      font-size: var(--icon-size, 36px);
+      line-height: 1;
+    }
+
+    small {
+      font-size: 14px;
+      line-height: 1.2;
+      opacity: 0.9;
+      user-select: text;
+    }
+
+    &:focus-visible {
+      box-shadow:
+        0 0 0 3px rgba(21, 156, 228, 0.15),
+        0 6px 18px rgba(0, 0, 0, 0.08);
+    }
+  }
+}
+
+/* ===== Modal ===== */
+#icons-svg-documentation {
+  .icon-modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    z-index: 9999;
+  }
+
+  .icon-modal--open {
+    display: block;
+  }
+
+  .icon-modal__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    animation: fadeIn 0.15s ease-out;
+  }
+
+  .icon-modal__dialog {
+    position: relative;
+    margin: 6vh auto 0;
+    width: min(720px, 92vw);
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.25);
+    padding: 22px 22px 18px;
+    animation: scaleIn 0.18s ease-out;
+  }
+
+  .icon-modal__close {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    border: 0;
+    background: transparent;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+    color: #3a4a5e;
+  }
+  .icon-modal__close:hover {
+    color: #000;
+  }
+
+  .icon-modal__title {
+    margin: 0 0 12px 0;
+    font-size: 20px;
+    color: #102234;
+  }
+
+  .icon-modal__preview {
+    display: grid;
+    place-items: center;
+    border: 1px solid #e6ebf2;
+    border-radius: 12px;
+    padding: 36px;
+    margin-bottom: 16px;
+    color: #000000;
+  }
+
+  .icon-modal__preview i {
+    font-size: 6rem;
+    line-height: 1;
+  }
+
+  .icon-modal__code {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-between;
+    background: #0b1b2c;
+    color: #cfe3ff;
+    border-radius: 10px;
+    padding: 12px 12px 12px 14px;
+  }
+
+  .icon-modal__snippet {
+    font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .icon-modal__copy {
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    background: #9758ab;
+    color: #fff;
+    border-radius: 8px;
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+
+  .icon-modal__copy:hover {
+    filter: brightness(1.05);
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes scaleIn {
+    from {
+      opacity: 0;
+      transform: translateY(8px) scale(0.98);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+}
