@@ -28,6 +28,11 @@ package-lock.json
 .idea
 *.log
 
+
+# Exclude README.md because it requires 4-space indentation enforced by eclint,
+# which conflicts with Prettier's formatting rules.
+README.md
+
 # Ignoring resources
 **/assets/fonts
 **/assets/img

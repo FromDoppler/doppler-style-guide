@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en" id="icons-svg-documentation">
+  <head>
+    <%=
+    require('html-loader!/src/documentation/templates/partials/_head.html').default
+    %>
+  </head>
+
+  <body data-active-menu="49" class="dp-library">
+    <!-- Layers -->
+    <main role="main" class="dpsg-main-wrap">
+      <%=
+      require('html-loader!/src/documentation/templates/partials/_header.html').default
+      %>
+      <!-- header -->
+      <div class="dpsg-wrapper">
+        <%=
+        require('html-loader!/src/documentation/templates/partials/_navigation.html').default
+        %>
+        <div class="dpsg-content-wrap">
+          <article class="dpsg-content">
+            <h3>SVG Icons</h3>
+            <p>Nuestra familia de iconos SVG agrupados por categorías</p>
+            <hr class="dpsg-break" />
+
+            <h3>Web</h3>
+            <ul class="dp-icons-svg-grid" aria-label="Web Icons">
+              <li>
+                <button
+                  class="icon-card icon-card--size-md"
+                  type="button"
+                  aria-label="sparkle-ia"
+                  data-icon-name="sparkle-ia"
+                >
+                  <i class="icon-sparkle-ia" aria-hidden="true"></i>
+                  <small>sparkle-ia</small>
+                </button>
+              </li>
+            </ul>
+            <h3>Business & Management</h3>
+            <ul
+              class="dp-icons-svg-grid"
+              aria-label="Business & Management Icons"
+            ></ul>
+            <h3>User Interface</h3>
+            <ul
+              class="dp-icons-svg-grid"
+              aria-label="User Interface Icons"
+            ></ul>
+            <h3>Network & Communication</h3>
+            <ul
+              class="dp-icons-svg-grid"
+              aria-label="Network & Communication Icons"
+            ></ul>
+            <h3>Time</h3>
+            <ul class="dp-icons-svg-grid" aria-label="Time Icons"></ul>
+            <h3>Digital Marketing</h3>
+            <ul
+              class="dp-icons-svg-grid"
+              aria-label="Digital Marketing Icons"
+            ></ul>
+            <h3>Finance</h3>
+            <ul class="dp-icons-svg-grid" aria-label="Finance Icons"></ul>
+            <h3>Human Resources</h3>
+            <ul
+              class="dp-icons-svg-grid"
+              aria-label="Human Resources Icons"
+            ></ul>
+            <h3>Shopping & Commerce</h3>
+            <ul
+              class="dp-icons-svg-grid"
+              aria-label="Shopping & Commerce Icons"
+            ></ul>
+            <h3>Tech Support</h3>
+            <ul class="dp-icons-svg-grid" aria-label="Tech Support Icons"></ul>
+            <h3>Cloud Computing</h3>
+            <ul
+              class="dp-icons-svg-grid"
+              aria-label="Cloud Computing Icons"
+            ></ul>
+            <h3>Seo</h3>
+            <ul class="dp-icons-svg-grid" aria-label="Seo Icons"></ul>
+            <h3>Cyber Security</h3>
+            <ul
+              class="dp-icons-svg-grid"
+              aria-label="Cyber Security Icons"
+            ></ul>
+            <h3>Maps & Navigation</h3>
+            <ul
+              class="dp-icons-svg-grid"
+              aria-label="Maps & Navigation Icons"
+            ></ul>
+            <h3>Artificial Intelligence</h3>
+            <ul
+              class="dp-icons-svg-grid"
+              aria-label="Artificial Intelligence Icons"
+            ></ul>
+            <h3>Awards & Budgets</h3>
+            <ul
+              class="dp-icons-svg-grid"
+              aria-label="Awards & Budgets Icons"
+            ></ul>
+            <h3>Buildings</h3>
+            <ul class="dp-icons-svg-grid" aria-label="Buildings Icons"></ul>
+          </article>
+        </div>
+      </div>
+      <%=
+      require('html-loader!/src/documentation/templates/partials/_footer.html').default
+      %>
+    </main>
+    <div class="icon-modal" id="iconModal" aria-hidden="true">
+      <div class="icon-modal__overlay" data-close="overlay"></div>
+      <div
+        class="icon-modal__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="iconModalTitle"
+      >
+        <button
+          class="icon-modal__close"
+          type="button"
+          aria-label="Close"
+          data-close="btn"
+        >
+          ×
+        </button>
+
+        <div class="icon-modal__header">
+          <h4 id="iconModalTitle" class="icon-modal__title">Icon</h4>
+        </div>
+
+        <div class="icon-modal__preview"></div>
+
+        <div class="icon-modal__code">
+          <code class="icon-modal__snippet" aria-live="polite"></code>
+          <button class="icon-modal__copy" type="button">Copy</button>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    (() => {
+      const gridSelector = ".dp-icons-svg-grid";
+      const modal = document.getElementById("iconModal");
+      const preview = modal.querySelector(".icon-modal__preview");
+      const title = modal.querySelector(".icon-modal__title");
+      const snippet = modal.querySelector(".icon-modal__snippet");
+      const copyBtn = modal.querySelector(".icon-modal__copy");
+      let lastFocus = null;
+
+      const openModal = ({ iconClass, iconName }) => {
+        lastFocus = document.activeElement;
+
+        preview.innerHTML = `<i class="${iconClass}" aria-hidden="true"></i>`;
+        snippet.textContent = `<i class="${iconClass}"></i>`;
+        title.textContent = iconName;
+
+        modal.classList.add("icon-modal--open");
+        modal.setAttribute("aria-hidden", "false");
+
+        setTimeout(() => copyBtn.focus(), 0);
+      };
+
+      const closeModal = () => {
+        modal.classList.remove("icon-modal--open");
+        modal.setAttribute("aria-hidden", "true");
+        if (lastFocus && lastFocus.focus) lastFocus.focus();
+      };
+
+      const flash = (btn, text) => {
+        const old = btn.textContent;
+        btn.textContent = text;
+        btn.disabled = true;
+        setTimeout(() => {
+          btn.textContent = old;
+          btn.disabled = false;
+        }, 1200);
+      };
+
+      document.addEventListener("click", (e) => {
+        //A single listener, not one for each card
+        const card = e.target.closest(".icon-card");
+        if (!card || !card.closest(gridSelector)) return;
+
+        const iconEl = card.querySelector("i");
+        if (!iconEl) return;
+
+        const iconClass = [...iconEl.classList].join(" ").trim();
+        const iconName =
+          card.dataset.iconName ||
+          card.querySelector("small")?.textContent?.trim() ||
+          iconClass;
+
+        openModal({ iconClass, iconName });
+      });
+
+      // Close handlers
+      modal.addEventListener("click", (e) => {
+        if (
+          e.target.dataset.close === "overlay" ||
+          e.target.dataset.close === "btn"
+        )
+          closeModal();
+      });
+
+      document.addEventListener("keydown", (e) => {
+        if (modal.classList.contains("icon-modal--open") && e.key === "Escape")
+          closeModal();
+      });
+
+      copyBtn.addEventListener("click", async () => {
+        const txt = snippet.textContent;
+        try {
+          if (navigator.clipboard?.writeText) {
+            await navigator.clipboard.writeText(txt);
+          } else {
+            const textarea = document.createElement("textarea");
+            textarea.value = txt;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand("copy");
+            document.body.removeChild(textarea);
+          }
+          flash(copyBtn, "Copied!");
+        } catch {
+          flash(copyBtn, "Failed");
+        }
+      });
+    })();
+  </script>
+</html>
