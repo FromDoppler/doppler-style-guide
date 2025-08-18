@@ -35,10 +35,10 @@ yarn dev
 Se levantan **dos entornos** en paralelo:
 
 1. 📚 **Documentación** (asociada a `documentation/templates`):
-   👉 [http://localhost:3500/documentation/index.html](http://localhost:3500/documentation/index.html)
+    👉 [http://localhost:3500/documentation/index.html](http://localhost:3500/documentation/index.html)
 
 2. 🧩 **Storybook**:
-   👉 [http://localhost:6006/?path=/story/example-introduction--page](http://localhost:6006/?path=/story/example-introduction--page)
+    👉 [http://localhost:6006/?path=/story/example-introduction--page](http://localhost:6006/?path=/story/example-introduction--page)
 
 ---
 
@@ -84,14 +84,14 @@ https://cdn.fromdoppler.com/doppler-style-guide/documentation/pr-551/storybook/?
 
 - **CDN Main**
 
-  ```
-  https://cdn.fromdoppler.com/doppler-style-guide/documentation/main/index.html
-  ```
+    ```
+    https://cdn.fromdoppler.com/doppler-style-guide/documentation/main/index.html
+    ```
 
 - **Storybook PR Example**
-  ```
-  https://cdn.fromdoppler.com/doppler-style-guide/documentation/pr-530/storybook/?path=/story/example-introduction--page
-  ```
+    ```
+    https://cdn.fromdoppler.com/doppler-style-guide/documentation/pr-530/storybook/?path=/story/example-introduction--page
+    ```
 
 ---
 
@@ -127,41 +127,41 @@ En el resto de la app **NO** se debe usar `!important`, ya que dificulta la reut
 ## ➕ Cómo agregar un nuevo ícono SVG
 
 1. **Agregar el SVG**
-   Colocar el archivo en:
+    Colocar el archivo en:
 
 ```
 assets/icons/svg-icons/
 ```
 
 2. **Definir el estilo del ícono**
-   En el archivo de estilos src\assets\scss\helpers\icons-svg_icons-svg.scss, agregar:
+    En el archivo de estilos src\assets\scss\helpers\icons-svg_icons-svg.scss, agregar:
 
 ```scss
 .icon-[nombre-del-icono] {
-  @extend .icon-svg;
-  --icon-url: url("assets/icons/svg-icons/[nombre-del-archivo].svg");
+    @extend .icon-svg;
+    --icon-url: url("assets/icons/svg-icons/[nombre-del-archivo].svg");
 }
 ```
 
 3. **Agregarlo en la documentación HTML**
-   En `documentation/templates/icons-svg-components.html`, agregar dentro del `<ul class="dp-icons-svg-grid">`:
+    En `documentation/templates/icons-svg-components.html`, agregar dentro del `<ul class="dp-icons-svg-grid">`:
 
 ```html
 <li>
-  <button
-    class="icon-card icon-card--size-md"
-    type="button"
-    aria-label="[nombre-del-icono]"
-    data-icon-name="[nombre-del-icono]"
-  >
-    <i class="icon-[nombre-del-icono]" aria-hidden="true"></i>
-    <small>[nombre-del-icono]</small>
-  </button>
+    <button
+        class="icon-card icon-card--size-md"
+        type="button"
+        aria-label="[nombre-del-icono]"
+        data-icon-name="[nombre-del-icono]"
+    >
+        <i class="icon-[nombre-del-icono]" aria-hidden="true"></i>
+        <small>[nombre-del-icono]</small>
+    </button>
 </li>
 ```
 
 4. **Verificar en desarrollo**
-   Ejecutar:
+    Ejecutar:
 
 ```bash
 yarn dev
@@ -171,6 +171,6 @@ y comprobar el ícono en:
 👉 [http://localhost:3500/documentation/icons-svg-components.html](http://localhost:3500/documentation/icons-svg-components.html)
 
 5. **Agregar a Storybook** (opcional)
-   Si es un ícono que forma parte de un componente, crear/actualizar su historia en `/stories`.
+    Si es un ícono que forma parte de un componente, crear/actualizar su historia en `/stories`.
 
 ---
