@@ -35,10 +35,10 @@ yarn dev
 Se levantan **dos entornos** en paralelo:
 
 1. 📚 **Documentación** (asociada a `documentation/templates`):
-  👉 [http://localhost:3500/documentation/index.html](http://localhost:3500/documentation/index.html)
+   👉 [http://localhost:3500/documentation/index.html](http://localhost:3500/documentation/index.html)
 
 2. 🧩 **Storybook**:
-  👉 [http://localhost:6006/?path=/story/example-introduction--page](http://localhost:6006/?path=/story/example-introduction--page)
+   👉 [http://localhost:6006/?path=/story/example-introduction--page](http://localhost:6006/?path=/story/example-introduction--page)
 
 ---
 
@@ -127,14 +127,14 @@ En el resto de la app **NO** se debe usar `!important`, ya que dificulta la reut
 ## ➕ Cómo agregar un nuevo ícono SVG
 
 1. **Agregar el SVG**
-  Colocar el archivo en:
+   Colocar el archivo en:
 
 ```
 assets/icons/svg-icons/
 ```
 
 2. **Definir el estilo del ícono**
-  En el archivo de estilos src\assets\scss\helpers\icons-svg_icons-svg.scss, agregar:
+   En el archivo de estilos src\assets\scss\helpers\icons-svg_icons-svg.scss, agregar:
 
 ```scss
 .icon-[nombre-del-icono] {
@@ -144,7 +144,7 @@ assets/icons/svg-icons/
 ```
 
 3. **Agregarlo en la documentación HTML**
-  En `documentation/templates/icons-svg-components.html`, agregar dentro del `<ul class="dp-icons-svg-grid">`:
+   En `documentation/templates/icons-svg-components.html`, agregar dentro del `<ul class="dp-icons-svg-grid">`:
 
 ```html
 <li>
@@ -161,7 +161,7 @@ assets/icons/svg-icons/
 ```
 
 4. **Verificar en desarrollo**
-  Ejecutar:
+   Ejecutar:
 
 ```bash
 yarn dev
@@ -171,6 +171,6 @@ y comprobar el ícono en:
 👉 [http://localhost:3500/documentation/icons-svg-components.html](http://localhost:3500/documentation/icons-svg-components.html)
 
 5. **Agregar a Storybook** (opcional)
-  Si es un ícono que forma parte de un componente, crear/actualizar su historia en `/stories`.
+   Si es un ícono que forma parte de un componente, crear/actualizar su historia en `/stories`.
 
 ---
