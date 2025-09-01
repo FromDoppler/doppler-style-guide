@@ -1585,6 +1585,36 @@
       color: #a63a33;
     }
   }
+
+  /* RFM Period Row */
+
+  .dp-rfm-period-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: nowrap;
+
+    > * {
+      flex: 0 0 auto;
+    }
+
+    label {
+      display: inline-block;
+      width: auto;
+      margin: 0;
+      white-space: nowrap;
+    }
+
+    select.dp-rfm-select {
+      width: auto;
+      min-width: 72px;
+      display: inline-block;
+    }
+
+    span {
+      white-space: nowrap;
+    }
+  }
 }
 
 .dp-card-number-input {
