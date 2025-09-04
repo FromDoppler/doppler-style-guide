@@ -1592,27 +1592,27 @@
     display: flex;
     align-items: center;
     gap: 6px;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
 
     > * {
-      flex: 0 0 auto;
+      flex: 1 1 auto;
+      min-width: 0;
     }
 
     label {
       display: inline-block;
-      width: auto;
       margin: 0;
-      white-space: nowrap;
+      white-space: normal;
     }
 
     select.dp-rfm-select {
-      width: auto;
       min-width: 72px;
-      display: inline-block;
+      width: auto;
+      flex-shrink: 0;
     }
 
     span {
-      white-space: nowrap;
+      white-space: normal;
     }
   }
 }
