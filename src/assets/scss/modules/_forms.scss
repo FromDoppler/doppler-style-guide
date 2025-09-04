@@ -1594,25 +1594,16 @@
     gap: 6px;
     flex-wrap: wrap;
 
-    > * {
-      flex: 1 1 auto;
+    > span,
+    > label {
+      flex: 0 1 auto;
       min-width: 0;
-    }
-
-    label {
-      display: inline-block;
-      margin: 0;
       white-space: normal;
     }
 
     select.dp-rfm-select {
+      flex: 0 0 auto;
       min-width: 72px;
-      width: auto;
-      flex-shrink: 0;
-    }
-
-    span {
-      white-space: normal;
     }
   }
 }
