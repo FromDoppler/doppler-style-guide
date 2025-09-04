@@ -1615,6 +1615,23 @@
       white-space: nowrap;
     }
   }
+
+  .dp-rfm-period-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    span,
+    select.dp-rfm-select {
+      font-size: 14px;
+    }
+
+    select.dp-rfm-select {
+      width: 80px;
+      min-width: 60px;
+    }
+  }
 }
 
 .dp-card-number-input {
