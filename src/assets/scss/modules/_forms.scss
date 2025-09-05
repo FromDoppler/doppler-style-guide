@@ -1594,12 +1594,13 @@
     flex-wrap: wrap;
     gap: 8px;
 
-    span,
-    select.dp-rfm-select {
+    span {
+      white-space: nowrap;
       font-size: 14px;
     }
 
     select.dp-rfm-select {
+      display: inline-block;
       appearance: auto;
     }
   }
