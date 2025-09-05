@@ -1591,8 +1591,8 @@
   .dp-rfm-period-row {
     display: flex;
     align-items: center;
-    gap: 6px;
-    flex-wrap: nowrap;
+    gap: 8px;
+    flex-wrap: wrap;
 
     > * {
       flex: 0 0 auto;
@@ -1609,27 +1609,13 @@
       width: auto;
       min-width: 72px;
       display: inline-block;
+      appearance: auto;
+      font-size: 14px;
     }
 
     span {
       white-space: nowrap;
-    }
-  }
-
-  .dp-rfm-period-row {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 8px;
-
-    span,
-    select.dp-rfm-select {
       font-size: 14px;
-    }
-
-    select.dp-rfm-select {
-      width: 80px;
-      min-width: 60px;
     }
   }
 }
