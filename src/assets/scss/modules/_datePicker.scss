@@ -1,0 +1,132 @@
+////
+/// DatePicker component
+/// Styles to be applied for the react-datepicker library.
+/// https://github.com/Hacker0x01/react-datepicker?tab=readme-ov-file#react-date-picker
+/// @access private
+/// @author Fernando Gonzalez
+/// Classes for the button component
+////
+
+@use "helpers/colors";
+
+.dp-library {
+  .dp-date-picker {
+    position: absolute;
+    z-index: 5;
+    margin-top: 2px;
+    border: 1px solid colors.$dp-color-darkyellow;
+    box-shadow: 0 0 0 1px colors.$dp-color-darkyellow;
+    font-size: 1rem;
+
+    .react-datepicker__header {
+      background-color: colors.$dp-color-white;
+      border-bottom: none;
+
+      h2 {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 22px;
+      }
+    }
+
+    .react-datepicker__day-names {
+      margin: 0 5px;
+
+      .react-datepicker__day-name {
+        width: 3.4rem;
+        padding: 0.5rem;
+        margin: 0;
+      }
+    }
+
+    .react-datepicker__navigation-icon {
+      &::before {
+        height: 0;
+        width: 0;
+        border-width: 7px 5.5px 0 5.5px;
+        border-color: #838370 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+        top: 8px;
+        z-index: 10;
+        pointer-events: none;
+      }
+
+      &--next::before {
+        transform: rotate(-90deg);
+      }
+
+      &--previous::before {
+        transform: rotate(90deg);
+      }
+    }
+
+    .react-datepicker__today-button {
+      background-color: colors.$dp-color-white;
+      margin: 0 20px;
+      border-top: 1px solid colors.$dp-color-darkyellow;
+    }
+
+    .react-datepicker__day {
+      color: #666666;
+      margin: 0;
+      padding: 0.5rem;
+      width: 3.4rem;
+      border-radius: 0;
+
+      &--outside-month {
+        visibility: hidden;
+      }
+
+      &:not([aria-disabled="true"]):hover {
+        background-color: colors.$dp-color-white;
+        outline: 1px solid #fbb224;
+        border-radius: 0;
+      }
+
+      &--selecting-range-start {
+        background-color: #fbb224 !important;
+      }
+
+      &--in-selecting-range {
+        &:not(
+          .react-datepicker__day--in-range,
+          .react-datepicker__month-text--in-range,
+          .react-datepicker__quarter-text--in-range,
+          .react-datepicker__year-text--in-range
+        ) {
+          background-color: #ffeea766;
+
+          &:not([aria-disabled="true"]):hover {
+            background-color: colors.$dp-color-white;
+            border: 1px solid #fbb224;
+          }
+        }
+
+        &:not([aria-disabled="true"]):hover {
+          background-color: #fbb224;
+        }
+
+        &--selected,
+        &--in-selecting-range {
+          color: #666666;
+        }
+      }
+
+      &--keyboard-selected {
+        background-color: #ffeea766;
+
+        &:not([aria-disabled="true"]):hover {
+          background-color: #fbb224;
+        }
+      }
+
+      &--selected,
+      &--in-range {
+        background-color: #fbb224;
+
+        &:not([aria-disabled="true"]):hover {
+          background-color: #ffeea766;
+        }
+      }
+    }
+  }
+}
