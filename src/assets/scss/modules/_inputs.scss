@@ -974,6 +974,10 @@
     select[aria-invalid="true"] + .assistance-wrap span {
       color: colors.$dp-color-content-error;
     }
+
+    select.small-font-size {
+      font-size: typography.$dp-fontsize-small;
+    }
   }
 }
 
