@@ -121,4 +121,11 @@ $dpsg-paragraph: 16px;
   .text-align--center {
     text-align: center;
   }
+
+  $font-size-amount: (0, 11, 13, 14, 15, 18, 22, 24, 32, 40, 50, 60);
+  @for $i from 0 through (length($font-size-amount) - 1) {
+    .font-size--lv#{$i} {
+      font-size: #{nth($font-size-amount, $i + 1)}px;
+    }
+  }
 }
