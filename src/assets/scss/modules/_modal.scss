@@ -61,39 +61,6 @@
       margin: 0 0 15px;
     }
 
-    .close {
-      position: absolute;
-      right: 30px;
-      top: 30px;
-      width: 20px;
-      height: 20px;
-      opacity: 0.7;
-      cursor: pointer;
-      z-index: 100;
-
-      &:hover {
-        opacity: 1;
-      }
-
-      &:after,
-      &:before {
-        content: " ";
-        position: absolute;
-        left: 9px;
-        height: 20px;
-        width: 3px;
-        background-color: colors.$dp-color-lightgrey;
-      }
-
-      &:before {
-        transform: rotate(45deg);
-      }
-
-      &:after {
-        transform: rotate(-45deg);
-      }
-    }
-
     &.p-all--20 {
       padding: 20px;
     }
