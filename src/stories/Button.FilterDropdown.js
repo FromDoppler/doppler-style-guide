@@ -30,7 +30,7 @@ export const FilterDropdown = ({
             class="dropdown-filter ${isRight ? "dropdown-filter--right" : ""}"
           >
             <div class="dropdown-filter-content">
-              <span class="close"></span>
+              <span class="dp-close"></span>
               <h2 class="dropdown-filter-title">
                 <span
                   class="dp-color-${titleIconColor} dpicon ${titleIcon} m-r-6"
@@ -121,7 +121,7 @@ export const FilterDropdown = ({
 
   const $btn = $(container).find("button.dp-button.button-icon");
   const $dropdown = $(container).find("section.dp-container");
-  const $close = $dropdown.find(".close");
+  const $close = $dropdown.find(".dp-close");
   const $form = $dropdown.find("form.form-request");
 
   const toggleDropdown = () => $dropdown.toggle();

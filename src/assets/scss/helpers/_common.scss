@@ -12,7 +12,11 @@
 @use "modules/breakpoints";
 @use "core/typography";
 
-.close {
+//// The `.close` class is deprecated.
+//// Use `.dp-close` instead for consistency across the project.
+//// `.close` remains for backward compatibility but should not be used in new code.
+.close,
+.dp-close {
   position: absolute;
   right: 30px;
   top: 30px;
