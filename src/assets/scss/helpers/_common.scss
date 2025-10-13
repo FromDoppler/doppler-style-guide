@@ -1,0 +1,50 @@
+////
+//// Common styles used across the project.
+//// Centralized definitions to avoid duplication in multiple modules.
+//// @access private
+//// @author Ezequiel Morales
+////
+
+@use "core/settings";
+@use "core/variables" as var;
+@use "helpers/colors";
+@use "modules/preload";
+@use "modules/breakpoints";
+@use "core/typography";
+
+//// The `.close` class is deprecated.
+//// Use `.dp-close` instead for consistency across the project.
+//// `.close` remains for backward compatibility but should not be used in new code.
+.close,
+.dp-close {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  width: 20px;
+  height: 20px;
+  opacity: 0.7;
+  cursor: pointer;
+  z-index: 101;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    left: 9px;
+    height: 20px;
+    width: 3px;
+    background-color: colors.$dp-color-lightgrey;
+  }
+
+  &:before {
+    transform: rotate(45deg);
+  }
+
+  &:after {
+    transform: rotate(-45deg);
+  }
+}
