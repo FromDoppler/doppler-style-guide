@@ -22,7 +22,12 @@ export const Button = ({
   }
 
   const sizeClass = onlyIcon
-    ? [`p-l-${onlyIconSize}`, `p-r-${onlyIconSize}`, `p-t-${onlyIconSize}`, `p-b-${onlyIconSize}`]
+    ? [
+        `p-l-${onlyIconSize}`,
+        `p-r-${onlyIconSize}`,
+        `p-t-${onlyIconSize}`,
+        `p-b-${onlyIconSize}`,
+      ]
     : [`button-${size || "medium"}`];
 
   return html`
@@ -43,7 +48,7 @@ export const Button = ({
       ${iconClass
         ? html`
             <span
-              class="dpicon ${iconClass} ${onlyIcon ? 'dpicon--onlyicon' : ''}"
+              class="dpicon ${iconClass} ${onlyIcon ? "dpicon--onlyicon" : ""}"
             ></span>
           `
         : ""}
