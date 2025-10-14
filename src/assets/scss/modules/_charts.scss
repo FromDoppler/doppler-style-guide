@@ -21,7 +21,8 @@
     }
 
     .bb-axis-x text,
-    .bb-axis-y text {
+    .bb-axis-y text,
+    .bb-axis-y2 text {
       font-weight: 700;
       font-size: 13px;
       line-height: 18px;
@@ -30,7 +31,8 @@
     }
 
     .bb-axis-x path,
-    .bb-axis-y path {
+    .bb-axis-y path,
+    .bb-axis-y2 path {
       stroke: colors.$dp-color-lightgrey;
     }
 
