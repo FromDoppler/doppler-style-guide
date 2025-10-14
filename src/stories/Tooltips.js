@@ -3,7 +3,7 @@ import { html } from "lit-html";
 /**
  * Primary UI component for user interaction
  */
-export const Tooltips = ({}) => {
+export const Tooltips = ({ direction }) => {
   return html` <div class="dp-library">
     <div class="dp-container">
       <div class="dp-rowflex">
@@ -23,67 +23,46 @@ export const Tooltips = ({}) => {
               </div>
 
               <div class="wrapper-tooltip">
-                <div class="dp-box">
-                  <p>Tooltip top</p>
-                  <div class="dp-tooltip-container">
-                    <span class="ms-icon icon-tip-icon"></span>
-                    <div class="dp-tooltip-top">
-                      <span
-                        >Lorem ipsum dolor sit amet.
-                        <a href="#">tips para seguir</a></span
-                      >
-                    </div>
-                  </div>
+                ${direction == "top"
+                  ? html`<div class="dp-box">
+                      <p>Tooltip top</p>
+                      <div class="dp-tooltip-container">
+                        <span class="ms-icon icon-tip-icon"></span>
+                        <div class="dp-tooltip-top">
+                          <span
+                            >Lorem ipsum dolor sit amet.
+                            <a href="#">tips para seguir</a></span
+                          >
+                        </div>
+                      </div>
 
-                  <div class="dp-tooltip-container">
-                    <span class="ms-icon icon-info-icon"></span>
+                      <div class="dp-tooltip-container">
+                        <span class="ms-icon icon-info-icon"></span>
 
-                    <div class="dp-tooltip-top">
-                      <span
-                        >¿Realizas envíos frecuentes? Escoge un Plan basado en
-                        la cantidad de Suscriptores que posees, sin límite de
-                        envíos. Si pagas 3, 6 o 12 meses por adelantado,
-                        ¡ahorras hasta un 25%!.</span
-                      >
-                    </div>
-                  </div>
-                </div>
-
-                <div class="dp-box">
-                  <p>
-                    Tooltip right
-                    <span class="ms-icon icon-tip-icon dp-tooltip-right">
-                      <span class="tooltiptext"
-                        >Lorem ipsum dolor sit amet.
-                        <a href="#">tips para seguir</a>
-                      </span>
-                    </span>
-                  </p>
-                </div>
-
-                <div class="dp-box">
-                  <p>
-                    Tooltip bottom
-                    <span class="ms-icon icon-tip-icon dp-tooltip-bottom">
-                      <span class="tooltiptext"
-                        >Lorem ipsum dolor sit amet.
-                        <a href="#">tips para seguir</a></span
-                      >
-                    </span>
-                  </p>
-                </div>
-
-                <div class="dp-box">
-                  <p>
-                    Tooltip left
-                    <span class="ms-icon icon-tip-icon dp-tooltip-left">
-                      <span class="tooltiptext">
-                        Lorem ipsum dolor sit amet.
-                        <a href="#">tips para seguir</a>
-                      </span>
-                    </span>
-                  </p>
-                </div>
+                        <div class="dp-tooltip-top">
+                          <span
+                            >¿Realizas envíos frecuentes? Escoge un Plan basado
+                            en la cantidad de Suscriptores que posees, sin
+                            límite de envíos. Si pagas 3, 6 o 12 meses por
+                            adelantado, ¡ahorras hasta un 25%!.</span
+                          >
+                        </div>
+                      </div>
+                    </div>`
+                  : html` <div class="dp-box">
+                      <p>
+                        Tooltip ${direction || "right"}
+                        <span
+                          class="ms-icon icon-tip-icon dp-tooltip-${direction ||
+                          "right"}"
+                        >
+                          <span class="tooltiptext"
+                            >Lorem ipsum dolor sit amet.
+                            <a href="#">tips para seguir</a>
+                          </span>
+                        </span>
+                      </p>
+                    </div>`}
               </div>
 
               <h3>Tooltip II</h3>
@@ -96,7 +75,9 @@ export const Tooltips = ({}) => {
                 <div class="dp-tooltip-container">
                   <span class="dpsg-code"
                     >Hover!
-                    <div class="dp-tooltip-chart">
+                    <div
+                      class="${`dp-tooltip-chart${direction == "top" ? "" : "-" + direction || ""}`}"
+                    >
                       <img
                         src="https://cdn.fromdoppler.com/doppler-ui-library/thumbnail-preview.png"
                         alt=""
@@ -107,7 +88,9 @@ export const Tooltips = ({}) => {
                 <div class="dp-tooltip-container">
                   <span class="dpsg-code">
                     Hover!
-                    <div class="dp-tooltip-chart">
+                    <div
+                      class="${`dp-tooltip-chart${direction == "top" ? "" : "-" + direction || ""}`}"
+                    >
                       <small>Jueves 16</small>
                       <span>Usuarios con email: 2</span>
                       <span>Usuarios sin email: 754</span>
