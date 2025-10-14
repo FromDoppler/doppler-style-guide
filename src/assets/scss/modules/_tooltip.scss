@@ -233,11 +233,17 @@
   /// in the next version it is obsolete
   ///
 
-  .dp-tooltip-chart,
-  .dp-tooltip-block {
-    //TODO: duplicated code
+  %tooltip-base {
+    //visibility: hidden;
     opacity: 0;
+    position: absolute;
+    z-index: -1;
     color: colors.$dp-color-darkgrey;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid colors.$dp-color-silver;
+    box-shadow: 0 0 0 4px rgba(204, 204, 204, 0.3);
+    border-radius: variables.$dp-border-radius;
+    padding: variables.$dp-spaces--lv2 variables.$dp-spaces--lv3;
     width: max-content;
     min-width: 150px;
     max-width: 240px;
@@ -246,36 +252,71 @@
     justify-content: center;
     font-size: variables.$dp-sizing--lvl2;
     line-height: 15px;
-    padding: variables.$dp-spaces--lv2 variables.$dp-spaces--lv3;
-    border-radius: variables.$dp-border-radius;
     text-align: left;
-    background: rgba(255, 255, 255, 0.9);
     transition: all 0.2s ease-in-out;
-    position: absolute;
-    top: -12px;
-    left: 50%;
-    border: 1px solid colors.$dp-color-silver;
-    box-shadow: 0 0 0 4px rgba(204, 204, 204, 0.3);
-    transform: translate(-50%, -50%) scale(0.75) rotate(15deg);
-    z-index: -1;
-    visibility: visible;
 
-    @media screen and (max-width: 1365px) {
-      display: none;
+    &::after {
+      content: "";
+      position: absolute;
+      border-width: 5px;
+      border-style: solid;
     }
   }
 
-  .dp-tooltip-chart:before,
-  .dp-tooltip-block:before,
-  .dp-tooltip-chart:after,
-  .dp-tooltip-block:after {
-    content: "";
-    border-left: 5px solid transparent;
-    border-right: 5px solid transparent;
-    border-top: 5px solid rgba(255, 255, 255, 0.9);
-    position: absolute;
-    bottom: -5px;
-    left: 47%;
+  .dp-tooltip-chart,
+  .dp-tooltip-block,
+  [class*="dp-tooltip-chart-"],
+  [class*="dp-tooltip-block-"] {
+    @extend %tooltip-base;
+
+    // Default to top
+    transform: translate(-50%, -50%) scale(0.75) rotate(15deg);
+    top: -12px;
+    left: 50%;
+
+    &::after {
+      border-color: rgba(255, 255, 255, 0.9) transparent transparent transparent;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  .dp-tooltip-chart-right,
+  .dp-tooltip-block-right {
+    transform: translate(0, -50%) scale(0.75);
+    top: 50%;
+    left: calc(100% + 12px);
+    &::after {
+      left: -6%;
+      bottom: 42%;
+      margin-top: -5px;
+      border-color: transparent transparent rgba(255, 255, 255, 0.9) transparent;
+      transform: rotate(-90deg);
+    }
+  }
+
+  .dp-tooltip-chart-bottom,
+  .dp-tooltip-block-bottom {
+    transform: translate(-50%, 0) scale(0.75);
+    top: calc(100% + 12px);
+    left: 50%;
+    &::after {
+      border-color: transparent transparent rgba(255, 255, 255, 0.9) transparent;
+      bottom: 100%;
+    }
+  }
+
+  .dp-tooltip-chart-left,
+  .dp-tooltip-block-left {
+    transform: translate(-100%, -50%) scale(0.75);
+    top: 50%;
+    left: -12px;
+    &::after {
+      border-color: transparent transparent transparent rgba(255, 255, 255, 0.9);
+      left: 104%;
+      bottom: 40%;
+    }
   }
 
   .dp-tooltip-container:hover .dp-tooltip-chart,
@@ -283,6 +324,25 @@
     opacity: 1;
     z-index: 10;
     transform: translate(-50%, -100%) scale(1) rotate(0deg);
+  }
+
+  .dp-tooltip-container:hover .dp-tooltip-chart-right,
+  .dp-tooltip-container:hover .dp-tooltip-block-right {
+    opacity: 1;
+    z-index: 10;
+    transform: translate(0, -50%) scale(1);
+  }
+  .dp-tooltip-container:hover .dp-tooltip-chart-bottom,
+  .dp-tooltip-container:hover .dp-tooltip-block-bottom {
+    opacity: 1;
+    z-index: 10;
+    transform: translate(-50%, 0) scale(1);
+  }
+  .dp-tooltip-container:hover .dp-tooltip-chart-left,
+  .dp-tooltip-container:hover .dp-tooltip-block-left {
+    opacity: 1;
+    z-index: 10;
+    transform: translate(-100%, -50%) scale(1);
   }
 
   // Beamer tooltip
