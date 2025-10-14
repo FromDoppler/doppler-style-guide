@@ -66,6 +66,15 @@
       line-height: normal;
     }
 
+    .dp-button--onlyicon {
+      width: 20px;
+      height: 20px;
+      font-size: 20px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+
     &.button--centered-loading {
       position: relative;
       display: flex;
