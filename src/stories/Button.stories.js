@@ -91,7 +91,7 @@ export const Icon = Template.bind({});
 Icon.args = {
   ...commonArgs,
   iconClass: "iconapp-user-interface",
-  onlyIcon: true,
+  onlyIcon: false,
   onlyIconSize: 12,
 };
 
@@ -110,7 +110,7 @@ Icon.argTypes = {
         108, 114, 120, 126, 132, 138, 144, 150, 156, 162, 168, 174,
       ],
     },
-    name: "Only Icon Size",
+    name: "Size",
     description: "Padding value (allowed multiples of 6)",
     if: { arg: "onlyIcon", truthy: true },
   },
