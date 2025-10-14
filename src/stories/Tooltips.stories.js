@@ -5,7 +5,12 @@ import { Tooltips } from "./Tooltips.js";
 export default {
   title: "Components/Tooltips",
   // More on argTypes: https://storybook.js.org/docs/web-components/api/argtypes
-  argTypes: {},
+  argTypes: {
+    direction: {
+      control: { type: "select" },
+      options: ["top", "bottom", "right", "left"],
+    },
+  },
 };
 
 // More on component templates:
