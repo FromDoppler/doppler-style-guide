@@ -1,5 +1,5 @@
 import { FilterDropdown } from "./Button.FilterDropdown";
-import { html, render } from "lit-html";
+import { render } from "lit-html";
 
 export default {
   title: "Components/Button.FilterDropdown",
