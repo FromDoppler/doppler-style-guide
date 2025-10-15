@@ -129,4 +129,13 @@
       }
     }
   }
+
+  .dp-input-w-100 {
+    .react-datepicker-wrapper,
+    .react-datepicker__input-container,
+    .react-datepicker-ignore-onclickoutside {
+      width: 100% !important;
+      box-sizing: border-box;
+    }
+  }
 }
