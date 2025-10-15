@@ -134,7 +134,7 @@ assets/icons/svg-icons/
 ```
 
 2. **Definir el estilo del ícono**
-    En el archivo de estilos src\assets\scss\helpers\icons-svg_icons-svg.scss, agregar:
+    En el archivo de estilos src\assets\scss\helpers\icons-svg\\_icons-svg.scss, agregar:
 
 ```scss
 .icon-[nombre-del-icono] {
