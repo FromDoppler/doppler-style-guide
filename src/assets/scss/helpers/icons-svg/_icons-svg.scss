@@ -55,3 +55,8 @@
   @extend .icon-svg;
   --icon-url: url("assets/icons/svg-icons/sparkle-ia.svg");
 }
+
+.icon-preview-eye {
+  @extend .icon-svg;
+  --icon-url: url("assets/icons/svg-icons/preview-eye.svg");
+}
