@@ -39,25 +39,25 @@
       }
     }
 
-    // .react-datepicker__navigation-icon {
-    //   &::before {
-    //     height: 0;
-    //     width: 0;
-    //     border-width: 7px 5.5px 0 5.5px;
-    //     border-color: #838370 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
-    //     top: 8px;
-    //     z-index: 10;
-    //     pointer-events: none;
-    //   }
+    .react-datepicker__navigation-icon {
+      &::before {
+        height: 0;
+        width: 0;
+        border-width: 7px 5.5px 0 5.5px;
+        border-color: #838370 rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) rgba(0, 0, 0, 0);
+        top: 8px;
+        z-index: 10;
+        pointer-events: none;
+      }
 
-    //   &--next::before {
-    //     transform: rotate(-90deg);
-    //   }
+      &--next::before {
+        transform: rotate(-90deg);
+      }
 
-    //   &--previous::before {
-    //     transform: rotate(90deg);
-    //   }
-    // }
+      &--previous::before {
+        transform: rotate(90deg);
+      }
+    }
 
     .react-datepicker__navigation-icon {
       display: none;
@@ -132,9 +132,14 @@
         }
       }
     }
-  }
 
+  }
+  
   .full-width-datepicker {
     width: 100% !important;
+  }
+  
+  .react-datepicker__triangle {
+    display: none;
   }
 }
