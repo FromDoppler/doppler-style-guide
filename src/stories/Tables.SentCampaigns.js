@@ -36,8 +36,19 @@ export const Tables = ({ type }) => {
           <tr>
             <td>
               <div class="dp-rowflex">
-                <div class="col-sm-1">
-                  <span class="icon icon-preview-eye" aria-hidden="true"></span>
+                <div class="dp-tooltip-container col-sm-1">
+                  <span class="dpsg-code">
+                    <span
+                      class="icon icon-preview-eye"
+                      aria-hidden="true"
+                    ></span>
+                    <div class="dp-tooltip-chart">
+                      <img
+                        src="https://cdn.fromdoppler.com/doppler-ui-library/thumbnail-preview.png"
+                        alt=""
+                      />
+                    </div>
+                  </span>
                 </div>
                 <div class="col-sm-11">
                   <a href="#">Promo 20% Off Cyber Mo...</a>
@@ -109,8 +120,19 @@ export const Tables = ({ type }) => {
           <tr>
             <td>
               <div class="dp-rowflex">
-                <div class="col-sm-1">
-                  <span class="icon icon-preview-eye" aria-hidden="true"></span>
+                <div class="dp-tooltip-container col-sm-1">
+                  <span class="dpsg-code">
+                    <span
+                      class="icon icon-preview-eye"
+                      aria-hidden="true"
+                    ></span>
+                    <div class="dp-tooltip-chart">
+                      <img
+                        src="https://cdn.fromdoppler.com/doppler-ui-library/thumbnail-preview.png"
+                        alt=""
+                      />
+                    </div>
+                  </span>
                 </div>
                 <div class="col-sm-11">
                   <a href="#">Promo 20% Off Cyber Mo...</a>
@@ -182,8 +204,19 @@ export const Tables = ({ type }) => {
           <tr>
             <td>
               <div class="dp-rowflex">
-                <div class="col-sm-1">
-                  <span class="icon icon-preview-eye" aria-hidden="true"></span>
+                <div class="dp-tooltip-container col-sm-1">
+                  <span class="dpsg-code">
+                    <span
+                      class="icon icon-preview-eye"
+                      aria-hidden="true"
+                    ></span>
+                    <div class="dp-tooltip-chart">
+                      <img
+                        src="https://cdn.fromdoppler.com/doppler-ui-library/thumbnail-preview.png"
+                        alt=""
+                      />
+                    </div>
+                  </span>
                 </div>
                 <div class="col-sm-11">
                   <a href="#">Promo 20% Off Cyber Mo...</a>
