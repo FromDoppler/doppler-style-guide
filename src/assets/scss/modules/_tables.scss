@@ -740,6 +740,10 @@
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
+
+        &:hover {
+          color: colors.$dp-color-blue-widget-darker;
+        }
       }
 
       p {
