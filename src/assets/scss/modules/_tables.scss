@@ -719,4 +719,43 @@
       }
     }
   }
+
+  /* Table sent campaigns */
+
+  .dp-table-sent-campaigns {
+    .long-column {
+      min-width: 385px;
+    }
+
+    .dp-wrapper-message {
+      flex-direction: column;
+    }
+
+    tbody td {
+      font-size: 16px;
+
+      a {
+        color: colors.$dp-color-blue-widget;
+        font-weight: 700;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+
+        &:hover {
+          color: colors.$dp-color-blue-widget-darker;
+        }
+      }
+
+      p {
+        color: colors.$dp-color-grey;
+        font-weight: 400;
+      }
+
+      .icon {
+        font-size: 24px;
+        color: colors.$dp-color-blue-widget;
+        cursor: pointer;
+      }
+    }
+  }
 }
