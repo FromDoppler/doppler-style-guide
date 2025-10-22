@@ -1,6 +1,5 @@
 import { Button } from "./Button";
 
-// Default export
 export default {
   title: "Components/Button",
   argTypes: {
@@ -27,7 +26,6 @@ export default {
   },
 };
 
-// Component template
 const Template = (args) => {
   let newArgs = { ...args };
   if (args.mode === "link") {
@@ -37,14 +35,12 @@ const Template = (args) => {
   return Button(newArgs);
 };
 
-// Common args
 const commonArgs = {
   disabled: false,
   rounded: false,
   label: "Doppler button",
 };
 
-// Primary story
 export const Primary = Template.bind({});
 Primary.args = {
   ...commonArgs,
@@ -59,7 +55,6 @@ Primary.parameters = {
   },
 };
 
-// Secondary story
 export const Secondary = Template.bind({});
 Secondary.args = {
   ...commonArgs,
@@ -75,7 +70,6 @@ Secondary.parameters = {
   },
 };
 
-// Link story
 export const Link = Template.bind({});
 Link.args = { ...commonArgs, mode: "link", loading: false, preloading: false };
 Link.parameters = {
@@ -86,7 +80,6 @@ Link.parameters = {
   },
 };
 
-// Icon story
 export const Icon = Template.bind({});
 Icon.args = {
   ...commonArgs,
@@ -95,7 +88,6 @@ Icon.args = {
   onlyIconSize: 12,
 };
 
-// ArgTypes only for Icon
 Icon.argTypes = {
   onlyIcon: {
     control: "boolean",
