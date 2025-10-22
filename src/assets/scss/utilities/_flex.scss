@@ -1,7 +1,71 @@
 ////
-/// Flex component
-/// It will apply annotations to all items from file.
+/// A set of CSS utility classes for Flexbox layouts.
+/// Includes classes to enable flex, justify content, and align items vertically.
+/// These classes can be combined freely to build responsive and consistent layouts.
+///
 /// @access private
-/// @author Gustavo Baamonde
-/// Classes for the Flex component
+/// @author Ezequiel Morales
 ////
+
+// ============================
+// FLEX CONTAINER
+// ============================
+
+/// Enables display:flex on a container.
+/// Useful for building flexbox layouts.
+.dp-flex {
+  display: flex !important;
+}
+
+// ============================
+// JUSTIFY CONTENT
+// ============================
+
+/// Aligns items to the start (left)
+.dp-justify-content-start {
+  justify-content: flex-start !important;
+}
+
+/// Centers items horizontally
+.dp-justify-content-center {
+  justify-content: center !important;
+}
+
+/// Aligns items to the end (right)
+.dp-justify-content-end {
+  justify-content: flex-end !important;
+}
+
+/// Distributes items with space between them
+.dp-justify-content-between {
+  justify-content: space-between !important;
+}
+
+/// Distributes items with space around them
+.dp-justify-content-around {
+  justify-content: space-around !important;
+}
+
+/// Distributes items with equal space between them
+.dp-justify-content-evenly {
+  justify-content: space-evenly !important;
+}
+
+// ============================
+// ALIGN ITEMS
+// ============================
+
+/// Aligns items to the start vertically (top)
+.dp-align-items-start {
+  align-items: flex-start !important;
+}
+
+/// Centers items vertically
+.dp-align-items-center {
+  align-items: center !important;
+}
+
+/// Aligns items to the end vertically (bottom)
+.dp-align-items-end {
+  align-items: flex-end !important;
+}
