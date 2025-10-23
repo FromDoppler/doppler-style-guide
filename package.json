@@ -31,9 +31,9 @@
   },
   "homepage": "https://github.com/FromDoppler/doppler-style-guide#readme",
   "dependencies": {
-    "@babel/core": "7.28.4",
-    "@babel/preset-env": "7.28.3",
-    "@babel/preset-react": "7.27.1",
+    "@babel/core": "7.28.5",
+    "@babel/preset-env": "7.28.5",
+    "@babel/preset-react": "7.28.5",
     "babel": "6.23.0",
     "babel-loader": "9.2.1",
     "billboard.js": "^3.13.0",
