@@ -724,22 +724,27 @@
 
   .dp-table-sent-campaigns {
     .long-column {
-      min-width: 385px;
+      min-width: 300px;
+      max-width: 300px;
     }
 
     .dp-wrapper-message {
       flex-direction: column;
     }
 
-    tbody td {
-      font-size: 16px;
+    thead tr p {
+      font-size: 13px;
+    }
 
+    tbody td {
       a {
+        font-size: 15px;
         color: colors.$dp-color-blue-widget;
         font-weight: 700;
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
+        display: block;
 
         &:hover {
           color: colors.$dp-color-blue-widget-darker;
@@ -749,12 +754,19 @@
       p {
         color: colors.$dp-color-grey;
         font-weight: 400;
+        font-size: 13px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
 
       .icon {
-        font-size: 24px;
         color: colors.$dp-color-blue-widget;
         cursor: pointer;
+
+        &-action {
+          font-size: 20px;
+        }
       }
     }
   }
