@@ -38,6 +38,7 @@
 ///   </table>
 
 @use "core/variables";
+@use "core/settings";
 @use "helpers/colors";
 
 .dp-library {
@@ -733,14 +734,14 @@
     }
 
     thead tr p {
-      font-size: 13px;
+      font-size: variables.$dp-sizing--lvl2;
     }
 
     tbody td {
       a {
-        font-size: 15px;
+        font-size: variables.$dp-sizing--lvl3;
         color: colors.$dp-color-blue-widget;
-        font-weight: 700;
+        font-weight: settings.$dp-font-weight-bold;
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
@@ -753,8 +754,8 @@
 
       p {
         color: colors.$dp-color-grey;
-        font-weight: 400;
-        font-size: 13px;
+        font-weight: settings.$dp-font-weight;
+        font-size: variables.$dp-sizing--lvl2;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -765,7 +766,7 @@
         cursor: pointer;
 
         &-action {
-          font-size: 20px;
+          font-size: variables.$dp-sizing--lvl4;
         }
       }
     }
