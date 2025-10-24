@@ -38,6 +38,7 @@
 ///   </table>
 
 @use "core/variables";
+@use "core/settings";
 @use "helpers/colors";
 
 .dp-library {
@@ -724,22 +725,27 @@
 
   .dp-table-sent-campaigns {
     .long-column {
-      min-width: 385px;
+      min-width: 300px;
+      max-width: 300px;
     }
 
     .dp-wrapper-message {
       flex-direction: column;
     }
 
-    tbody td {
-      font-size: 16px;
+    thead tr p {
+      font-size: variables.$dp-sizing--lvl2;
+    }
 
+    tbody td {
       a {
+        font-size: variables.$dp-sizing--lvl3;
         color: colors.$dp-color-blue-widget;
-        font-weight: 700;
+        font-weight: settings.$dp-font-weight-bold;
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
+        display: block;
 
         &:hover {
           color: colors.$dp-color-blue-widget-darker;
@@ -748,13 +754,20 @@
 
       p {
         color: colors.$dp-color-grey;
-        font-weight: 400;
+        font-weight: settings.$dp-font-weight;
+        font-size: variables.$dp-sizing--lvl2;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
       }
 
       .icon {
-        font-size: 24px;
         color: colors.$dp-color-blue-widget;
         cursor: pointer;
+
+        &-action {
+          font-size: variables.$dp-sizing--lvl4;
+        }
       }
     }
   }
