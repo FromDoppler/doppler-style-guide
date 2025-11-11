@@ -43,13 +43,11 @@ export default {
           "</div>\n" +
           "```\n\n" +
           "---\n\n" +
-          "### ❌ Close Button (SVG Icon)\n\n" +
-          "The close icon (“x”) uses a **modified external SVG**, which doesn’t dynamically" +
-          " change color according to the applied style.  \n" +
-          "> If you want to use a different SVG or one that adopts the theme color, you need to " +
-          "**create a new SVG file and edit it**, adjusting the `fill` attribute to the desired value.\n\n" +
-          "This ensures visual consistency with the color defined in `.pill--green` or any" +
-          " future variants.\n\n---\n\n" +
+          "### ❌ Close Icon (Inline SVG)\n\n" +
+          "The close icon is now rendered using an **inline SVG** through the `<i>` element.\n\n" +
+          "This allows the SVG to **inherit the color** from its parent pill, adapting automatically " +
+          "to the current color variant (e.g. `.pill--green`).\n\n" +
+          "---\n\n" +
           "### 🧩 Grouping Multiple Pills\n\n" +
           "To display multiple pills on the same line, you can use the helper class " +
           "**`.pill-container`**, which handles proper alignment:\n\n" +

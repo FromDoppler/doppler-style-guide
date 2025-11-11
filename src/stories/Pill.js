@@ -9,9 +9,7 @@ export const Pill = ({
   return html`
     <div class="pill pill--${color} ${expandable ? "pill--expandable" : ""}">
       <span class="pill-text">${text}</span>
-      ${removable
-        ? html`<button class="pill-close" aria-label="Cerrar"></button>`
-        : ""}
+      ${removable ? html`<i class="icon-cancel-icon"></i>` : ""}
     </div>
   `;
 };
