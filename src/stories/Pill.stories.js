@@ -52,7 +52,7 @@ The generated HTML structure looks like this:
 
 ### ❌ Close Button (SVG Icon)
 
-The close icon (“x”) uses a **modified external SVG**, which doesn’t dynamically change color according to the applied style.  
+The close icon (“x”) uses a **modified external SVG**, which doesn’t dynamically change color according to the applied style.
 > If you want to use a different SVG or one that adopts the theme color, you need to **create a new SVG file and edit it**, adjusting the \`fill\` attribute to the desired value.
 
 This ensures visual consistency with the color defined in \`.pill--green\` or any future variants.
@@ -114,7 +114,8 @@ With this class, the pills are placed **side by side** and **wrap automatically*
     expandable: {
       control: "boolean",
       defaultValue: false,
-      description: "Allows the text to grow without showing ellipsis (…) when it exceeds 212px width.",
+      description:
+        "Allows the text to grow without showing ellipsis (…) when it exceeds 212px width.",
     },
     color: {
       control: { type: "select" },
