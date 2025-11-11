@@ -60,3 +60,8 @@
   @extend .icon-svg;
   --icon-url: url("assets/icons/svg-icons/preview-eye.svg");
 }
+
+.icon-cancel-icon {
+  @extend .icon-svg;
+  --icon-url: url("assets/icons/svg-icons/message-cancel-icon.svg");
+}
