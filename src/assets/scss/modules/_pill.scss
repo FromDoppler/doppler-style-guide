@@ -1,0 +1,85 @@
+@use "core/variables";
+@use "helpers/colors";
+@use "core/typography";
+
+$pill-colors: (
+  green: (
+    border: colors.$dp-color-green,
+    bg: colors.$dp-color-green-brightness,
+  ),
+);
+
+$pill-icons: (
+  green: "assets/img/message-cancel-icon-green.svg",
+);
+
+.dp-library {
+  .pill-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 9999px;
+    padding: variables.$dp-spaces--lv1 variables.$dp-spaces--lv2;
+    font-family: typography.$dp-fontfamily-awa;
+    font-size: variables.$dp-sizing--lvl2;
+    line-height: 1;
+    cursor: default;
+
+    &-text {
+      margin-right: 8px;
+      max-width: 212px; // width for "Septiembre 2024 - Septiembre 2024"
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    &-close {
+      border: none;
+      border-radius: 50%;
+      width: 16px;
+      height: 16px;
+      cursor: pointer;
+      background-color: transparent;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      padding: 0;
+      transition: none;
+      flex-shrink: 0;
+    }
+
+    &:not(:has(.pill-close)) .pill-text {
+      margin-right: 0;
+    }
+
+    &--expandable {
+      .pill-text {
+        max-width: none;
+        overflow: visible;
+        white-space: normal;
+        text-overflow: unset;
+      }
+    }
+
+    @each $name, $values in $pill-colors {
+      &--#{$name} {
+        border: 2px solid map-get($values, border);
+        color: map-get($values, border);
+        background-color: map-get($values, bg);
+
+        @if map-has-key($pill-icons, $name) {
+          .pill-close {
+            background-image: url("#{map-get($pill-icons, $name)}");
+          }
+        }
+      }
+    }
+  }
+}
