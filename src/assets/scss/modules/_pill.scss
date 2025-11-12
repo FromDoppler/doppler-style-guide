@@ -44,14 +44,26 @@ $pill-colors: (
       }
     }
 
-    i {
-      font-size: 16px;
-      line-height: 1;
+    .pill-close {
+      background: none;
+      border: none;
+      padding: 0;
+      margin-left: 4px;
+      cursor: pointer;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      margin-left: 4px;
-      cursor: pointer;
+      color: inherit;
+
+      i {
+        font-size: 16px;
+        line-height: 1;
+        color: inherit;
+      }
+
+      &:hover {
+        opacity: 0.8;
+      }
     }
 
     @each $name, $values in $pill-colors {
