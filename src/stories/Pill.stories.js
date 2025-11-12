@@ -7,9 +7,8 @@ export default {
       description: {
         component:
           "💊 **Pill Component**\n\n" +
-          "_Last updated: **11/11/2025** by **Ezequiel Morales**_\n\n" +
           "The `Pill` component is used to display small text labels (tags) or time ranges, usually " +
-          'accompanied by a" button to close or remove them from the context.\n\n' +
+          "accompanied by a button to close or remove them from the context.\n\n" +
           "---\n\n" +
           "### ⚙️ Main Properties\n\n" +
           "| Property | Type | Description |\n" +
@@ -39,7 +38,9 @@ export default {
           "```html\n" +
           '<div class="pill pill--green">\n' +
           '  <span class="pill-text">Septiembre 2025 - Septiembre 2025</span>\n' +
-          '  <button class="pill-close" aria-label="Close"></button>\n' +
+          '  <button class="pill-close" aria-label="Remove">\n' +
+          '    <i class="icon-cancel-icon"></i>\n' +
+          "  </button>\n" +
           "</div>\n" +
           "```\n\n" +
           "---\n\n" +
