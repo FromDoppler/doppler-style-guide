@@ -44,6 +44,14 @@ $pill-colors: (
       }
     }
 
+    @each $name, $values in $pill-colors {
+      &--#{$name} {
+        border: 2px solid map-get($values, border);
+        color: map-get($values, border);
+        background-color: map-get($values, bg);
+      }
+    }
+
     .pill-close {
       background: none;
       border: none;
@@ -63,14 +71,6 @@ $pill-colors: (
 
       &:hover {
         opacity: 0.8;
-      }
-    }
-
-    @each $name, $values in $pill-colors {
-      &--#{$name} {
-        border: 2px solid map-get($values, border);
-        color: map-get($values, border);
-        background-color: map-get($values, bg);
       }
     }
   }
