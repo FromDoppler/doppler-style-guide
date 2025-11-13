@@ -1,0 +1,77 @@
+@use "core/variables";
+@use "helpers/colors";
+@use "core/typography";
+
+$pill-colors: (
+  green: (
+    border: colors.$dp-color-green,
+    bg: colors.$dp-color-green-brightness,
+  ),
+);
+
+.dp-library {
+  .pill-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .pill {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 9999px;
+    padding: variables.$dp-spaces--lv1 variables.$dp-spaces--lv2;
+    font-family: typography.$dp-fontfamily-awa;
+    font-size: variables.$dp-sizing--lvl2;
+    line-height: 1.2;
+    cursor: default;
+
+    &-text {
+      max-width: 246px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    &--expandable {
+      .pill-text {
+        max-width: none;
+        overflow: visible;
+        white-space: normal;
+        text-overflow: unset;
+      }
+    }
+
+    @each $name, $values in $pill-colors {
+      &--#{$name} {
+        border: 2px solid map-get($values, border);
+        color: map-get($values, border);
+        background-color: map-get($values, bg);
+      }
+    }
+
+    .pill-close {
+      background: none;
+      border: none;
+      padding: 0;
+      margin-left: 4px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: inherit;
+
+      i {
+        font-size: 16px;
+        line-height: 1;
+        color: inherit;
+      }
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}
