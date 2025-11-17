@@ -1,0 +1,10 @@
+@use "core/variables";
+@use "core/settings";
+
+.label-tag {
+  padding: 0 variables.$dp-spaces--lv1;
+  border-radius: 6px;
+  font-size: variables.$dp-sizing--lvl2;
+  display: inline-block;
+  font-weight: settings.$dp-font-weight;
+}
