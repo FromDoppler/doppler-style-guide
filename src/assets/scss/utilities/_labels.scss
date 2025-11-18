@@ -1,0 +1,12 @@
+@use "core/variables";
+@use "core/settings";
+@use "helpers/colors";
+
+.label-tag {
+  color: colors.$dp-color-darkgrey;
+  padding: 0 variables.$dp-spaces--lv1;
+  border-radius: 6px;
+  font-size: variables.$dp-sizing--lvl2;
+  display: inline-block;
+  font-weight: settings.$dp-font-weight;
+}
