@@ -39,7 +39,7 @@ export const Multiselect = () => {
                 <span class="checkmark"></span>
                 <span class="label-text">Etiqueta ${i}</span>
               </label>
-            `
+            `,
           )}
         </div>
       </div>
