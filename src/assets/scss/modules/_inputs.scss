@@ -979,6 +979,115 @@
       font-size: typography.$dp-fontsize-small;
     }
   }
+
+  .dp-select.dp-select-multiple {
+    position: relative;
+
+    .select-header {
+      height: 40px;
+      color: colors.$dp-color-text-input;
+      border: 1px solid colors.$dp-color-border-input;
+      width: 100%;
+      background-color: colors.$dp-color-white;
+      border-radius: var.$dp-border-radius;
+      font-size: typography.$dp-fontsize-base;
+      padding: 0 40px 0 10px;
+      text-align: left;
+      line-height: 36px;
+      cursor: pointer;
+      text-overflow: ellipsis;
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-sizing: border-box;
+
+      .selected-text {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        flex: 1;
+        margin-right: 10px;
+      }
+    }
+
+    &.active {
+      .select-options {
+        display: block;
+      }
+
+      .dropdown-arrow {
+        transform: rotate(180deg);
+      }
+    }
+
+    .select-options {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: white;
+      border: 2.59px solid #e58900;
+      border-radius: 3.89px;
+      margin-top: 5px;
+      padding: 0;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      max-height: 200px;
+      overflow-y: auto;
+      box-sizing: border-box;
+      width: 100%;
+
+      .option {
+        display: flex;
+        align-items: center;
+        padding: 12px 12px;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+        width: 100%;
+        box-sizing: border-box;
+        font-weight: normal !important;
+
+        &:hover {
+          background-color: #f5f5f5;
+        }
+
+        input[type="checkbox"] {
+          display: none;
+
+          &:checked + .checkmark {
+            background-color: #33ad73;
+            border-color: #33ad73;
+
+            &::after {
+              content: "";
+              position: absolute;
+              left: 4px;
+              top: 1px;
+              width: 6px;
+              height: 10px;
+              border: solid white;
+              border-width: 0 2px 2px 0;
+              transform: rotate(45deg);
+            }
+          }
+        }
+
+        .checkmark {
+          width: 16px;
+          height: 16px;
+          border: 1.3px solid #ccc;
+          border-radius: 3.89px;
+          margin-right: 10px;
+          position: relative;
+          transition: all 0.2s ease;
+          flex-shrink: 0;
+        }
+      }
+    }
+  }
 }
 
 .dp-label-with-icon {
