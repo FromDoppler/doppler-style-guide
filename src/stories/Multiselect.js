@@ -13,21 +13,21 @@ export const Multiselect = () => {
         multiple
         class="native-multiselect"
         style="display:none;"
-        data-label="Selecciona las etiquetas"
+        data-label="Select labels"
       >
-        <option value="etiqueta1">Etiqueta 1</option>
-        <option value="etiqueta2">Etiqueta 2</option>
-        <option value="etiqueta3">Etiqueta 3</option>
-        <option value="etiqueta4">Etiqueta 4</option>
-        <option value="etiqueta5">Etiqueta 5</option>
-        <option value="etiqueta6">Etiqueta 6</option>
-        <option value="etiqueta7">Etiqueta 7</option>
-        <option value="etiqueta8">Etiqueta 8</option>
+        <option value="label1">Label 1</option>
+        <option value="label2">Label 2</option>
+        <option value="label3">Label 3</option>
+        <option value="label4">Label 4</option>
+        <option value="label5">Label 5</option>
+        <option value="label6">Label 6</option>
+        <option value="label7">Label 7</option>
+        <option value="label8">Label 8</option>
       </select>
 
       <div class="dp-select dp-select-multiple">
         <div class="select-header">
-          <span class="selected-text">Selecciona las etiquetas</span>
+          <span class="selected-text">Select labels</span>
           <span class="dropdown-arrow"></span>
         </div>
 
@@ -35,9 +35,9 @@ export const Multiselect = () => {
           ${[1, 2, 3, 4, 5, 6, 7, 8].map(
             (i) => html`
               <label class="option">
-                <input type="checkbox" value="etiqueta${i}" />
+                <input type="checkbox" value="label${i}" />
                 <span class="checkmark"></span>
-                <span class="label-text">Etiqueta ${i}</span>
+                <span class="label-text">Label ${i}</span>
               </label>
             `,
           )}
