@@ -46,7 +46,7 @@
     "sass": "1.94.0",
     "sass-loader": "15.0.0",
     "string-replace-loader": "3.2.0",
-    "webpack": "5.102.1",
+    "webpack": "5.103.0",
     "webpack-manifest-plugin": "5.0.1"
   },
   "devDependencies": {
