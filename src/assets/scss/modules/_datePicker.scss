@@ -9,6 +9,7 @@
 
 @use "helpers/colors";
 @use "core/typography";
+@use "core/variables" as var;
 
 @mixin dp-datepicker-base {
   font-family: typography.$dp-fontfamily-awa;
@@ -217,32 +218,32 @@
   }
 
   .full-width-datepicker .react-datepicker__input-container input {
+    border: 1px solid colors.$dp-color-border-input;
+    background-color: colors.$dp-color-white;
+    color: colors.$dp-color-text-input;
+    padding: var.$dp-spaces--lv2 var.$dp-spaces--lv1;
+    font-size: typography.$dp-fontsize-base;
+    line-height: 24px;
+    margin-top: var.$dp-spaces--lv1;
+    box-shadow: 0 0 0 2px colors.$dp-color-white;
+
     width: 100%;
-    padding: 10px 14px;
-    border: 1px solid #d0d5dd;
-    border-radius: 6px;
-    font-size: 14px;
-    line-height: 20px;
-    color: #101828;
-    background-color: white;
-    outline: none;
+    border-radius: 2px;
   }
 
-  /* placeholder igual */
   .full-width-datepicker .react-datepicker__input-container input::placeholder {
-    color: #667085;
-    opacity: 1;
+    color: colors.$dp-color-text-input;
+    font-style: normal;
   }
 
-  /* hover */
   .full-width-datepicker .react-datepicker__input-container input:hover {
-    border-color: #b5bdc9;
+    border-color: colors.$dp-color-border-input;
   }
 
-  /* focus igual al campo de texto normal */
   .full-width-datepicker .react-datepicker__input-container input:focus {
-    border-color: #7f56d9;
-    box-shadow: 0 0 0 4px rgba(127, 86, 217, 0.2);
+    outline: none;
+    border-color: colors.$dp-color-border-input;
+    box-shadow: 0 0 0 2px colors.$dp-color-white;
   }
 
   .react-datepicker__triangle {
