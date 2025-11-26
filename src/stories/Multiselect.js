@@ -23,6 +23,8 @@ export const Multiselect = () => {
         <option value="label6">Label 6</option>
         <option value="label7">Label 7</option>
         <option value="label8">Label 8</option>
+        <option value="label9">Label 9</option>
+        <option value="label10">Label 10</option>
       </select>
 
       <div class="dp-select dp-select-multiple">
@@ -32,12 +34,15 @@ export const Multiselect = () => {
         </div>
 
         <div class="select-options">
-          ${[1, 2, 3, 4, 5, 6, 7, 8].map(
+          ${[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map(
             (i) => html`
               <label class="option">
-                <input type="checkbox" value="label${i}" />
-                <span class="checkmark"></span>
-                <span class="label-text">Label ${i}</span>
+                <div class="awa-form">
+                  <label class="dp-label-checkbox dp-label-checkbox--darkyellow">
+                    <input type="checkbox" value="label${i}" />
+                    <span class="label-text">Label ${i}</span>
+                  </label>
+                </div>
               </label>
             `,
           )}

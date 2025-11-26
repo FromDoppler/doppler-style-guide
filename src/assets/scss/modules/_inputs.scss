@@ -121,6 +121,12 @@
     border-color: colors.$dp-color-white;
   }
 
+  label.dp-label-checkbox--darkyellow > input:checked + span::before,
+  label.dp-label-checkbox--darkyellow > input:indeterminate + span::before {
+    border-color: colors.$dp-color-darkyellow;
+    background-color: colors.$dp-color-darkyellow;
+  }
+
   label.dp-label-checkbox > input:indeterminate + span::after {
     border-left: none;
     transform: translate(4px, 3px);
@@ -1024,62 +1030,24 @@
       top: 100%;
       left: 0;
       right: 0;
-      background: white;
-      border: 2.59px solid #e58900;
-      border-radius: 3.89px;
-      margin-top: 5px;
-      padding: 0;
+      background: colors.$dp-color-white;
+      border: 2.59px solid colors.$dp-color-darkyellow;
+      border-radius: 2.59px;
+      margin-top: var.$dp-spaces--lv1;
+      padding: var.$dp-spaces--lv0;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       z-index: 1000;
       max-height: 200px;
       overflow-y: auto;
       box-sizing: border-box;
-      width: 100%;
 
       .option {
-        display: flex;
-        align-items: center;
-        padding: 12px 12px;
+        padding: 0 12px;
         cursor: pointer;
         transition: background-color 0.2s ease;
-        width: 100%;
-        box-sizing: border-box;
-        font-weight: normal !important;
 
         &:hover {
           background-color: #f5f5f5;
-        }
-
-        input[type="checkbox"] {
-          display: none;
-
-          &:checked + .checkmark {
-            background-color: #33ad73;
-            border-color: #33ad73;
-
-            &::after {
-              content: "";
-              position: absolute;
-              left: 4px;
-              top: 1px;
-              width: 6px;
-              height: 10px;
-              border: solid white;
-              border-width: 0 2px 2px 0;
-              transform: rotate(45deg);
-            }
-          }
-        }
-
-        .checkmark {
-          width: 16px;
-          height: 16px;
-          border: 1.3px solid #ccc;
-          border-radius: 3.89px;
-          margin-right: 10px;
-          position: relative;
-          transition: all 0.2s ease;
-          flex-shrink: 0;
         }
       }
     }
