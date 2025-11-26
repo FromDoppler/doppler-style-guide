@@ -44,7 +44,7 @@ export default {
           '    <option value="label1">Label 1</option>\n' +
           "    <!-- ... -->\n" +
           "  </select>\n\n" +
-          '  <div class="dp-select dp-select-multiple">\n' +
+          '  <div class="dp-select dp-select-multiple dp-label-checkbox--darkyellow">\n' +
           '    <div class="select-header">\n' +
           '      <span class="selected-text">Select labels</span>\n' +
           '      <span class="dropdown-arrow"></span>\n' +

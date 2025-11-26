@@ -38,7 +38,9 @@ export const Multiselect = () => {
             (i) => html`
               <label class="option">
                 <div class="awa-form">
-                  <label class="dp-label-checkbox dp-label-checkbox--darkyellow">
+                  <label
+                    class="dp-label-checkbox dp-label-checkbox--darkyellow"
+                  >
                     <input type="checkbox" value="label${i}" />
                     <span class="label-text">Label ${i}</span>
                   </label>
