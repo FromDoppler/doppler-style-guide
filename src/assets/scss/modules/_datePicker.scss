@@ -216,6 +216,35 @@
     width: 100% !important;
   }
 
+  .full-width-datepicker .react-datepicker__input-container input {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #d0d5dd;
+    border-radius: 6px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #101828;
+    background-color: white;
+    outline: none;
+  }
+
+  /* placeholder igual */
+  .full-width-datepicker .react-datepicker__input-container input::placeholder {
+    color: #667085;
+    opacity: 1;
+  }
+
+  /* hover */
+  .full-width-datepicker .react-datepicker__input-container input:hover {
+    border-color: #b5bdc9;
+  }
+
+  /* focus igual al campo de texto normal */
+  .full-width-datepicker .react-datepicker__input-container input:focus {
+    border-color: #7f56d9;
+    box-shadow: 0 0 0 4px rgba(127, 86, 217, 0.2);
+  }
+
   .react-datepicker__triangle {
     display: none;
   }
