@@ -42,7 +42,7 @@ export const Contact = ({ disabled, label, isError }) => {
                     <label
                       for="name"
                       class="labelcontrol"
-                      aria-disabled="${disabled}"
+                      aria-disabled=${disabled}
                       data-required="false"
                     >
                       No enviar mas de
@@ -51,8 +51,8 @@ export const Contact = ({ disabled, label, isError }) => {
                         name="number"
                         id="correos electrónicos"
                         aria-placeholder="999"
-                        .disabled="${disabled}"
-                        aria-invalid="${isError}"
+                        .disabled=${disabled}
+                        aria-invalid=${isError}
                       />
                       emails en un período de
                       <input
@@ -60,8 +60,8 @@ export const Contact = ({ disabled, label, isError }) => {
                         name="number"
                         id="dias"
                         aria-placeholder="30"
-                        .disabled="${disabled}"
-                        aria-invalid="${isError}"
+                        .disabled=${disabled}
+                        aria-invalid=${isError}
                       />
                       días
                       <!-- add class "show" message -->

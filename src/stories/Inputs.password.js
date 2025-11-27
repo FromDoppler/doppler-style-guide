@@ -9,7 +9,7 @@ export const Inputs = ({ disabled, label, labelRequired, isError }) => {
       <label
         for="password"
         class="labelpassword"
-        data-required="${labelRequired}"
+        data-required=${labelRequired}
       >
         ${label}
         <div class="dp-wrap-eyed">
@@ -25,7 +25,7 @@ export const Inputs = ({ disabled, label, labelRequired, isError }) => {
             name="password"
             placeholder="Your Password"
             aria-required="true"
-            aria-invalid="${isError}"
+            aria-invalid=${isError}
             aria-placeholder="Your Password"
           />
           <div class="assistance-wrap">

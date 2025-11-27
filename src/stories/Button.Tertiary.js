@@ -14,21 +14,21 @@ export const Inputs = ({ disabled }) => {
       <button
         type="button"
         class="dp-button button-big ctaTertiary"
-        .disabled="${disabled}"
+        .disabled=${disabled}
       >
         Volver
       </button>
       <button
         type="button"
         class="dp-button button-medium ctaTertiary m-l-42"
-        .disabled="${disabled}"
+        .disabled=${disabled}
       >
         Volver
       </button>
       <button
         type="button"
         class="dp-button button-small ctaTertiary m-l-42"
-        .disabled="${disabled}"
+        .disabled=${disabled}
       >
         Volver
       </button>

@@ -33,7 +33,7 @@ export const Button = ({
   return html`
     <button
       type="button"
-      class="${[
+      class=${[
         "dp-button",
         `${mode}-${color}`,
         ...sizeClass,
@@ -41,9 +41,9 @@ export const Button = ({
         rounded ? "button--round" : "",
         preloading ? "button--centered-loading" : "",
         iconClass ? "button-icon" : "",
-      ].join(" ")}"
-      @click="${onClick}"
-      .disabled="${disabled}"
+      ].join(" ")}
+      @click=${onClick}
+      .disabled=${disabled}
     >
       ${iconClass
         ? html`

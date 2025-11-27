@@ -9,11 +9,11 @@ export const Inputs = ({ disabled, label, labelLegend, isError }) => {
       <label
         class="dp-label-dropfile"
         for="file"
-        aria-disabled="${disabled}"
-        aria-invalid="${isError}"
+        aria-disabled=${disabled}
+        aria-invalid=${isError}
       >
         ${label}
-        <input type="file" id="file" name="file" .disabled="${disabled}" />
+        <input type="file" id="file" name="file" .disabled=${disabled} />
         <div class="assistance-wrap">
           <span>${labelLegend}</span>
         </div>

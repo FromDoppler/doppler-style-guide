@@ -10,7 +10,7 @@ export const WidgetInfoCard = ({ bgColor }) => {
       <div class="col-md-8 col-lg-6">
         <div class="dp-widget-info-card">
           <div class="dp-widget-info-card-header">
-            <div class="${`dp-widget-card-icon ${bgColor}`}">
+            <div class=${`dp-widget-card-icon ${bgColor}`}>
               <span class="dpicon iconapp-online-clothing"></span>
             </div>
 

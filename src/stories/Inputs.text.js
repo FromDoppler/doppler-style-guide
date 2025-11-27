@@ -9,8 +9,8 @@ export const Inputs = ({ disabled, label, labelRequired, isError }) => {
       <label
         for="name"
         class="labelcontrol"
-        aria-disabled="${disabled}"
-        data-required="${labelRequired}"
+        aria-disabled=${disabled}
+        data-required=${labelRequired}
       >
         ${label}
         <input
@@ -19,9 +19,9 @@ export const Inputs = ({ disabled, label, labelRequired, isError }) => {
           name="name"
           placeholder="Your Name"
           aria-required="true"
-          aria-invalid="${isError}"
+          aria-invalid=${isError}
           aria-placeholder="Your Name"
-          .disabled="${disabled}"
+          .disabled=${disabled}
         />
         <div class="assistance-wrap">
           <span>Assistive text</span>

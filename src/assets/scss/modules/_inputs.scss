@@ -121,6 +121,12 @@
     border-color: colors.$dp-color-white;
   }
 
+  label.dp-label-checkbox--darkyellow > input:checked + span::before,
+  label.dp-label-checkbox--darkyellow > input:indeterminate + span::before {
+    border-color: colors.$dp-color-darkyellow;
+    background-color: colors.$dp-color-darkyellow;
+  }
+
   label.dp-label-checkbox > input:indeterminate + span::after {
     border-left: none;
     transform: translate(4px, 3px);
@@ -977,6 +983,73 @@
 
     select.small-font-size {
       font-size: typography.$dp-fontsize-small;
+    }
+  }
+
+  .dp-select.dp-select-multiple {
+    position: relative;
+
+    .select-header {
+      height: 40px;
+      color: colors.$dp-color-text-input;
+      border: 1px solid colors.$dp-color-border-input;
+      width: 100%;
+      background-color: colors.$dp-color-white;
+      border-radius: var.$dp-border-radius;
+      font-size: typography.$dp-fontsize-base;
+      padding: 0 40px 0 10px;
+      text-align: left;
+      line-height: 36px;
+      cursor: pointer;
+      text-overflow: ellipsis;
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-sizing: border-box;
+
+      .selected-text {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        flex: 1;
+        margin-right: 10px;
+      }
+    }
+
+    &.active {
+      .select-options {
+        display: block;
+      }
+    }
+
+    .select-options {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: colors.$dp-color-white;
+      border: 2.59px solid colors.$dp-color-darkyellow;
+      border-radius: 2.59px;
+      margin-top: var.$dp-spaces--lv1;
+      padding: var.$dp-spaces--lv0;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+      max-height: 200px;
+      overflow-y: auto;
+      box-sizing: border-box;
+
+      .option {
+        padding: 0 12px;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+
+        &:hover {
+          background-color: #f5f5f5;
+        }
+      }
     }
   }
 }

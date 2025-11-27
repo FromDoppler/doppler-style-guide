@@ -9,10 +9,10 @@ export const UndoRedo = ({ labelUndo, labelRedo, disabled }) => {
       <button
         type="button"
         class="dp-arrow-undo"
-        title="${labelUndo}"
-        .disabled="${disabled}"
+        title=${labelUndo}
+        .disabled=${disabled}
       ></button>
-      <button type="button" class="dp-arrow-redo" title="${labelRedo}"></button>
+      <button type="button" class="dp-arrow-redo" title=${labelRedo}></button>
     </div>
   `;
 };
