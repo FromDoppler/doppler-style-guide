@@ -9,7 +9,7 @@ export const WidgetCard = ({ bgColor, ribbon, message }) => {
       <h2>Widget-Card</h2>
       <div class="col-md-6 col-lg-4">
         <div class="dp-widget-card">
-          <div class="${`dp-widget-card-icon ${bgColor}`}">
+          <div class=${`dp-widget-card-icon ${bgColor}`}>
             <span class="dpicon iconapp-online-clothing"></span>
           </div>
           <div class="dp-widget-card-content">
@@ -34,7 +34,7 @@ export const WidgetCard = ({ bgColor, ribbon, message }) => {
             : ""}
           ${message
             ? html`
-                <div class="${`dp-widget-card-hover-message ${bgColor}`}">
+                <div class=${`dp-widget-card-hover-message ${bgColor}`}>
                   <h3>${message.title}</h3>
                   <p>${message.description} <a href=${message.link}>Link</a></p>
                 </div>

@@ -15,7 +15,7 @@ export const Inputs = ({ disabled }) => {
                   type="button"
                   class="dp-button button-big dp-button-dropdown"
                   aria-controls=""
-                  .disabled="${disabled}"
+                  .disabled=${disabled}
                 >
                   <span class="dp-dropdown-arrow"></span>
                   Salir del Editor
@@ -46,7 +46,7 @@ export const Inputs = ({ disabled }) => {
                   type="button"
                   class="dp-button button-medium dp-button-dropdown"
                   aria-controls=""
-                  .disabled="${disabled}"
+                  .disabled=${disabled}
                 >
                   <span class="dp-dropdown-arrow"></span>
                   Salir del Editor
@@ -77,7 +77,7 @@ export const Inputs = ({ disabled }) => {
                   type="button"
                   class="dp-button button-small dp-button-dropdown"
                   aria-controls=""
-                  .disabled="${disabled}"
+                  .disabled=${disabled}
                 >
                   <span class="dp-dropdown-arrow"></span>
                   Salir del Editor

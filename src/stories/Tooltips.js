@@ -76,7 +76,7 @@ export const Tooltips = ({ direction }) => {
                   <span class="dpsg-code"
                     >Hover!
                     <div
-                      class="${`dp-tooltip-chart${direction == "top" ? "" : "-" + direction || ""}`}"
+                      class=${`dp-tooltip-chart${direction == "top" ? "" : "-" + direction || ""}`}
                     >
                       <img
                         src="https://cdn.fromdoppler.com/doppler-ui-library/thumbnail-preview.png"
@@ -89,7 +89,7 @@ export const Tooltips = ({ direction }) => {
                   <span class="dpsg-code">
                     Hover!
                     <div
-                      class="${`dp-tooltip-chart${direction == "top" ? "" : "-" + direction || ""}`}"
+                      class=${`dp-tooltip-chart${direction == "top" ? "" : "-" + direction || ""}`}
                     >
                       <small>Jueves 16</small>
                       <span>Usuarios con email: 2</span>

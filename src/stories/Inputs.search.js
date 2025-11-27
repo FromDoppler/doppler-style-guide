@@ -6,12 +6,12 @@ import { html } from "lit-html";
 export const Inputs = ({ disabled, label, isError }) => {
   return html`
     <div class="awa-form" style="width:450px;">
-      <label for="search" class="labelcontrol" aria-disabled="${disabled}">
+      <label for="search" class="labelcontrol" aria-disabled=${disabled}>
         ${label}
         <div class="dp-wrap-search">
           <button
             class="dp-button button-medium dp-button--search"
-            .disabled="${disabled}"
+            .disabled=${disabled}
           >
             <span class="ms-icon icon-search" aria-hidden="true"></span>
           </button>
@@ -19,8 +19,8 @@ export const Inputs = ({ disabled, label, isError }) => {
             type="search"
             id="search"
             placeholder="Busqueda de imagenes"
-            aria-invalid="${isError}"
-            .disabled="${disabled}"
+            aria-invalid=${isError}
+            .disabled=${disabled}
           />
           <div class="assistance-wrap">
             <span>Assistive text</span>

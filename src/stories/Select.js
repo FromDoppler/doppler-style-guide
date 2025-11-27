@@ -9,8 +9,8 @@ export const Select = ({ disabled, label, labelRequired, isError }) => {
       <label
         for="list-selection"
         class="labelcontrol"
-        aria-disabled="${disabled}"
-        data-required="${labelRequired}"
+        aria-disabled=${disabled}
+        data-required=${labelRequired}
         >${label}
         <div class="dp-select">
           <span class="dropdown-arrow"></span>
@@ -18,8 +18,8 @@ export const Select = ({ disabled, label, labelRequired, isError }) => {
             id="list-selection"
             class=""
             name="list-selection"
-            aria-invalid="${isError}"
-            .disabled="${disabled}"
+            aria-invalid=${isError}
+            .disabled=${disabled}
           >
             <option value="">
               Lorem Ipsum has been the industry's standard dummy

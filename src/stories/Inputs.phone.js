@@ -9,8 +9,8 @@ export const Inputs = ({ disabled, label, labelRequired, isError }) => {
       <label
         for="tel"
         class="labelcontrol"
-        aria-disabled="${disabled}"
-        data-required="${labelRequired}"
+        aria-disabled=${disabled}
+        data-required=${labelRequired}
       >
         ${label}
         <div class="iti iti--allow-dropdown">
@@ -20,9 +20,9 @@ export const Inputs = ({ disabled, label, labelRequired, isError }) => {
             name="tel"
             placeholder="Your Phone"
             aria-required="true"
-            aria-invalid="${isError}"
+            aria-invalid=${isError}
             aria-placeholder="Your Phone"
-            .disabled="${disabled}"
+            .disabled=${disabled}
           />
         </div>
         <div class="assistance-wrap">
