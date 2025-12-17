@@ -1050,6 +1050,18 @@
           background-color: #f5f5f5;
         }
       }
+
+      .option--disabled {
+        padding: var.$dp-spaces--lv2;
+        color: colors.$dp-color-grey;
+        cursor: default;
+        pointer-events: none;
+        background-color: transparent;
+
+        &:hover {
+          background-color: transparent;
+        }
+      }
     }
   }
 }
