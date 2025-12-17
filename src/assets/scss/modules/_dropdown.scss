@@ -285,12 +285,11 @@
     }
 
     &-title {
-      font-size: variables.$dp-sizing--lvl6;
+      font-size: variables.$dp-sizing--lvl5;
       text-align: left;
       font-family: settings.$dp-font-family;
       color: colors.$dp-color-darkgrey;
       font-weight: settings.$dp-font-weight-bold;
-      margin: 0 0 10px;
       padding: 0;
     }
 
