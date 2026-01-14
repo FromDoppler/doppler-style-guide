@@ -4387,9 +4387,9 @@ bignumber.js@^2.4.0:
   integrity sha1-g4qZLan51zfg9LLbC+YrsJ3Qxeg=
 
 billboard.js@^3.13.0:
-  version "3.17.3"
-  resolved "https://registry.yarnpkg.com/billboard.js/-/billboard.js-3.17.3.tgz#51d7ee2af29566a1fbbc0f9d14f68ed5326c43e3"
-  integrity sha512-p9w/qZ0Gt5hrmNb9OKFbLK3VTe4M2OpRdlpZJ+KyQ1Rb3OliuWky2NCyi2cGebWsEvMumoYQ0a9N8nEd8MxEug==
+  version "3.17.4"
+  resolved "https://registry.yarnpkg.com/billboard.js/-/billboard.js-3.17.4.tgz#3fe6940d9a5f10bff49cd167c7c0c5cb1609ce54"
+  integrity sha512-biAEOfpuD5btDYFtOypeLuHBiL8zr+R4ytasnbqguNSz78Mwm+0DCPIOc6W6tFPmPFHAkVHsWKJ6SSvRjq1gKQ==
   dependencies:
     "@types/d3-selection" "^3.0.11"
     "@types/d3-transition" "^3.0.9"
@@ -5675,9 +5675,9 @@ d3-dsv@^3.0.1:
   integrity sha512-wR/XK3D3XcLIZwpbvQwQ5fK+8Ykds1ip7A2Txe0yxncXSdq1L9skcG7blcedkOX+ZcgxGAmLX1FrRGbADwzi0w==
 
 "d3-format@1 - 3":
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/d3-format/-/d3-format-3.1.0.tgz#9260e23a28ea5cb109e93b21a06e24e2ebd55641"
-  integrity sha512-YyUI6AEuY/Wpt8KWLgZHsIU86atmikuoOmCfommt0LYHiQSPjvX2AcFc38PX0CBpr2RCyZhjex+NS/LPOv6YqA==
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/d3-format/-/d3-format-3.1.1.tgz#9703346c5c6743163c59cea3d9efd056120810cf"
+  integrity sha512-ryitBnaRbXQtgZ/gU50GSn6jQRwinSCQclpakXymvLd8ytTgE5bmSfgYcUxD7XYL34qHhFDyVk71qqKsfSyvmA==
 
 d3-hierarchy@^3.1.2:
   version "3.1.2"
