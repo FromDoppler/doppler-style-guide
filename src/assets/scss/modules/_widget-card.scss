@@ -1,4 +1,5 @@
 @use "helpers/colors";
+@use "settings";
 
 .dp-widget-card,
 .dp-widget-info-card {
@@ -107,6 +108,8 @@
 
     &-title-container {
       flex: 1;
+      min-width: 0;
+      padding-right: 12px;
     }
 
     &-subtitle-container {
@@ -118,6 +121,36 @@
 
     &-subtitle {
       font-size: 14px;
+    }
+
+    h3 {
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .dp-tooltip-top {
+      span {
+        max-width: 360px;
+        overflow-wrap: anywhere;
+      }
+    }
+
+    &-status {
+      margin-right: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding-top: 1px;
+    }
+
+    &-status-row {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    &-status-value {
+      font-weight: $dp-font-weight-semibold;
     }
   }
 
