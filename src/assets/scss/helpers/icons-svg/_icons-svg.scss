@@ -65,3 +65,18 @@
   @extend .icon-svg;
   --icon-url: url("assets/icons/svg-icons/message-cancel-icon.svg");
 }
+
+.icon-custom-document {
+  @extend .icon-svg;
+  --icon-url: url("assets/icons/svg-icons/custom-document.svg");
+}
+
+.icon-wheel-of-fortune {
+  @extend .icon-svg;
+  --icon-url: url("assets/icons/svg-icons/wheel-of-fortune.svg");
+}
+
+.icon-verified-search {
+  @extend .icon-svg;
+  --icon-url: url("assets/icons/svg-icons/verified-search.svg");
+}
