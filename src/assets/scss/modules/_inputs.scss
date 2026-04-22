@@ -541,13 +541,11 @@
   }
 
   .labelcontrol
-    .iti--allow-dropdown
-    input[aria-invalid="true"]
+    .iti--allow-dropdown:has(input[aria-invalid="true"])
     + .assistance-wrap
     span,
   .labelcontrol
-    .iti--allow-dropdown
-    input[aria-invalid="true"]
+    .iti--allow-dropdown:has(input[aria-invalid="true"])
     + .assistance-wrap
     p,
   .labelcontrol
