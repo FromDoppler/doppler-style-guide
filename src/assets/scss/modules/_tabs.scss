@@ -51,8 +51,8 @@
       text-decoration: none;
       position: relative;
       color: colors.$dp-color-grey;
-      font-size: variables.$dp-sizing--lvl2;
-      font-weight: settings.$dp-font-weight-bold;
+      font-size: variables.$dp-sizing--lvl3-16;
+      font-weight: settings.$dp-font-weight-regular;
       font-family: settings.$dp-font-family;
       line-height: variables.$dp-spaces--lv3;
       display: block;
@@ -60,7 +60,7 @@
       overflow: hidden;
       padding: 15px 0;
       margin-right: variables.$dp-spaces--lv10;
-      @include mixins.transition-all;
+      @include mixins.transition-all(color);
 
       &:before {
         content: "";
@@ -69,24 +69,27 @@
         border-bottom: 3px solid colors.$dp-color-yellow;
         bottom: 0;
         right: 350px;
-        @include mixins.transition-all;
+        @include mixins.transition-all(right);
       }
 
       &:hover:before {
         right: 0;
       }
 
-      &.active,
+      &.active {
+        color: colors.$dp-color-darkgrey;
+        font-weight: settings.$dp-font-weight-bold;
+      }
+
       &:hover {
         color: colors.$dp-color-darkgrey;
-        font-weight: bold;
       }
     }
   }
 
   .tab--item .active {
     color: colors.$dp-color-darkgrey;
-    font-weight: bold;
+    font-weight: settings.$dp-font-weight-bold;
   }
 
   .tab--item .active:before {
@@ -95,7 +98,7 @@
     border-bottom: 3px solid colors.$dp-color-yellow;
     bottom: 0;
     right: 0;
-    @include mixins.transition-all;
+    @include mixins.transition-all(right);
   }
 
   .tab--container {
