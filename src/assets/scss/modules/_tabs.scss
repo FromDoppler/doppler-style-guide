@@ -60,7 +60,7 @@
       overflow: hidden;
       padding: 15px 0;
       margin-right: variables.$dp-spaces--lv10;
-      @include mixins.transition-all;
+      @include mixins.transition-all(color);
 
       &:before {
         content: "";
@@ -69,7 +69,7 @@
         border-bottom: 3px solid colors.$dp-color-yellow;
         bottom: 0;
         right: 350px;
-        @include mixins.transition-all;
+        @include mixins.transition-all(right);
       }
 
       &:hover:before {
@@ -98,7 +98,7 @@
     border-bottom: 3px solid colors.$dp-color-yellow;
     bottom: 0;
     right: 0;
-    @include mixins.transition-all;
+    @include mixins.transition-all(right);
   }
 
   .tab--container {
