@@ -51,8 +51,8 @@
       text-decoration: none;
       position: relative;
       color: colors.$dp-color-grey;
-      font-size: variables.$dp-sizing--lvl2;
-      font-weight: settings.$dp-font-weight-bold;
+      font-size: variables.$dp-sizing--lvl3-16;
+      font-weight: settings.$dp-font-weight-regular;
       font-family: settings.$dp-font-family;
       line-height: variables.$dp-spaces--lv3;
       display: block;
@@ -76,17 +76,20 @@
         right: 0;
       }
 
-      &.active,
+      &.active {
+        color: colors.$dp-color-darkgrey;
+        font-weight: settings.$dp-font-weight-bold;
+      }
+
       &:hover {
         color: colors.$dp-color-darkgrey;
-        font-weight: bold;
       }
     }
   }
 
   .tab--item .active {
     color: colors.$dp-color-darkgrey;
-    font-weight: bold;
+    font-weight: settings.$dp-font-weight-bold;
   }
 
   .tab--item .active:before {
