@@ -1,4 +1,5 @@
 import { html } from "lit-html";
+import { ifDefined } from "lit-html/directives/if-defined.js";
 
 const defaultKpis = [
   {
@@ -80,12 +81,18 @@ export const KPIs = ({
                     class=${`dp-assisted-sales-icon dpicon ${icon} ${iconColorClassName}`}
                   ></span>
                   <div class="dp-assisted-sales-text">
-                    <h3 class=${textColorClassName} style=${textStyles}>
+                    <h3
+                      class=${ifDefined(textColorClassName || undefined)}
+                      style=${ifDefined(textStyles || undefined)}
+                    >
                       ${value}
                     </h3>
-                    <span class=${textColorClassName} style=${textStyles}
-                      >${label}</span
+                    <span
+                      class=${ifDefined(textColorClassName || undefined)}
+                      style=${ifDefined(textStyles || undefined)}
                     >
+                      ${label}
+                    </span>
                   </div>
                 </div>
               </li>
