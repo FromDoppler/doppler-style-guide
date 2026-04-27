@@ -8,7 +8,8 @@ export default {
       description: {
         component:
           "ActionCTA displays a compact call to action with editable title, description, and icon. " +
-          "The icon color uses `$dp-violet-tabs` (`#c9a9d5`) and the right arrow uses the existing `icon-arrow-next` icon.",
+          "The icon color uses `$dp-violet-tabs` (`#c9a9d5`) " +
+          "and the right arrow uses the existing `icon-arrow-next` icon.",
       },
     },
   },
