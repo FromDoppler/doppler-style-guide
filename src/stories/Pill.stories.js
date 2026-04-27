@@ -21,7 +21,8 @@ export default {
           "the pill becomes fixed. |\n| **expandable** | `boolean` | When enabled, " +
           "the pill **doesn’t limit its width** (it can exceed 212px) " +
           "and the text **is not truncated**. When disabled, the text is shortened with" +
-          " ellipsis to maintain a controlled size. |\n\n" +
+          " ellipsis to maintain a controlled size. |\n" +
+          "| **icon** | `string` | Defines the icon class used inside the close button. Defaults to `icon-cancel-icon`. |\n\n" +
           "---\n\n" +
           "### 🎨 Styles and Structure\n\n" +
           "Each pill has its own border and background color, defined through the SCSS " +
@@ -39,14 +40,14 @@ export default {
           '<div class="pill pill--green">\n' +
           '  <span class="pill-text">Septiembre 2025 - Septiembre 2025</span>\n' +
           '  <button class="pill-close" aria-label="Remove">\n' +
-          '    <i class="icon-cancel-icon"></i>\n' +
+          '    <i class="{icon}"></i>\n' +
           "  </button>\n" +
           "</div>\n" +
           "```\n\n" +
           "---\n\n" +
-          "### ❌ Close Icon (Inline SVG)\n\n" +
-          "The close icon is now rendered using an **inline SVG** through the `<i>` element.\n\n" +
-          "This allows the SVG to **inherit the color** from its parent pill, adapting automatically " +
+          "### ❌ Close Icon\n\n" +
+          "The close icon is rendered through the `<i>` element using the class received in `icon`.\n\n" +
+          "This allows the icon to **inherit the color** from its parent pill, adapting automatically " +
           "to the current color variant (e.g. `.pill--green`).\n\n" +
           "---\n\n" +
           "### 🧩 Grouping Multiple Pills\n\n" +
@@ -94,6 +95,11 @@ export default {
       defaultValue: true,
       description: "Show or hide the close button",
     },
+    icon: {
+      control: "text",
+      defaultValue: "icon-cancel-icon",
+      description: "Icon class displayed inside the close button",
+    },
     expandable: {
       control: "boolean",
       defaultValue: false,
@@ -116,6 +122,7 @@ const commonArgs = {
   removable: true,
   expandable: false,
   color: "green",
+  icon: "icon-cancel-icon",
 };
 
 export const Green = Template.bind({});
