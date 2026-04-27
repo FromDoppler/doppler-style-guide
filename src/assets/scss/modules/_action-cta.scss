@@ -13,8 +13,7 @@
 
   .dp-action-cta {
     display: grid;
-    grid-template-columns:
-      28px minmax(0, 1fr) variables.$dp-sizing--lvl4;
+    grid-template-columns: 28px minmax(0, 1fr) variables.$dp-sizing--lvl4;
     grid-template-rows: auto auto;
     column-gap: 10px;
     row-gap: 2px;
