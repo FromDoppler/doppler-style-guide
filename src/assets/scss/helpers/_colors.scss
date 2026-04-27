@@ -55,6 +55,7 @@ $dp-color-orange-focus: #e58900;
 $dp-color-orange-carousel: #e79433;
 $dp-color-orange-carousel-back: rgba(250, 178, 33, 0.1);
 $dp-color-orange-carousel-border: rgba(250, 178, 33, 0.4);
+$dp-color-purple: #b58fc1;
 $dp-color-purple-carousel: #8c6698;
 $dp-color-purple-carousel-back: rgba(229, 207, 227, 0.2);
 $dp-color-purple-carousel-border: rgba(180, 143, 193, 0.5);
@@ -235,12 +236,24 @@ $dp-color-onsite-gray-border: #e7e5dc;
     background: $dp-color-brown;
   }
 
+  .dp-color-brown {
+    color: $dp-color-brown;
+  }
+
   .dp-brown--hover {
     background: $dp-color-brown--hover;
   }
 
   .dp-brown-brightness {
     background: $dp-color-brown-brightness;
+  }
+
+  .dp-purple {
+    background: $dp-color-purple;
+  }
+
+  .dp-color-purple {
+    color: $dp-color-purple;
   }
 
   .dp-color-orange-focus {
