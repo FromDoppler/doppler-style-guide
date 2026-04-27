@@ -24,7 +24,7 @@ export default {
           " ellipsis to maintain a controlled size. |\n" +
           "| **icon** | `string` | Defines the icon class used inside the close button. " +
           "Defaults to `icon-cancel-icon`. |\n" +
-          "| **isButton** | `boolean` | Defines if the icon is rendered inside a button. " +
+          "| **isClickable** | `boolean` | Defines if the icon is rendered inside a button. " +
           "Defaults to `true`. |\n\n" +
           "---\n\n" +
           "### 🎨 Styles and Structure\n\n" +
@@ -50,7 +50,7 @@ export default {
           "---\n\n" +
           "### ❌ Close Icon\n\n" +
           "The close icon is rendered through the `<i>` element using the class received in `icon`. " +
-          "When `isButton` is disabled, the `<button>` wrapper is not rendered.\n\n" +
+          "When `isClickable` is disabled, the `<button>` wrapper is not rendered.\n\n" +
           "This allows the icon to **inherit the color** from its parent pill, adapting automatically " +
           "to the current color variant (e.g. `.pill--green`).\n\n" +
           "---\n\n" +
@@ -104,7 +104,7 @@ export default {
       defaultValue: "icon-cancel-icon",
       description: "Icon class displayed inside the close button",
     },
-    isButton: {
+    isClickable: {
       control: "boolean",
       defaultValue: true,
       description: "Render the icon inside a button wrapper",
@@ -132,7 +132,7 @@ const commonArgs = {
   expandable: false,
   color: "green",
   icon: "icon-cancel-icon",
-  isButton: true,
+  isClickable: true,
 };
 
 export const Green = Template.bind({});

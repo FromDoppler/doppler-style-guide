@@ -6,7 +6,7 @@ export const Pill = ({
   expandable = false,
   color = "green",
   icon = "icon-cancel-icon",
-  isButton = true,
+  isClickable = true,
 }) => {
   const iconClass = icon || "icon-cancel-icon";
   const pillIcon = html`<i class=${`pill-close-icon ${iconClass}`}></i>`;
@@ -15,7 +15,7 @@ export const Pill = ({
     <div class="pill pill--${color} ${expandable ? "pill--expandable" : ""}">
       <span class="pill-text">${text}</span>
       ${removable
-        ? isButton
+        ? isClickable
           ? html`
               <button class="pill-close" aria-label="Remove">
                 ${pillIcon}
