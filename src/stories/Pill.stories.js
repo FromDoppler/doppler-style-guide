@@ -22,7 +22,8 @@ export default {
           "the pill **doesn’t limit its width** (it can exceed 212px) " +
           "and the text **is not truncated**. When disabled, the text is shortened with" +
           " ellipsis to maintain a controlled size. |\n" +
-          "| **icon** | `string` | Defines the icon class used inside the close button. Defaults to `icon-cancel-icon`. |\n\n" +
+          "| **icon** | `string` | Defines the icon class used inside the close button. Defaults to `icon-cancel-icon`. |\n" +
+          "| **isButton** | `boolean` | Defines if the icon is rendered inside a button. Defaults to `true`. |\n\n" +
           "---\n\n" +
           "### 🎨 Styles and Structure\n\n" +
           "Each pill has its own border and background color, defined through the SCSS " +
@@ -40,13 +41,14 @@ export default {
           '<div class="pill pill--green">\n' +
           '  <span class="pill-text">Septiembre 2025 - Septiembre 2025</span>\n' +
           '  <button class="pill-close" aria-label="Remove">\n' +
-          '    <i class="{icon}"></i>\n' +
+          '    <i class="pill-close-icon {icon}"></i>\n' +
           "  </button>\n" +
           "</div>\n" +
           "```\n\n" +
           "---\n\n" +
           "### ❌ Close Icon\n\n" +
-          "The close icon is rendered through the `<i>` element using the class received in `icon`.\n\n" +
+          "The close icon is rendered through the `<i>` element using the class received in `icon`. " +
+          "When `isButton` is disabled, the `<button>` wrapper is not rendered.\n\n" +
           "This allows the icon to **inherit the color** from its parent pill, adapting automatically " +
           "to the current color variant (e.g. `.pill--green`).\n\n" +
           "---\n\n" +
@@ -100,6 +102,11 @@ export default {
       defaultValue: "icon-cancel-icon",
       description: "Icon class displayed inside the close button",
     },
+    isButton: {
+      control: "boolean",
+      defaultValue: true,
+      description: "Render the icon inside a button wrapper",
+    },
     expandable: {
       control: "boolean",
       defaultValue: false,
@@ -123,6 +130,7 @@ const commonArgs = {
   expandable: false,
   color: "green",
   icon: "icon-cancel-icon",
+  isButton: true,
 };
 
 export const Green = Template.bind({});
