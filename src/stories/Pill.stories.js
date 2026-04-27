@@ -22,8 +22,10 @@ export default {
           "the pill **doesn’t limit its width** (it can exceed 212px) " +
           "and the text **is not truncated**. When disabled, the text is shortened with" +
           " ellipsis to maintain a controlled size. |\n" +
-          "| **icon** | `string` | Defines the icon class used inside the close button. Defaults to `icon-cancel-icon`. |\n" +
-          "| **isButton** | `boolean` | Defines if the icon is rendered inside a button. Defaults to `true`. |\n\n" +
+          "| **icon** | `string` | Defines the icon class used inside the close button. " +
+          "Defaults to `icon-cancel-icon`. |\n" +
+          "| **isButton** | `boolean` | Defines if the icon is rendered inside a button. " +
+          "Defaults to `true`. |\n\n" +
           "---\n\n" +
           "### 🎨 Styles and Structure\n\n" +
           "Each pill has its own border and background color, defined through the SCSS " +
