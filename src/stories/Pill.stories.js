@@ -102,7 +102,7 @@ export default {
     },
     color: {
       control: { type: "select" },
-      options: ["green"],
+      options: ["green", "blue"],
       defaultValue: "green",
       description: "Defines the border and background color of the pill.",
     },
@@ -118,8 +118,8 @@ const commonArgs = {
   color: "green",
 };
 
-export const Green = Template.bind({});
-Green.args = { ...commonArgs };
+export const Default = Template.bind({});
+Default.args = { ...commonArgs };
 
 export const WithoutClose = Template.bind({});
 WithoutClose.args = {

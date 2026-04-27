@@ -3,9 +3,13 @@
 @use "core/typography";
 
 $pill-colors: (
-  green: (
+  "green": (
     border: colors.$dp-color-green,
     bg: colors.$dp-color-green-brightness,
+  ),
+  "blue": (
+    border: colors.$dp-color-blue-widget,
+    bg: #2a75db33,
   ),
 );
 
