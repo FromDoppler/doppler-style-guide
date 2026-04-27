@@ -23,8 +23,7 @@ export default {
     },
     iconClass: {
       control: "text",
-      description:
-        "Icon class. For example: `ms-icon icon-notification`.",
+      description: "Icon class. For example: `ms-icon icon-notification`.",
     },
   },
 };
