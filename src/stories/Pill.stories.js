@@ -135,14 +135,8 @@ const commonArgs = {
   isClickable: true,
 };
 
-export const Green = Template.bind({});
-Green.args = { ...commonArgs };
-
-export const Blue = Template.bind({});
-Blue.args = {
-  ...commonArgs,
-  color: "blue",
-};
+export const Default = Template.bind({});
+Default.args = { ...commonArgs };
 
 export const WithoutClose = Template.bind({});
 WithoutClose.args = {
