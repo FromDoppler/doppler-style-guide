@@ -77,5 +77,15 @@ $pill-colors: (
         opacity: 0.8;
       }
     }
+
+    .pill-close-icon {
+      font-size: 16px;
+      line-height: 1;
+      color: inherit;
+    }
+
+    > .pill-close-icon {
+      margin-left: 4px;
+    }
   }
 }
