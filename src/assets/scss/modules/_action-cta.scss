@@ -1,0 +1,85 @@
+@use "core/settings";
+@use "core/typography";
+@use "core/variables";
+@use "helpers/colors";
+
+.dp-library {
+  .dp-action-cta-list {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    max-width: 564px;
+  }
+
+  .dp-action-cta {
+    display: grid;
+    grid-template-columns:
+      28px minmax(0, 1fr) variables.$dp-sizing--lvl4;
+    grid-template-rows: auto auto;
+    column-gap: 10px;
+    row-gap: 2px;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 564px;
+    min-height: 127px;
+    padding: 21px 30px 20px 27px;
+    border: 1px solid colors.$dp-color-onsite-gray-border;
+    border-radius: variables.$dp-border-radius;
+    background-color: colors.$dp-color-white;
+    color: colors.$dp-color-darkgrey;
+    font-family: typography.$dp-fontfamily-awa;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: colors.$dp-color-darkgrey;
+      text-decoration: none;
+    }
+
+    &:focus {
+      outline: 2px solid colors.$dp-color-focus-checkbox;
+      outline-offset: 2px;
+    }
+  }
+
+  .dp-action-cta__icon {
+    grid-column: 1;
+    grid-row: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: variables.$dp-sizing--lvl6;
+    height: variables.$dp-sizing--lvl6;
+    color: colors.$dp-violet-tabs;
+    font-size: variables.$dp-sizing--lvl6;
+    line-height: 1;
+  }
+
+  .dp-action-cta__title {
+    grid-column: 2;
+    grid-row: 1;
+    color: colors.$dp-color-darkgrey;
+    font-size: variables.$dp-sizing--lvl6;
+    font-weight: settings.$dp-font-weight-bold;
+    line-height: 26px;
+  }
+
+  .dp-action-cta__description {
+    grid-column: 1 / 3;
+    grid-row: 2;
+    color: colors.$dp-color-darkgrey;
+    font-size: variables.$dp-sizing--lvl4;
+    line-height: 25px;
+  }
+
+  .dp-action-cta__arrow {
+    grid-column: 3;
+    grid-row: 1 / 3;
+    align-self: center;
+    justify-self: end;
+    color: colors.$dp-color-grey;
+    font-size: variables.$dp-sizing--lvl5;
+    line-height: 1;
+  }
+}
