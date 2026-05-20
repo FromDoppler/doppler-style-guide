@@ -23,7 +23,7 @@
     max-width: 564px;
     min-height: 127px;
     padding: 21px 30px 20px 27px;
-    border: 1px solid colors.$dp-color-onsite-gray-border;
+    border: 2px solid colors.$dp-color-onsite-gray-border;
     border-radius: variables.$dp-border-radius;
     background-color: colors.$dp-color-white;
     color: colors.$dp-color-darkgrey;
@@ -32,6 +32,8 @@
 
     &:hover,
     &:focus {
+      border-color: #fcc338;
+      border-width: 2px;
       color: colors.$dp-color-darkgrey;
       text-decoration: none;
     }
