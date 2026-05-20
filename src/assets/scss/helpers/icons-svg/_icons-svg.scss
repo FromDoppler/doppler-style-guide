@@ -80,3 +80,8 @@
   @extend .icon-svg;
   --icon-url: url("assets/icons/svg-icons/verified-search.svg");
 }
+
+.icon-whatsapp {
+  @extend .icon-svg;
+  --icon-url: url("assets/icons/svg-icons/whatsapp.svg");
+}
