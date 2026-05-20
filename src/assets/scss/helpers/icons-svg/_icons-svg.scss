@@ -85,3 +85,8 @@
   @extend .icon-svg;
   --icon-url: url("assets/icons/svg-icons/whatsapp.svg");
 }
+
+.icon-online-clothing {
+  @extend .icon-svg;
+  --icon-url: url("assets/icons/svg-icons/online-clothing.svg");
+}
