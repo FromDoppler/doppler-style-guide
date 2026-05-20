@@ -52,7 +52,7 @@
   .dp-date-picker {
     @include dp-datepicker-base;
     position: absolute;
-    z-index: 5;
+    z-index: 1000;
     margin-top: 2px;
     box-shadow: 0 0 0 1px colors.$dp-color-darkyellow;
     font-size: 1rem;
@@ -215,6 +215,11 @@
 
   .full-width-datepicker {
     width: 100% !important;
+  }
+
+  .dp-date-picker-wrapper {
+    position: absolute;
+    z-index: 1000;
   }
 
   .full-width-datepicker .react-datepicker__input-container input {
