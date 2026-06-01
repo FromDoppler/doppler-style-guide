@@ -90,3 +90,8 @@
   @extend .icon-svg;
   --icon-url: url("assets/icons/svg-icons/online-clothing.svg");
 }
+
+.icon-fast-email {
+  @extend .icon-svg;
+  --icon-url: url("assets/icons/svg-icons/fast-email.svg");
+}
