@@ -4,8 +4,8 @@
 
 .dp-library {
   .dp-tutorial-card {
-    width: min(100%, 490px);
-    padding: 40px;
+    width: 100%;
+    padding: variables.$dp-spaces--lv2;
     border: 1px solid colors.$dp-color-separator;
     border-radius: variables.$dp-border-radius;
     background-color: colors.$dp-color-white;
@@ -16,7 +16,7 @@
   .dp-tutorial-card__media {
     position: relative;
     width: 100%;
-    aspect-ratio: 411 / 239;
+    aspect-ratio: 186 / 107;
     overflow: hidden;
     background-color: #2a75db33;
   }
@@ -44,8 +44,8 @@
     top: 50%;
     left: 50%;
     z-index: 1;
-    width: 40px;
-    height: 40px;
+    width: variables.$dp-spaces--lv6;
+    height: variables.$dp-spaces--lv6;
     border-radius: 50%;
     background-color: colors.$dp-color-white;
     transform: translate(-50%, -50%);
@@ -55,65 +55,67 @@
     content: "";
     position: absolute;
     top: 50%;
-    left: 53%;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-left: 14px solid colors.$dp-color-darkgrey;
+    left: 54%;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+    border-left: 10px solid colors.$dp-color-darkgrey;
     transform: translate(-50%, -50%);
   }
 
   .dp-tutorial-card__body {
-    margin-top: variables.$dp-spaces--lv4;
+    margin-top: variables.$dp-spaces--lv1;
   }
 
   .dp-tutorial-card .pill {
     max-width: 100%;
-    padding: 2px variables.$dp-spaces--lv2;
+    padding: 2px variables.$dp-spaces--lv1;
     border: 0;
-    font-size: variables.$dp-sizing--lvl5;
+    font-size: variables.$dp-sizing--lvl1;
     font-weight: settings.$dp-font-weight-bold;
-    line-height: variables.$dp-spaces--lv5;
+    line-height: variables.$dp-sizing--lvl2-14;
   }
 
   .dp-tutorial-card .pill-text {
     max-width: 100%;
+    font-weight: 600;
+    font-size: variables.$dp-sizing--lvl2-14;
   }
 
   .dp-tutorial-card__title {
     margin: variables.$dp-spaces--lv1 0 0;
     padding-bottom: 0;
     color: colors.$dp-color-darkgrey;
-    font-size: 30px;
-    font-weight: settings.$dp-font-weight-bold;
-    line-height: variables.$dp-spaces--lv6;
+    font-size: variables.$dp-sizing--lvl4;
+    font-weight: settings.$dp-font-weight-semibold;
+    line-height: 20px;
   }
 
   .dp-tutorial-card__author {
     margin-top: variables.$dp-spaces--lv1;
     color: colors.$dp-color-lightgrey;
-    font-size: variables.$dp-sizing--lvl6;
+    font-size: variables.$dp-sizing--lvl2-14;
     font-weight: settings.$dp-font-weight-bold;
-    line-height: variables.$dp-spaces--lv5;
+    line-height: settings.$dp-font-small-lineheight;
   }
 
   @media (max-width: 480px) {
     .dp-tutorial-card {
-      padding: variables.$dp-spaces--lv4;
+      padding: variables.$dp-spaces--lv2;
     }
 
     .dp-tutorial-card .pill {
-      font-size: variables.$dp-sizing--lvl4;
-      line-height: variables.$dp-spaces--lv4;
+      font-size: variables.$dp-sizing--lvl1;
+      line-height: variables.$dp-sizing--lvl2-14;
     }
 
     .dp-tutorial-card__title {
-      font-size: variables.$dp-sizing--lvl6;
-      line-height: variables.$dp-spaces--lv5;
+      font-size: variables.$dp-sizing--lvl3-16;
+      line-height: 20px;
     }
 
     .dp-tutorial-card__author {
-      font-size: variables.$dp-sizing--lvl4;
-      line-height: variables.$dp-spaces--lv4;
+      font-size: variables.$dp-sizing--lvl2-14;
+      line-height: settings.$dp-font-small-lineheight;
     }
   }
 }
