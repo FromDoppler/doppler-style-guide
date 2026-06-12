@@ -5,6 +5,28 @@
   background-color: colors.$dp-color-white;
   border: 1px solid colors.$dp-color-onsite-gray-border;
 
+  .dp-treemap-chart {
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+
+    .bb svg {
+      overflow: visible;
+    }
+
+    .bb-chart-treemap rect {
+      stroke: colors.$dp-color-white;
+      stroke-width: 4px;
+      shape-rendering: geometricPrecision;
+    }
+  }
+
+  .dp-treemap-chart__tiles {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
   .dp-overlay {
     position: absolute;
     width: 100%;
