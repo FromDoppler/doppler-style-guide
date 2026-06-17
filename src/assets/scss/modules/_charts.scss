@@ -1,3 +1,5 @@
+@use "core/settings";
+@use "core/variables";
 @use "helpers/colors";
 
 .dp-chart-container {
@@ -75,6 +77,35 @@
       stroke: colors.$dp-color-lightgrey;
       stroke-width: 2px;
       stroke-dasharray: 3, 3;
+    }
+  }
+
+  .dp-treemap-chart {
+    .bb-chart-treemap rect {
+      rx: 5.5px;
+      ry: 5.5px;
+      stroke-width: 5px;
+    }
+
+    .bb-texts {
+      image {
+        transform: translate(8px, 10px);
+      }
+
+      text {
+        font-size: variables.$dp-sizing--lvl3-16;
+        font-weight: settings.$dp-font-weight-semibold;
+        transform: translate(8px, 35px);
+      }
+
+      text tspan:first-child {
+        font-size: variables.$dp-sizing--lvl3-16;
+        font-weight: settings.$dp-font-weight-semibold;
+      }
+
+      text tspan:not(:first-child) {
+        font-size: variables.$dp-sizing--lvl2-14;
+      }
     }
   }
 }
