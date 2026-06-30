@@ -38,10 +38,10 @@ export const WidgetFormInput = ({
                                   <input
                                     type=${type}
                                     name=${
-                                    type === "radio"
-                                      ? "radio"
-                                      : `${type}-${option}`
-                                  }
+                                      type === "radio"
+                                        ? "radio"
+                                        : `${type}-${option}`
+                                    }
                                     class="dp-card-input--${type}"
                                     ?disabled=${disabled}
                                   />
