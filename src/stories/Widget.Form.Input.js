@@ -27,68 +27,78 @@ export const WidgetFormInput = ({
           <ul class="field-group col-md-12 col-lg-12">
             <li class="field-item col-sm-6 m-b-12">
               <div class="dp-input--${type} dp-checkout-${type}-selected">
-                ${multipleOptions
-                  ? html`
-                      <ul class="dp-card-${type}-list">
-                        ${options.map(
-                          (option) => html`
-                            <li>
-                              <label>
-                                <input
-                                  type=${type}
-                                  name=${type === "radio"
-                                    ? "radio"
-                                    : `${type}-${option}`}
-                                  class="dp-card-input--${type}"
-                                  ?disabled=${disabled}
-                                />
-                                <span class="dp-card-span"
-                                  >${capitalize(option)}</span
-                                >
-                              </label>
-                            </li>
-                          `,
-                        )}
-                      </ul>
-                    `
-                  : html`
-                      <label class="dp-card-label">
-                        <input
-                          type=${type}
-                          name="radio"
-                          ?checked=${checked}
-                          class="dp-card-input--${type}"
-                          ?disabled=${disabled}
-                        />
-                        ${hasInput
-                          ? html`
-                              <span class="dp-card-span">
-                                ${textBefore}
-                                <input
-                                  type="number"
-                                  value=${inputValue}
-                                  class="dp-card-number-input"
-                                  ?disabled=${disabled}
-                                />
-                                ${textAfter}
-                              </span>
-                            `
-                          : html` <span class="dp-card-span">${text}</span> `}
-                      </label>
-                    `}
-                ${children && type === "radio"
-                  ? html`
-                      <div
-                        class="dp-accordion-content ${showChildren
-                          ? "visible"
-                          : "hidden"}"
-                      >
-                        <div class="dp-accordion-option-container">
-                          ${children}
+                ${
+                  multipleOptions
+                    ? html`
+                        <ul class="dp-card-${type}-list">
+                          ${options.map(
+                            (option) => html`
+                              <li>
+                                <label>
+                                  <input
+                                    type=${type}
+                                    name=${
+                                      type === "radio"
+                                        ? "radio"
+                                        : `${type}-${option}`
+                                    }
+                                    class="dp-card-input--${type}"
+                                    ?disabled=${disabled}
+                                  />
+                                  <span class="dp-card-span"
+                                    >${capitalize(option)}</span
+                                  >
+                                </label>
+                              </li>
+                            `,
+                          )}
+                        </ul>
+                      `
+                    : html`
+                        <label class="dp-card-label">
+                          <input
+                            type=${type}
+                            name="radio"
+                            ?checked=${checked}
+                            class="dp-card-input--${type}"
+                            ?disabled=${disabled}
+                          />
+                          ${
+                            hasInput
+                              ? html`
+                                  <span class="dp-card-span">
+                                    ${textBefore}
+                                    <input
+                                      type="number"
+                                      value=${inputValue}
+                                      class="dp-card-number-input"
+                                      ?disabled=${disabled}
+                                    />
+                                    ${textAfter}
+                                  </span>
+                                `
+                              : html`
+                                  <span class="dp-card-span">${text}</span>
+                                `
+                          }
+                        </label>
+                      `
+                }
+                ${
+                  children && type === "radio"
+                    ? html`
+                        <div
+                          class="dp-accordion-content ${
+                            showChildren ? "visible" : "hidden"
+                          }"
+                        >
+                          <div class="dp-accordion-option-container">
+                            ${children}
+                          </div>
                         </div>
-                      </div>
-                    `
-                  : ""}
+                      `
+                    : ""
+                }
               </div>
             </li>
           </ul>

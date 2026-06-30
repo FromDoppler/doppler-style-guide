@@ -21,12 +21,14 @@ export const TutorialCard = ({
           src=${tutorialCardImage}
           alt=${title}
         />
-        ${showPlayIcon
-          ? html`<span
-              class="dp-tutorial-card__play"
-              aria-hidden="true"
-            ></span>`
-          : ""}
+        ${
+          showPlayIcon
+            ? html`<span
+                class="dp-tutorial-card__play"
+                aria-hidden="true"
+              ></span>`
+            : ""
+        }
       </div>
 
       <div class="dp-tutorial-card__body">

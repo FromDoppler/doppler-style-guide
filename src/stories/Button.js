@@ -45,13 +45,15 @@ export const Button = ({
       @click=${onClick}
       .disabled=${disabled}
     >
-      ${iconClass
-        ? html`
-            <span
-              class="dpicon ${iconClass} ${onlyIcon ? "dpicon--onlyicon" : ""}"
-            ></span>
-          `
-        : ""}
+      ${
+        iconClass
+          ? html`
+              <span
+                class="dpicon ${iconClass} ${onlyIcon ? "dpicon--onlyicon" : ""}"
+              ></span>
+            `
+          : ""
+      }
       ${!onlyIcon ? label : ""}
     </button>
   `;

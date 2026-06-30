@@ -23,46 +23,49 @@ export const Tooltips = ({ direction }) => {
               </div>
 
               <div class="wrapper-tooltip">
-                ${direction == "top"
-                  ? html`<div class="dp-box">
-                      <p>Tooltip top</p>
-                      <div class="dp-tooltip-container">
-                        <span class="ms-icon icon-tip-icon"></span>
-                        <div class="dp-tooltip-top">
-                          <span
-                            >Lorem ipsum dolor sit amet.
-                            <a href="#">tips para seguir</a></span
-                          >
+                ${
+                  direction == "top"
+                    ? html`<div class="dp-box">
+                        <p>Tooltip top</p>
+                        <div class="dp-tooltip-container">
+                          <span class="ms-icon icon-tip-icon"></span>
+                          <div class="dp-tooltip-top">
+                            <span
+                              >Lorem ipsum dolor sit amet.
+                              <a href="#">tips para seguir</a></span
+                            >
+                          </div>
                         </div>
-                      </div>
 
-                      <div class="dp-tooltip-container">
-                        <span class="ms-icon icon-info-icon"></span>
+                        <div class="dp-tooltip-container">
+                          <span class="ms-icon icon-info-icon"></span>
 
-                        <div class="dp-tooltip-top">
-                          <span
-                            >¿Realizas envíos frecuentes? Escoge un Plan basado
-                            en la cantidad de Suscriptores que posees, sin
-                            límite de envíos. Si pagas 3, 6 o 12 meses por
-                            adelantado, ¡ahorras hasta un 25%!.</span
-                          >
+                          <div class="dp-tooltip-top">
+                            <span
+                              >¿Realizas envíos frecuentes? Escoge un Plan
+                              basado en la cantidad de Suscriptores que posees,
+                              sin límite de envíos. Si pagas 3, 6 o 12 meses por
+                              adelantado, ¡ahorras hasta un 25%!.</span
+                            >
+                          </div>
                         </div>
-                      </div>
-                    </div>`
-                  : html` <div class="dp-box">
-                      <p>
-                        Tooltip ${direction || "right"}
-                        <span
-                          class="ms-icon icon-tip-icon dp-tooltip-${direction ||
-                          "right"}"
-                        >
-                          <span class="tooltiptext"
-                            >Lorem ipsum dolor sit amet.
-                            <a href="#">tips para seguir</a>
+                      </div>`
+                    : html` <div class="dp-box">
+                        <p>
+                          Tooltip ${direction || "right"}
+                          <span
+                            class="ms-icon icon-tip-icon dp-tooltip-${
+                              direction || "right"
+                            }"
+                          >
+                            <span class="tooltiptext"
+                              >Lorem ipsum dolor sit amet.
+                              <a href="#">tips para seguir</a>
+                            </span>
                           </span>
-                        </span>
-                      </p>
-                    </div>`}
+                        </p>
+                      </div>`
+                }
               </div>
 
               <h3>Tooltip II</h3>

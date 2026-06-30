@@ -25,21 +25,27 @@ export const WidgetCard = ({ bgColor, ribbon, message }) => {
               ><span class="iconapp-arrow-right"></span>
             </div>
           </div>
-          ${ribbon
-            ? html`<div
-                class="dp-ribbon dp-ribbon-top-right-alt dp-ribbon-violet"
-              >
-                <span>New Feature</span>
-              </div>`
-            : ""}
-          ${message
-            ? html`
-                <div class=${`dp-widget-card-hover-message ${bgColor}`}>
-                  <h3>${message.title}</h3>
-                  <p>${message.description} <a href=${message.link}>Link</a></p>
-                </div>
-              `
-            : ""}
+          ${
+            ribbon
+              ? html`<div
+                  class="dp-ribbon dp-ribbon-top-right-alt dp-ribbon-violet"
+                >
+                  <span>New Feature</span>
+                </div>`
+              : ""
+          }
+          ${
+            message
+              ? html`
+                  <div class=${`dp-widget-card-hover-message ${bgColor}`}>
+                    <h3>${message.title}</h3>
+                    <p>
+                      ${message.description} <a href=${message.link}>Link</a>
+                    </p>
+                  </div>
+                `
+              : ""
+          }
         </div>
       </div>
     </div>

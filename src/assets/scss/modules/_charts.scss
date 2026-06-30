@@ -25,7 +25,7 @@
     .bb-axis-x text,
     .bb-axis-y text,
     .bb-axis-y2 text {
-      font-weight: 700;
+      font-weight: settings.$dp-font-weight-bold;
       font-size: 13px;
       line-height: 18px;
       font-family: "proxima-nova", helvetica, arial, sans-serif;
@@ -79,7 +79,12 @@
       stroke-dasharray: 3, 3;
     }
   }
-
+  .dp-donut-chart {
+    .bb-chart-arcs text {
+      font-weight: 800;
+      fill: colors.$dp-color-darkgrey;
+    }
+  }
   .dp-treemap-chart {
     .bb-chart-treemap rect {
       rx: 5.5px;
