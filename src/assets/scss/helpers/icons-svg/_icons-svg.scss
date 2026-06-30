@@ -56,9 +56,19 @@
   --icon-url: url("assets/icons/svg-icons/sparkle-ia.svg");
 }
 
+.icon-screen-w {
+  @extend .icon-svg;
+  --icon-url: url("assets/icons/svg-icons/screen-w.svg");
+}
+
 .icon-preview-eye {
   @extend .icon-svg;
   --icon-url: url("assets/icons/svg-icons/preview-eye.svg");
+}
+
+.icon-check_circle {
+  @extend .icon-svg;
+  --icon-url: url("assets/icons/svg-icons/check_circle.svg");
 }
 
 .icon-cancel-icon {
@@ -89,6 +99,16 @@
 .icon-online-clothing {
   @extend .icon-svg;
   --icon-url: url("assets/icons/svg-icons/online-clothing.svg");
+}
+
+.icon-cart-check {
+  @extend .icon-svg;
+  --icon-url: url("assets/icons/svg-icons/cart-check.svg");
+}
+
+.icon-user-full-circle {
+  @extend .icon-svg;
+  --icon-url: url("assets/icons/svg-icons/user-full-circle.svg");
 }
 
 .icon-fast-email {
