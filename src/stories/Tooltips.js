@@ -55,8 +55,8 @@ export const Tooltips = ({ direction }) => {
                           Tooltip ${direction || "right"}
                           <span
                             class="ms-icon icon-tip-icon dp-tooltip-${
-                            direction || "right"
-                          }"
+                              direction || "right"
+                            }"
                           >
                             <span class="tooltiptext"
                               >Lorem ipsum dolor sit amet.

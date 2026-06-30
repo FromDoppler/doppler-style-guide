@@ -32,26 +32,26 @@ export const WidgetFormInput = ({
                     ? html`
                         <ul class="dp-card-${type}-list">
                           ${options.map(
-                          (option) => html`
-                            <li>
-                              <label>
-                                <input
-                                  type=${type}
-                                  name=${
+                            (option) => html`
+                              <li>
+                                <label>
+                                  <input
+                                    type=${type}
+                                    name=${
                                     type === "radio"
                                       ? "radio"
                                       : `${type}-${option}`
                                   }
-                                  class="dp-card-input--${type}"
-                                  ?disabled=${disabled}
-                                />
-                                <span class="dp-card-span"
-                                  >${capitalize(option)}</span
-                                >
-                              </label>
-                            </li>
-                          `,
-                        )}
+                                    class="dp-card-input--${type}"
+                                    ?disabled=${disabled}
+                                  />
+                                  <span class="dp-card-span"
+                                    >${capitalize(option)}</span
+                                  >
+                                </label>
+                              </li>
+                            `,
+                          )}
                         </ul>
                       `
                     : html`
@@ -64,21 +64,23 @@ export const WidgetFormInput = ({
                             ?disabled=${disabled}
                           />
                           ${
-                          hasInput
-                            ? html`
-                                <span class="dp-card-span">
-                                  ${textBefore}
-                                  <input
-                                    type="number"
-                                    value=${inputValue}
-                                    class="dp-card-number-input"
-                                    ?disabled=${disabled}
-                                  />
-                                  ${textAfter}
-                                </span>
-                              `
-                            : html` <span class="dp-card-span">${text}</span> `
-                        }
+                            hasInput
+                              ? html`
+                                  <span class="dp-card-span">
+                                    ${textBefore}
+                                    <input
+                                      type="number"
+                                      value=${inputValue}
+                                      class="dp-card-number-input"
+                                      ?disabled=${disabled}
+                                    />
+                                    ${textAfter}
+                                  </span>
+                                `
+                              : html`
+                                  <span class="dp-card-span">${text}</span>
+                                `
+                          }
                         </label>
                       `
                 }
@@ -87,8 +89,8 @@ export const WidgetFormInput = ({
                     ? html`
                         <div
                           class="dp-accordion-content ${
-                          showChildren ? "visible" : "hidden"
-                        }"
+                            showChildren ? "visible" : "hidden"
+                          }"
                         >
                           <div class="dp-accordion-option-container">
                             ${children}
