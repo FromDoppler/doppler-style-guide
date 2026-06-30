@@ -14,15 +14,17 @@ export const Pill = ({
   return html`
     <div class="pill pill--${color} ${expandable ? "pill--expandable" : ""}">
       <span class="pill-text">${text}</span>
-      ${removable
-        ? isClickable
-          ? html`
-              <button class="pill-close" aria-label="Remove">
-                ${pillIcon}
-              </button>
-            `
-          : pillIcon
-        : ""}
+      ${
+        removable
+          ? isClickable
+            ? html`
+                <button class="pill-close" aria-label="Remove">
+                  ${pillIcon}
+                </button>
+              `
+            : pillIcon
+          : ""
+      }
     </div>
   `;
 };
