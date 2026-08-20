@@ -114,6 +114,7 @@ $dp-lineheight-medium: 1.5rem; /*24px*/
     font-size: var.$dp-sizing--lvl3;
     line-height: var.$dp-spaces--lv4;
     margin: var.$dp-spaces--lv0;
+    text-wrap: pretty;
   }
 
   small {
