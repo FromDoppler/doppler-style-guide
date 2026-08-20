@@ -214,6 +214,36 @@ extract_manifest_assets () {
   done | sort -u
 }
 
+append_recursive_directory_delete_commands () {
+  remoteDir="$1"
+  listBatch="${tmpDir}/list-remote-dir.batch"
+  listOutput="${tmpDir}/list-remote-dir.output"
+
+  {
+    printf 'cd %s\n' "${remotePath}"
+    printf 'ls -l %s\n' "${remoteDir}"
+  } > "${listBatch}"
+
+  sftp -P "${port}" -b "${listBatch}" "${remoteUserAndHost}" > "${listOutput}" 2>/dev/null || true
+
+  awk '/^[bcdlps-][rwx-]/ { print substr($1, 1, 1) "\t" $NF }' "${listOutput}" \
+    | while IFS="$(printf '\t')" read -r entryType entryName
+      do
+        [ -n "${entryName}" ] || continue
+
+        entryPath="${remoteDir%/}/${entryName}"
+
+        if [ "${entryType}" = "d" ]
+        then
+          append_recursive_directory_delete_commands "${entryPath}"
+        else
+          printf -- '-rm %s\n' "${entryPath}" >> "${deleteBatch}"
+        fi
+      done
+
+  printf -- '-rmdir %s\n' "${remoteDir}" >> "${deleteBatch}"
+}
+
 grep -F -x -v -f "${deleteManifests}" "${allManifests}" > "${keepManifests}" || true
 
 while IFS= read -r manifest
@@ -275,22 +305,15 @@ fi
   done < "${deleteManifests}"
 } > "${deleteBatch}"
 
-sftp -P "${port}" -b "${deleteBatch}" "${remoteUserAndHost}" >/dev/null
-
 if [ "${environment}" = "pr" ] && [ -s "${deleteDocumentationDirs}" ]
 then
-  deleteDocsScript="${tmpDir}/delete-docs.sh"
-
-  {
-    printf 'set -eu\n'
-    while IFS= read -r documentationDir
-    do
-      printf 'rm -rf "%s/%s"\n' "${remotePath%/}" "${documentationDir}"
-    done < "${deleteDocumentationDirs}"
-  } > "${deleteDocsScript}"
-
-  ssh -p "${port}" "${remoteUserAndHost}" sh < "${deleteDocsScript}"
+  while IFS= read -r documentationDir
+  do
+    append_recursive_directory_delete_commands "${documentationDir}"
+  done < "${deleteDocumentationDirs}"
 fi
+
+sftp -P "${port}" -b "${deleteBatch}" "${remoteUserAndHost}" >/dev/null
 
 echo "Deleted ${manifestsToDeleteCount} old CDN manifests and ${deletableAssetsCount} unreferenced manifest assets for ${environment}."
 
