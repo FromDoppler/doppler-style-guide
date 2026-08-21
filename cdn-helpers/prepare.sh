@@ -172,28 +172,36 @@ then
   canonicalTag=${versionFull}
 fi
 
+manifestFile="asset-manifest-${canonicalTag}.json"
+manifestReference="${manifestFile}"
+
+if [ -n "${name}" ]
+then
+  manifestFile="asset-manifest-${name}.json"
+  manifestReference="${manifestFile}?v=${commit}"
+fi
+
 mkdir "${ready}" -p
 
 cp -R "${build}/static/." "${ready}/static"
 
-cp "${build}/asset-manifest.json" "${ready}/asset-manifest-${canonicalTag}.json"
+cp "${build}/asset-manifest.json" "${ready}/${manifestFile}"
 
-sed -r -i "s/^\\{/\\{\\n  \"canonicalVersion\": \"${canonicalTag}\",/g" "${ready}/asset-manifest-${canonicalTag}.json"
-find . -regex ".*html$" -exec sed -i "s/asset-manifest.json/asset-manifest-${canonicalTag}.json/g" {} +
+sed -r -i "s/^\\{/\\{\\n  \"canonicalVersion\": \"${canonicalTag}\",/g" "${ready}/${manifestFile}"
+find . -regex ".*html$" -exec sed -i "s/asset-manifest.json/${manifestReference}/g" {} +
 
 if [ -n "${version}" ]
 then
-  cp "${ready}/asset-manifest-${canonicalTag}.json" "${ready}/asset-manifest-${versionMayor}.json"
-  cp "${ready}/asset-manifest-${canonicalTag}.json" "${ready}/asset-manifest-${versionMayorMinor}.json"
-  cp "${ready}/asset-manifest-${canonicalTag}.json" "${ready}/asset-manifest-${versionMayorMinorPatch}.json"
-  cp "${ready}/asset-manifest-${canonicalTag}.json" "${ready}/asset-manifest-${versionMayorMinorPatchPre}.json"
+  cp "${ready}/${manifestFile}" "${ready}/asset-manifest-${versionMayor}.json"
+  cp "${ready}/${manifestFile}" "${ready}/asset-manifest-${versionMayorMinor}.json"
+  cp "${ready}/${manifestFile}" "${ready}/asset-manifest-${versionMayorMinorPatch}.json"
+  cp "${ready}/${manifestFile}" "${ready}/asset-manifest-${versionMayorMinorPatchPre}.json"
   mkdir "${ready}/documentation/${versionMayor}" -p
   cp -R "${build}/documentation/." "${ready}/documentation/${versionMayor}"
 fi
 
 if [ -n "${name}" ]
 then
-  cp "${ready}/asset-manifest-${canonicalTag}.json" "${ready}/asset-manifest-${name}.json"
   mkdir "${ready}/documentation/${name}" -p
   cp -R "${build}/documentation/." "${ready}/documentation/${name}"
 fi
