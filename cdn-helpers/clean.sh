@@ -144,7 +144,7 @@ if [ "${environment}" = "pr" ]
 then
   printf '%s\n' 'mget -p asset-manifest-pr-*.json' >> "${downloadBatch}"
 else
-  printf 'mget -p asset-manifest-%s.json\n' "${environment}" >> "${downloadBatch}"
+  printf 'mget -p asset-manifest-%s-*.json\n' "${environment}" >> "${downloadBatch}"
 fi
 # cSpell:enable
 
@@ -168,7 +168,7 @@ then
     -exec basename {} \; \
     | sort > "${deleteManifests}"
 else
-  grep -E "^asset-manifest-${environment}\\.json$" "${allManifests}" \
+  grep -E "^asset-manifest-${environment}-.*\\.json$" "${allManifests}" \
     | sort > "${deleteManifests}" || true
 fi
 
