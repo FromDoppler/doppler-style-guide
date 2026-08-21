@@ -173,15 +173,18 @@ then
 fi
 
 htmlManifestTag=${canonicalTag}
+htmlManifestReference="asset-manifest-${htmlManifestTag}.json"
 
 if [ -n "${version}" ]
 then
   htmlManifestTag=${versionMayor}
+  htmlManifestReference="asset-manifest-${htmlManifestTag}.json?v=${commit}"
 fi
 
 if [ -n "${name}" ]
 then
   htmlManifestTag=${name}
+  htmlManifestReference="asset-manifest-${htmlManifestTag}.json?v=${commit}"
 fi
 
 mkdir "${ready}" -p
@@ -191,7 +194,7 @@ cp -R "${build}/static/." "${ready}/static"
 cp "${build}/asset-manifest.json" "${ready}/asset-manifest-${canonicalTag}.json"
 
 sed -r -i "s/^\\{/\\{\\n  \"canonicalVersion\": \"${canonicalTag}\",/g" "${ready}/asset-manifest-${canonicalTag}.json"
-find . -regex ".*html$" -exec sed -i "s/asset-manifest.json/asset-manifest-${htmlManifestTag}.json/g" {} +
+find . -regex ".*html$" -exec sed -i "s/asset-manifest.json/${htmlManifestReference}/g" {} +
 
 if [ -n "${version}" ]
 then
