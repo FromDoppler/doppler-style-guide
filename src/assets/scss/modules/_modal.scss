@@ -10,7 +10,8 @@
 @use "helpers/colors";
 
 .dp-library {
-  .modal {
+  .modal,
+  .dp-modal {
     position: fixed;
     z-index: 9999;
     left: 0;
@@ -67,33 +68,40 @@
   }
 
   /* Tamaño del scroll */
-  .modal::-webkit-scrollbar {
+  .modal::-webkit-scrollbar,
+  .dp-modal::-webkit-scrollbar {
     width: 8px;
   }
 
   /* Estilos barra (thumb) de scroll */
-  .modal::-webkit-scrollbar-thumb {
+  .modal::-webkit-scrollbar-thumb,
+  .dp-modal::-webkit-scrollbar-thumb {
     background: #333;
     border-radius: 0px;
   }
 
-  .modal::-webkit-scrollbar-thumb:active {
+  .modal::-webkit-scrollbar-thumb:active,
+  .dp-modal::-webkit-scrollbar-thumb:active {
     background-color: #999999;
   }
 
-  .modadl::-webkit-scrollbar-thumb:hover {
+  .modal::-webkit-scrollbar-thumb:hover,
+  .dp-modal::-webkit-scrollbar-thumb:hover {
     background: #b3b3b3;
     box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
   }
 
   /* Estilos track de scroll */
-  .modal::-webkit-scrollbar-track {
+  .modal::-webkit-scrollbar-track,
+  .dp-modal::-webkit-scrollbar-track {
     background: #212121;
     border-radius: 4px;
   }
 
   .modal::-webkit-scrollbar-track:hover,
-  .modal::-webkit-scrollbar-track:active {
+  .modal::-webkit-scrollbar-track:active,
+  .dp-modal::-webkit-scrollbar-track:hover,
+  .dp-modal::-webkit-scrollbar-track:active {
     background: #212121;
   }
 
