@@ -103,6 +103,63 @@
     display: flex;
   }
 
+  .dp-eco-ia-menu-button {
+    display: inline-flex;
+    flex-shrink: 0;
+    align-items: center;
+    gap: 7px;
+    margin-right: var.$dp-spaces--lv3;
+    padding: 7px 13px;
+    cursor: pointer;
+    border: 1px solid colors.$dp-color-ecoia-border;
+    border-radius: var.$dp-border-radius--lv1;
+    background: colors.$dp-color-ecoia-background;
+    color: colors.$dp-color-brown;
+    font-family: inherit;
+    line-height: normal;
+    transition:
+      background-color 0.15s ease-in-out,
+      border-color 0.15s ease-in-out;
+
+    &:hover {
+      border-color: colors.$dp-violet-doppler-plus;
+      background: colors.$dp-color-ecoia-background-hover;
+    }
+
+    &:focus-visible {
+      outline: 3px solid colors.$dp-color-ecoia-focus;
+      outline-offset: 2px;
+    }
+
+    &__icon {
+      display: inline-flex;
+      flex-shrink: 0;
+      align-items: center;
+      justify-content: center;
+      width: 22px;
+      height: 22px;
+      border-radius: var.$dp-border-radius;
+      background: colors.$dp-violet-doppler-plus;
+    }
+
+    &__label {
+      color: colors.$dp-color-brown;
+      font-size: var.$dp-sizing--lvl3-16;
+      font-weight: settings.$dp-font-weight-bold;
+    }
+
+    &__badge {
+      padding: 2px 5px;
+      border: 1px solid colors.$dp-greenBorder-forFlashcards;
+      border-radius: var.$dp-border-radius;
+      background: colors.$dp-color-green-brightness;
+      color: colors.$dp-color-darkgreen;
+      font-size: 9px;
+      font-weight: settings.$dp-font-weight-bold;
+      letter-spacing: 0.5px;
+    }
+  }
+
   .dp-shadow-bottom {
     box-shadow:
       3px 13px 17px -19px rgba(0, 0, 0, 0.45),
