@@ -151,6 +151,20 @@
     .dp-accordion-panel {
       padding: var.$dp-spaces--lv4 var.$dp-spaces--lv0 var.$dp-spaces--lv0;
       overflow: visible;
+
+      &::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+    }
+
+    .dp-accordion-content {
+      &::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
     }
 
     .dp-accordion-content .field-group > li.field-item {
