@@ -117,7 +117,7 @@ export default {
     },
     color: {
       control: { type: "select" },
-      options: ["green", "blue"],
+      options: ["green", "blue", "grey"],
       defaultValue: "green",
       description: "Defines the border and background color of the pill.",
     },
@@ -148,4 +148,10 @@ export const Expandable = Template.bind({});
 Expandable.args = {
   ...commonArgs,
   expandable: true,
+};
+
+export const Grey = Template.bind({});
+Grey.args = {
+  ...commonArgs,
+  color: "grey",
 };
