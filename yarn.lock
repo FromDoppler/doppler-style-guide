@@ -11336,12 +11336,10 @@ sane@^4.0.3:
     minimist "^1.1.1"
     walker "~1.0.5"
 
-sass-loader@15.0.0:
-  version "15.0.0"
-  resolved "https://registry.npmjs.org/sass-loader/-/sass-loader-15.0.0.tgz"
-  integrity sha512-mbXAL7sI/fgt3skXR6xHxtKkaGyxRrGf7zrU4hLLWxBDJEcAe0QsoNy92qKttCb3zfMniTkU2kD9yakUKtW7vQ==
-  dependencies:
-    neo-async "^2.6.2"
+sass-loader@17.0.1:
+  version "17.0.1"
+  resolved "https://registry.yarnpkg.com/sass-loader/-/sass-loader-17.0.1.tgz#4e89d8028b313d713584ac90f6f25fc1256449f7"
+  integrity sha512-pgJMwCuLjVTSIWsv/2luVRXKlCeaViUGcgSe8dx95zMG4hUwqIMFmjbhq29ypFLflJU0GyiJZeLM9iI1n3KYAA==
 
 sass@1.104.0:
   version "1.104.0"
