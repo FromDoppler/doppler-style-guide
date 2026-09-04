@@ -112,6 +112,10 @@
         outline: 3px solid #ffdc95;
         outline-offset: 3px;
       }
+
+      &.dp-accordion-thumb--with-top-border {
+        border-top: 1px solid colors.$dp-color-silver;
+      }
     }
 
     .dp-accordion-header {
@@ -120,6 +124,24 @@
       flex-wrap: wrap;
       gap: var.$dp-spaces--lv2;
       margin: var.$dp-spaces--lv4 0;
+
+      &.dp-accordion-header--nowrap {
+        display: flex;
+        flex-wrap: nowrap;
+        width: 100%;
+
+        .dp-accordion-title {
+          flex: 1 1 auto;
+          min-width: 0;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        .pill {
+          flex: 0 0 auto;
+        }
+      }
     }
 
     .dp-accordion-icon {
